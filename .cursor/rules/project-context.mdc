@@ -1,0 +1,54 @@
+---
+description: ChickenLoop project context and conventions
+globs: 
+alwaysApply: true
+---
+
+# ChickenLoop Project Context
+
+## 📋 Project Overview
+
+**ChickenLoop** is a watersports job platform with three user roles:
+- **Recruiter**: Post/manage jobs, company profile
+- **Job-seeker**: Create/manage CV, browse jobs
+- **Admin**: Full access to all users and data
+
+## 🛠️ Tech Stack
+
+- **Framework**: Next.js 16 (App Router)
+- **UI**: React 19, TypeScript, Tailwind CSS
+- **Database**: MongoDB Atlas with Mongoose
+- **Auth**: JWT in HTTP-only cookies
+- **Hosting**: Vercel
+- **Storage**: Vercel Blob
+
+## 📁 Key Directories
+
+```
+app/api/        # API routes
+app/recruiter/  # Recruiter pages
+app/job-seeker/ # Job seeker pages
+app/admin/      # Admin pages
+lib/            # Utilities (db, auth, jwt)
+models/         # Mongoose schemas
+```
+
+## 🔑 Key Commands
+
+```bash
+npm run dev      # Start dev server
+npm run build    # Build for production
+npm run lint     # Run linter
+```
+
+## ⚠️ Important Notes
+
+1. **Database**: MongoDB Atlas (cloud) - no local DB needed
+2. **Env vars**: `.env.local` for local dev (not in git)
+3. **Country fields**: Store ISO codes, display full names
+4. **Images**: Max 3 per job, stored in Vercel Blob
+
+## 🔗 Live URLs
+
+- **Production**: https://cl1-ashen.vercel.app
+- **GitHub**: https://github.com/chickenloop3845-commits/chickenloop

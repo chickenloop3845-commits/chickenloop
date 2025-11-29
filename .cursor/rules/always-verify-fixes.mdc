@@ -1,0 +1,67 @@
+---
+description: Golden rule for all bug fixes and code changes - always verify they work
+globs: 
+alwaysApply: true
+---
+
+# 🎯 GOLDEN RULE: ALWAYS VERIFY YOUR FIXES
+
+After making ANY bug fix or code change, you MUST verify it works before considering the task complete.
+
+## The 5 Metaphors to Remember
+
+### 1. 🔧 The Mechanic's Rule
+> A mechanic doesn't just tighten a bolt and walk away—they turn the key and listen to the engine run. Always start the engine after your repair.
+
+### 2. 🧑‍🍳 The Chef's Taste Test
+> A chef never serves a dish without tasting it first. You wouldn't plate food blindly—taste your code by running it before serving it to users.
+
+### 3. 🎯 The Archer's Follow-Through
+> An archer watches where the arrow lands, not just where they aimed. Don't just release the fix—watch where it actually hits.
+
+### 4. 🏗️ The Bridge Builder's Walk
+> An engineer who builds a bridge walks across it themselves before opening it to traffic. Build your fix, then walk across it.
+
+### 5. 💊 The Doctor's Check-Up
+> A doctor doesn't prescribe medicine and vanish—they check if the patient improved. Administer your fix, then check the patient (the code) is actually healthy.
+
+## ✅ Verification Checklist
+
+After every fix, run through this:
+
+```bash
+# 1. Does it compile?
+npm run build
+
+# 2. Does it run?
+npm run dev
+
+# 3. Does the bug actually go away?
+# Test the specific functionality you fixed
+
+# 4. Did we break anything else?
+# Test related features
+```
+
+## 🚫 What NOT To Do
+
+- ❌ Say "this should fix it" without testing
+- ❌ Make a change and immediately move to the next task
+- ❌ Assume the fix works because it "looks right"
+- ❌ Skip verification because "it's a small change"
+
+## ✅ What TO Do
+
+- ✅ Run the build after every change
+- ✅ Test the specific bug scenario
+- ✅ Verify in the browser/terminal that it works
+- ✅ Check for regressions in related features
+- ✅ Only mark task complete after seeing it work
+
+## 💡 Remember
+
+> **"A fix that isn't verified is just a guess"**
+> 
+> **"It should work" ≠ "It works"**
+> 
+> **Your job isn't done until you've seen it work with your own eyes**
