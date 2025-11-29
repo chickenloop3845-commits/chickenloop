@@ -377,52 +377,6 @@ export default function NewCVPage() {
               </div>
             </div>
 
-            {/* Pictures Section */}
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
-                Pictures (up to 3)
-              </label>
-              <div className="space-y-4">
-                {/* New Picture Previews */}
-                {picturePreviews.length > 0 && (
-                  <div className="flex flex-wrap gap-4">
-                    {picturePreviews.map((preview, index) => (
-                      <div key={index} className="relative">
-                        <img
-                          src={preview}
-                          alt={`Preview ${index + 1}`}
-                          className="w-32 h-32 object-cover rounded-lg border border-gray-300"
-                        />
-                        <button
-                          type="button"
-                          onClick={() => removeNewPicture(index)}
-                          className="absolute -top-2 -right-2 bg-red-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-xs hover:bg-red-600"
-                        >
-                          ×
-                        </button>
-                      </div>
-                    ))}
-                  </div>
-                )}
-
-                {/* Upload Input */}
-                {selectedPictures.length < 3 && (
-                  <div>
-                    <input
-                      type="file"
-                      accept="image/jpeg,image/jpg,image/png,image/webp,image/gif"
-                      multiple
-                      onChange={handlePictureChange}
-                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-900"
-                    />
-                    <p className="text-xs text-gray-500 mt-1">
-                      Maximum 3 pictures. Each file must be less than 5MB.
-                    </p>
-                  </div>
-                )}
-              </div>
-            </div>
-
             <div>
               <div className="flex justify-between items-center mb-4">
                 <label className="block text-sm font-medium text-gray-700">Experience</label>
@@ -829,6 +783,58 @@ export default function NewCVPage() {
                   ? `${formData.professionalCertifications.length} certification(s) selected`
                   : 'Select professional certifications (tap to select)'}
               </p>
+            </div>
+
+            {/* Pictures Section */}
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-2">
+                Pictures (up to 3)
+              </label>
+              <div className="space-y-4">
+                {/* New Picture Previews */}
+                {picturePreviews.length > 0 && (
+                  <div className="flex flex-wrap gap-4">
+                    {picturePreviews.map((preview, index) => (
+                      <div key={index} className="relative">
+                        <img
+                          src={preview}
+                          alt={`Preview ${index + 1}`}
+                          className="w-32 h-32 object-cover rounded-lg border border-gray-300"
+                        />
+                        <button
+                          type="button"
+                          onClick={() => removeNewPicture(index)}
+                          className="absolute -top-2 -right-2 bg-red-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-xs hover:bg-red-600"
+                        >
+                          ×
+                        </button>
+                      </div>
+                    ))}
+                  </div>
+                )}
+
+                {/* Upload Input */}
+                <div>
+                  {selectedPictures.length < 3 ? (
+                    <>
+                      <input
+                        type="file"
+                        accept="image/jpeg,image/jpg,image/png,image/webp,image/gif"
+                        multiple
+                        onChange={handlePictureChange}
+                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-900"
+                      />
+                      <p className="text-xs text-gray-500 mt-1">
+                        Maximum 3 pictures. Each file must be less than 5MB.
+                      </p>
+                    </>
+                  ) : (
+                    <p className="text-sm text-gray-600">
+                      Maximum of 3 pictures reached. Remove a picture to add a new one.
+                    </p>
+                  )}
+                </div>
+              </div>
             </div>
 
             <div className="flex gap-4">
