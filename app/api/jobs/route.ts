@@ -19,8 +19,8 @@ export async function GET(request: NextRequest) {
       ]
     })
       .populate('recruiter', 'name email')
-      .populate('recruiter', 'name email');
-    // .sort({ createdAt: -1 }); // Temporarily disabled to avoid memory limit until index is created
+      .populate('recruiter', 'name email')
+      .sort({ createdAt: -1 });
 
     return NextResponse.json({ jobs }, { status: 200 });
   } catch (error: any) {
