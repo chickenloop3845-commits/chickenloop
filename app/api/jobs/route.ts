@@ -12,14 +12,15 @@ export async function GET(request: NextRequest) {
     // Get only published jobs (unpublished jobs are hidden from public)
     // Include jobs where published is true OR undefined (default is true)
     // Exclude only jobs where published is explicitly false
-    const jobs = await Job.find({ 
+    const jobs = await Job.find({
       $or: [
         { published: true },
         { published: { $exists: false } }
       ]
     })
       .populate('recruiter', 'name email')
-      .sort({ createdAt: -1 });
+      .populate('recruiter', 'name email');
+    // .sort({ createdAt: -1 }); // Temporarily disabled to avoid memory limit until index is created
 
     return NextResponse.json({ jobs }, { status: 200 });
   } catch (error: any) {
@@ -64,7 +65,7 @@ export async function POST(request: NextRequest) {
 
     // Normalize country: trim and uppercase, or set to null if empty (null explicitly stores the field)
     const normalizedCountry = country?.trim() ? country.trim().toUpperCase() : null;
-    
+
     const job = await Job.create({
       title,
       description,
@@ -88,13 +89,13 @@ export async function POST(request: NextRequest) {
     });
 
     const populatedJob = await Job.findById(job._id).populate('recruiter', 'name email');
-    
+
     // Convert to plain object and ensure all fields are included, including country
     const jobObject = populatedJob?.toObject();
     const jobResponse = jobObject ? {
       ...jobObject,
       // Handle country field - normalize if it exists, preserve null if explicitly set
-      country: jobObject.country != null 
+      country: jobObject.country != null
         ? (jobObject.country.trim() ? jobObject.country.trim().toUpperCase() : null)
         : undefined,
     } : populatedJob;
