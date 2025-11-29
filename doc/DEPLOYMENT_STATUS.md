@@ -1,84 +1,141 @@
-# ✅ Deployment Status
+# ✅ Vercel Deployment Status
 
-## Completed ✅
+**Last Updated:** November 29, 2025
 
-1. **✅ Code Committed** - All changes committed to git
-2. **✅ GitHub Repository Created** - https://github.com/chickenloop3845-commits/chickenloop
-3. **✅ Code Pushed** - All code is now on GitHub
+---
 
-## Next Steps (5 minutes)
+## 🌐 Live Deployments
 
-### Step 1: Deploy to Vercel (2 minutes)
+| Environment | URL | Status |
+|-------------|-----|--------|
+| **Production** | https://cl1-ashen.vercel.app | ✅ Active |
+| **GitHub Repo** | https://github.com/chickenloop3845-commits/chickenloop | ✅ Connected |
 
-**Option A: Via Website (Easiest)**
-1. Go to https://vercel.com/new
-2. Sign in with GitHub
-3. Click "Import" next to your `chickenloop` repository
-4. Vercel will auto-detect Next.js - click "Deploy"
+---
 
-**Option B: Via CLI**
+## 📦 Stack Overview
+
+| Component | Version/Service |
+|-----------|-----------------|
+| Framework | Next.js 16.0.3 |
+| React | 19.2.0 |
+| Database | MongoDB Atlas (M0 Free Tier) |
+| Hosting | Vercel |
+| Region | `iad1` (US East) |
+| Blob Storage | Vercel Blob (@vercel/blob 2.0.0) |
+
+---
+
+## 🔐 Environment Variables
+
+Required environment variables configured in Vercel:
+
+| Variable | Purpose | Environments |
+|----------|---------|--------------|
+| `MONGODB_URI` | MongoDB Atlas connection string | Production, Preview, Development |
+| `JWT_SECRET` | JWT signing key | Production, Preview, Development |
+| `BLOB_READ_WRITE_TOKEN` | Auto-provided by Vercel | Production, Preview, Development |
+
+---
+
+## 🔄 Deployment Workflow
+
+### Automatic Deployments
+Vercel automatically deploys when you push to GitHub:
+
 ```bash
-vercel login
-vercel --prod
+# Make changes, then:
+git add .
+git commit -m "Your changes"
+git push origin main
 ```
 
-### Step 2: Add Environment Variables (2 minutes)
+Vercel will:
+1. Detect the push (10-30 seconds)
+2. Run `npm install`
+3. Run `npm run build`
+4. Deploy to production
 
-After deployment starts, go to your Vercel project dashboard:
+### Manual Deployment (CLI)
 
-1. Go to **Settings** → **Environment Variables**
-2. Add these two variables:
-
-   **Variable 1:**
-   - Name: `MONGODB_URI`
-   - Value: `mongodb+srv://username:password@cluster.mongodb.net/chickenloop`
-   - Environments: ✅ Production ✅ Preview ✅ Development
-
-   **Variable 2:**
-   - Name: `JWT_SECRET`
-   - Value: `2hxoXFr26ersairETgh8k0lBTC0fT2xR0YetVIuJxM8=`
-   - Environments: ✅ Production ✅ Preview ✅ Development
-
-3. **Image Storage:** The app uses Vercel Blob Storage for images. The `BLOB_READ_WRITE_TOKEN` is automatically available in Vercel deployments - no manual setup needed! 🎉
-
-4. Click "Save"
-5. Go to **Deployments** → Click "..." on latest deployment → **Redeploy**
-
-### Step 3: Set Up MongoDB Atlas (1 minute)
-
-If you haven't already:
-
-1. Go to https://www.mongodb.com/cloud/atlas/register
-2. Create free account
-3. Create cluster (free M0 tier)
-4. **Database Access:**
-   - Create database user (save credentials!)
-5. **Network Access:**
-   - Add IP Address → Allow Access from Anywhere (0.0.0.0/0)
-6. **Get Connection String:**
-   - Database → Connect → Connect your application
-   - Copy string, replace `<password>`, add `/chickenloop` at end
-   - Update `MONGODB_URI` in Vercel with this string
-
-## Your Repository
-
-🔗 **GitHub:** https://github.com/chickenloop3845-commits/chickenloop
-
-## Quick Deploy Command
-
-If you want to deploy via CLI after logging in:
 ```bash
+# Login (if not already)
 vercel login
+
+# Deploy to production
 vercel --prod
+
+# Deploy preview
+vercel
 ```
 
-Then add environment variables in the Vercel dashboard.
+---
 
-## Test Your Deployment
+## 🧪 Test Accounts
 
-Once deployed:
-1. Visit your Vercel URL (e.g., `https://chickenloop.vercel.app`)
-2. Register a new account
-3. Test creating jobs/CVs
-4. 🎉 Done!
+| Role | Email | Password |
+|------|-------|----------|
+| Admin | rooster@chickenloop.com | Chicken!123 |
 
+---
+
+## 🔧 Quick Actions
+
+### Check Build Locally
+```bash
+npm run build
+```
+
+### Check TypeScript Errors
+```bash
+npx tsc --noEmit
+```
+
+### View Deployment Logs
+```bash
+vercel ls                              # List deployments
+vercel inspect <url> --logs           # View logs
+```
+
+### Manage Environment Variables
+```bash
+vercel env ls                          # List vars
+vercel env add VARIABLE_NAME production # Add var
+vercel env rm VARIABLE_NAME production  # Remove var
+```
+
+### Force Redeploy
+```bash
+vercel --prod --force
+```
+
+Or via Dashboard: Deployments → "..." → Redeploy
+
+---
+
+## 📚 Related Documentation
+
+- [DEPLOYMENT.md](./DEPLOYMENT.md) - Full deployment guide
+- [QUICK_DEPLOY.md](./QUICK_DEPLOY.md) - 2-minute quick start
+- [VERCEL_TROUBLESHOOTING.md](./VERCEL_TROUBLESHOOTING.md) - Fix common issues
+- [MONGODB_SETUP.md](./MONGODB_SETUP.md) - Database setup
+- [COLLABORATOR_GUIDE.md](./COLLABORATOR_GUIDE.md) - Team member onboarding
+
+---
+
+## 🚨 Common Issues & Quick Fixes
+
+| Issue | Quick Fix |
+|-------|-----------|
+| MongoDB connection fails | Check Atlas IP whitelist (0.0.0.0/0) |
+| Build fails | Run `npm run build` locally first |
+| Env vars not working | Redeploy after adding variables |
+| 500 errors | Check Vercel runtime logs |
+
+---
+
+## 📊 Project Info
+
+- **Vercel Project:** cl1
+- **Vercel Team:** chickenloop3845-commits-projects
+- **Dashboard:** https://vercel.com/chickenloop3845-commits-projects/cl1

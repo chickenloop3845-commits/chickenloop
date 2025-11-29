@@ -1,6 +1,10 @@
 # 🚨 Vercel Deployment Troubleshooting
 
+**Updated:** November 29, 2025
+
 Quick reference for fixing common Vercel deployment issues.
+
+**Live URL:** https://cl1-ashen.vercel.app
 
 ## Quick Status Check
 
