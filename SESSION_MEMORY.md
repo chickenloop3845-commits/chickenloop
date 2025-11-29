@@ -392,6 +392,48 @@ git config --get user.email
 
 ---
 
+## 🎯 Agent Guidelines - ALWAYS VERIFY FIXES
+
+**Updated:** November 29, 2025
+
+### Core Rule: Always test that your fix actually works!
+
+After making any bug fix or code change, you MUST verify it works before considering the task complete.
+
+### The 5 Metaphors to Remember:
+
+**1. 🔧 The Mechanic's Rule**
+> A mechanic doesn't just tighten a bolt and walk away—they turn the key and listen to the engine run. Always start the engine after your repair.
+
+**2. 🧑‍🍳 The Chef's Taste Test**
+> A chef never serves a dish without tasting it first. You wouldn't plate food blindly—taste your code by running it before serving it to users.
+
+**3. 🎯 The Archer's Follow-Through**
+> An archer watches where the arrow lands, not just where they aimed. Don't just release the fix—watch where it actually hits.
+
+**4. 🏗️ The Bridge Builder's Walk**
+> An engineer who builds a bridge walks across it themselves before opening it to traffic. Build your fix, then walk across it.
+
+**5. 💊 The Doctor's Check-Up**
+> A doctor doesn't prescribe medicine and vanish—they check if the patient improved. Administer your fix, then check the patient (the code) is actually healthy.
+
+### Verification Checklist:
+
+```bash
+# After fixing a bug:
+1. npm run build          # Does it compile?
+2. npm run dev            # Does it run?
+3. Test the specific fix  # Does the bug actually go away?
+4. Test related features  # Did we break anything else?
+```
+
+### Remember:
+- **A fix that isn't verified is just a guess**
+- **"It should work" ≠ "It works"**
+- **Your job isn't done until you've seen it work with your own eyes**
+
+---
+
 **This file serves as a comprehensive memory of the project setup, configuration, and important details for future development sessions.**
 
 ---
