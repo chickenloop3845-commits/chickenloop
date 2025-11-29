@@ -3,11 +3,16 @@ import connectDB from '@/lib/db';
 import Job from '@/models/Job';
 import Company from '@/models/Company';
 import { requireAuth, requireRole } from '@/lib/auth';
+import mongoose from 'mongoose';
 
 // GET - Get all jobs (accessible to all users, including anonymous)
 export async function GET(request: NextRequest) {
   try {
     await connectDB();
+    
+    // Debug: Log registered models to help diagnose population issues
+    const registeredModels = Object.keys(mongoose.models);
+    console.log('[Jobs API] GET - Registered models:', registeredModels);
 
     // Get only published jobs (unpublished jobs are hidden from public)
     // Include jobs where published is true OR undefined (default is true)
