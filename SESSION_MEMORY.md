@@ -254,6 +254,15 @@ npm run dev
 
 ### Vercel Deployment
 
+**Production Website:**
+- **URL**: https://chickenloop.vercel.app
+- **Status**: ✅ Deployed and operational (verified November 30, 2025)
+- **Response**: HTTP 200 OK
+- **Server**: Vercel
+- **Framework**: Next.js (App Router)
+- **Title**: "ChickenLoop - Watersports Jobs"
+- **Description**: "Find your dream watersports job or post job openings"
+
 **Auto-Deployment:**
 - Pushes to `main` branch trigger automatic deployment
 - Deployment takes 2-5 minutes
@@ -268,6 +277,13 @@ npm run dev
 - Vercel deployment uses same MongoDB Atlas database as local
 - Data is shared between local and production
 - Verify connection string matches in both places
+
+**Deployment Verification:**
+- Website accessible at https://chickenloop.vercel.app
+- Homepage loads correctly with navigation (Login/Register links)
+- Content displays: "Welcome to Chickenloop - Your gateway to watersports careers"
+- Next.js application rendering properly
+- Vercel cache working (x-vercel-cache: HIT)
 
 ---
 
@@ -387,6 +403,7 @@ git config --get user.email
 **Local Config:** `.env.local` (not in Git)  
 **Shared Credentials:** `SHARED_DATABASE_CREDENTIALS.template.md` (not in Git)  
 **Repository:** https://github.com/chickenloop3845-commits/chickenloop  
+**Production Website:** https://chickenloop.vercel.app ✅  
 **Team Members:** jhegedus42 (owner), Tzwengali (collaborator)  
 **Deployment:** Vercel (auto-deploy on push to main)
 
