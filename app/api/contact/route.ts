@@ -13,6 +13,8 @@ export async function POST(request: NextRequest) {
       );
     }
 
+    const contactTo = process.env.CONTACT_TO || 'hello@chickenloop.com';
+
     // Check if SMTP is configured
     const smtpHost = process.env.SMTP_HOST;
     const smtpPort = process.env.SMTP_PORT;
@@ -23,7 +25,7 @@ export async function POST(request: NextRequest) {
     if (!smtpHost || !smtpPort || !smtpUser || !smtpPass) {
       // Log the submission for manual processing if SMTP is not configured
       console.log('Contact Form Submission (SMTP not configured):', {
-        to: 'hello@chickenloop.com',
+        to: contactTo,
         from: email,
         name,
         message,
@@ -32,18 +34,26 @@ export async function POST(request: NextRequest) {
 
       return NextResponse.json(
         { 
-          error: 'Email service is not configured. Please contact support directly at hello@chickenloop.com',
+          error: `Email service is not configured. Please contact support directly at ${contactTo}`,
           fallback: true 
         },
         { status: 503 }
       );
     }
 
+    const port = Number.parseInt(smtpPort, 10);
+    if (!Number.isFinite(port) || port <= 0) {
+      return NextResponse.json(
+        { error: 'Email service is misconfigured (invalid SMTP_PORT).' },
+        { status: 500 }
+      );
+    }
+
     // Create transporter
     const transporter = nodemailer.createTransport({
       host: smtpHost,
-      port: parseInt(smtpPort, 10),
-      secure: parseInt(smtpPort, 10) === 465, // true for 465, false for other ports
+      port,
+      secure: port === 465, // true for 465, false for other ports (e.g. Proton Bridge uses 1025)
       auth: {
         user: smtpUser,
         pass: smtpPass,
@@ -53,7 +63,7 @@ export async function POST(request: NextRequest) {
     // Send email
     await transporter.sendMail({
       from: smtpFrom,
-      to: 'hello@chickenloop.com',
+      to: contactTo,
       replyTo: email,
       subject: `Feedback from ${name}`,
       text: `From: ${name} (${email})\n\n${message}`,
