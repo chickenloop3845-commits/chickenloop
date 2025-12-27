@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 interface JobCardProps {
   job: {
@@ -21,21 +22,12 @@ export default function JobCard({ job }: JobCardProps) {
       {/* Thumbnail Image */}
       <div className="w-full h-48 sm:h-56 bg-gray-200 relative overflow-hidden">
         {thumbnail ? (
-          <img
+          <Image
             src={thumbnail}
             alt={job.title}
-            className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
-            loading="lazy"
-            onError={(e) => {
-              // Only hide if it's a local /uploads/ path (won't work on Vercel)
-              const img = e.target as HTMLImageElement;
-              if (img.src.includes('/uploads/')) {
-                img.style.display = 'none';
-              } else {
-                // For blob storage URLs, log the error but don't hide
-                console.error('Failed to load image:', img.src);
-              }
-            }}
+            fill
+            className="object-cover transition-transform duration-300 hover:scale-110"
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
           />
         ) : (
           <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-gray-300 to-gray-400">

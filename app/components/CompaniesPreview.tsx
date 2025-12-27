@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import SectionHeader from './SectionHeader';
 
 interface Company {
@@ -66,13 +67,14 @@ export default function CompaniesPreview() {
                 className="bg-white border border-gray-200 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer block overflow-hidden transform hover:-translate-y-1 p-4 sm:p-6 flex flex-col items-center text-center"
               >
                 {/* Company Logo */}
-                <div className="w-full h-24 sm:h-32 mb-4 flex items-center justify-center bg-gray-50 rounded-lg p-3">
+                <div className="w-full h-24 sm:h-32 mb-4 flex items-center justify-center bg-gray-50 rounded-lg p-3 relative">
                   {company.logo ? (
-                    <img
+                    <Image
                       src={company.logo}
                       alt={company.name}
-                      className="max-w-full max-h-full object-contain"
-                      loading="lazy"
+                      fill
+                      className="object-contain"
+                      sizes="(max-width: 640px) 120px, 160px"
                     />
                   ) : (
                     <div className="text-gray-400 text-sm text-center">

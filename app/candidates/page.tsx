@@ -2,6 +2,7 @@
 // Force Vercel rebuild
 
 import { useEffect, useState } from 'react';
+import Image from 'next/image';
 import Navbar from '../components/Navbar';
 import { useAuth } from '../contexts/AuthContext';
 import { useRouter } from 'next/navigation';
@@ -463,11 +464,12 @@ export default function CVsPage() {
                           {/* CV Picture */}
                           <div className="w-full h-48 bg-gray-200 relative overflow-hidden">
                             {firstPicture ? (
-                              <img
+                              <Image
                                 src={firstPicture}
                                 alt={cv.fullName}
-                                className="w-full h-full object-cover"
-                                loading="lazy"
+                                fill
+                                className="object-cover"
+                                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, (max-width: 1280px) 33vw, 25vw"
                               />
                             ) : (
                               <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-gray-300 to-gray-400">
@@ -603,8 +605,8 @@ export default function CVsPage() {
                         onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
                         disabled={currentPage === 1}
                         className={`px-4 py-2 rounded-md font-medium ${currentPage === 1
-                            ? 'bg-gray-200 text-gray-400 cursor-not-allowed'
-                            : 'bg-blue-600 text-white hover:bg-blue-700'
+                          ? 'bg-gray-200 text-gray-400 cursor-not-allowed'
+                          : 'bg-blue-600 text-white hover:bg-blue-700'
                           }`}
                       >
                         Previous
@@ -623,8 +625,8 @@ export default function CVsPage() {
                                 key={page}
                                 onClick={() => setCurrentPage(page)}
                                 className={`px-3 py-2 rounded-md font-medium ${currentPage === page
-                                    ? 'bg-blue-600 text-white'
-                                    : 'bg-white text-gray-700 hover:bg-gray-100 border border-gray-300'
+                                  ? 'bg-blue-600 text-white'
+                                  : 'bg-white text-gray-700 hover:bg-gray-100 border border-gray-300'
                                   }`}
                               >
                                 {page}
@@ -648,8 +650,8 @@ export default function CVsPage() {
                         onClick={() => setCurrentPage((prev) => Math.min(prev + 1, totalPages))}
                         disabled={currentPage === totalPages}
                         className={`px-4 py-2 rounded-md font-medium ${currentPage === totalPages
-                            ? 'bg-gray-200 text-gray-400 cursor-not-allowed'
-                            : 'bg-blue-600 text-white hover:bg-blue-700'
+                          ? 'bg-gray-200 text-gray-400 cursor-not-allowed'
+                          : 'bg-blue-600 text-white hover:bg-blue-700'
                           }`}
                       >
                         Next

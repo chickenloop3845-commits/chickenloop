@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 interface CandidateCardProps {
   candidate: {
@@ -27,11 +28,12 @@ export default function CandidateCard({ candidate }: CandidateCardProps) {
       {/* Candidate Picture */}
       <div className="w-full h-48 sm:h-56 bg-gray-200 relative overflow-hidden">
         {candidate.pictures && candidate.pictures.length > 0 ? (
-          <img
+          <Image
             src={candidate.pictures[0]}
             alt={candidate.fullName}
-            className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
-            loading="lazy"
+            fill
+            className="object-cover transition-transform duration-300 hover:scale-110"
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
           />
         ) : (
           <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-gray-300 to-gray-400">

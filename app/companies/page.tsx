@@ -2,6 +2,7 @@
 
 import { useEffect, useState, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
+import Image from 'next/image';
 import Navbar from '../components/Navbar';
 import { getCountryNameFromCode } from '@/lib/countryUtils';
 import Link from 'next/link';
@@ -328,8 +329,8 @@ function CompaniesPageContent() {
                           key={company.id}
                           href={`/companies/${company.id}`}
                           className={`rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow cursor-pointer block ${company.featured
-                              ? 'bg-gradient-to-br from-yellow-50 to-amber-50 border-2 border-yellow-300'
-                              : 'bg-white'
+                            ? 'bg-gradient-to-br from-yellow-50 to-amber-50 border-2 border-yellow-300'
+                            : 'bg-white'
                             }`}
                         >
                           {/* Company Picture */}
@@ -340,21 +341,12 @@ function CompaniesPageContent() {
                               </div>
                             )}
                             {firstPicture ? (
-                              <img
+                              <Image
                                 src={firstPicture}
                                 alt={company.name}
-                                className="w-full h-full object-cover"
-                                loading="lazy"
-                                onError={(e) => {
-                                  // Only hide if it's a local /uploads/ path (won't work on Vercel)
-                                  const img = e.target as HTMLImageElement;
-                                  if (img.src.includes('/uploads/')) {
-                                    img.style.display = 'none';
-                                  } else {
-                                    // For blob storage URLs, log the error but don't hide
-                                    console.error('Failed to load image:', img.src);
-                                  }
-                                }}
+                                fill
+                                className="object-cover"
+                                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, (max-width: 1280px) 33vw, 25vw"
                               />
                             ) : (
                               <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-gray-300 to-gray-400">

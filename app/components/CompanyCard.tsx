@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { getCountryNameFromCode } from '@/lib/countryUtils';
 
 interface CompanyCardProps {
@@ -35,23 +36,14 @@ export default function CompanyCard({ company }: CompanyCardProps) {
       className="bg-white border border-gray-200 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer block overflow-hidden transform hover:-translate-y-1"
     >
       {/* Company Picture */}
-      <div className="w-full h-36 sm:h-40 bg-gray-200 overflow-hidden">
+      <div className="w-full h-36 sm:h-40 bg-gray-200 overflow-hidden relative">
         {company.pictures && company.pictures.length > 0 ? (
-          <img
+          <Image
             src={company.pictures[0]}
             alt={company.name}
-            className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
-            loading="lazy"
-            onError={(e) => {
-              // Only hide if it's a local /uploads/ path (won't work on Vercel)
-              const img = e.target as HTMLImageElement;
-              if (img.src.includes('/uploads/')) {
-                img.style.display = 'none';
-              } else {
-                // For blob storage URLs, log the error but don't hide
-                console.error('Failed to load company picture:', img.src);
-              }
-            }}
+            fill
+            className="object-cover transition-transform duration-300 hover:scale-110"
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
           />
         ) : (
           <div className="w-full h-full bg-gray-50 flex items-center justify-center">
