@@ -26,7 +26,7 @@ declare global {
   var mongoose: MongooseCache | undefined;
 }
 
-let cached: MongooseCache = global.mongoose || { conn: null, promise: null };
+const cached: MongooseCache = global.mongoose || { conn: null, promise: null };
 
 if (!global.mongoose) {
   global.mongoose = cached;
@@ -51,7 +51,7 @@ async function connectDB() {
   if (cached.conn && mongoose.connection.readyState !== 1) {
     try {
       await mongoose.connection.close();
-    } catch (e) {
+    } catch {
       // Ignore errors when closing
     }
     cached.conn = null;
@@ -62,7 +62,8 @@ async function connectDB() {
   if (cached.promise) {
     // Check if the promise has been pending for more than 5 seconds
     // This is a safety check for stuck connections
-    const promiseAge = Date.now() - (cached.promise as any)._startTime || 0;
+    const promiseWithTimestamp = cached.promise as Promise<typeof mongoose> & { _startTime?: number };
+    const promiseAge = Date.now() - (promiseWithTimestamp._startTime || 0);
     if (promiseAge > 5000) {
       console.warn('Clearing stale connection promise');
       cached.promise = null;
@@ -70,7 +71,7 @@ async function connectDB() {
       // Force disconnect mongoose
       try {
         await mongoose.disconnect();
-      } catch (e) {
+      } catch {
         // Ignore
       }
     }
@@ -99,7 +100,7 @@ async function connectDB() {
     };
 
     // Mark start time for the promise
-    (cached.promise as any) = mongoose.connect(uri, opts).then((mongoose) => {
+    const connectPromise = mongoose.connect(uri, opts).then((mongoose) => {
       return mongoose;
     }).catch((error) => {
       // Clear the promise on error so we can retry
@@ -107,16 +108,17 @@ async function connectDB() {
       cached.conn = null;
       console.error('MongoDB connection error:', error.message);
       throw error;
-    });
-    (cached.promise as any)._startTime = Date.now();
+    }) as Promise<typeof mongoose> & { _startTime?: number };
+    connectPromise._startTime = Date.now();
+    cached.promise = connectPromise;
   }
 
   try {
     cached.conn = await cached.promise;
-  } catch (e) {
+  } catch (error) {
     cached.promise = null;
     cached.conn = null;
-    throw e;
+    throw error;
   }
 
   return cached.conn;

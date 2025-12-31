@@ -22,7 +22,7 @@ export function getCountryNameFromCode(countryCode: string): string {
     if (countryName) {
       return countryName;
     }
-  } catch (e) {
+  } catch {
     // Fall through to return original code
   }
 
@@ -38,7 +38,7 @@ const ISO_REGION_CODE_FALLBACK = [
 
 let SUPPORTED_REGION_CODES: string[] = [];
 try {
-  SUPPORTED_REGION_CODES = Intl.supportedValuesOf('region' as any);
+  SUPPORTED_REGION_CODES = Intl.supportedValuesOf('region' as 'region');
 } catch {
   SUPPORTED_REGION_CODES = ISO_REGION_CODE_FALLBACK;
 }
@@ -186,7 +186,6 @@ export function getCountryNameInEnglish(countryName: string): string {
   const regionNamesInEnglish = new Intl.DisplayNames(['en'], { type: 'region' });
 
   // Try to find a country code from the map
-  const upperCountry = normalizedCountryName.toUpperCase();
   let countryCode: string | undefined;
 
   // Check direct mapping
@@ -209,7 +208,7 @@ export function getCountryNameInEnglish(countryName: string): string {
       if (englishName) {
         return englishName;
       }
-    } catch (e) {
+    } catch {
       // Fall through to return original
     }
   }

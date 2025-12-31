@@ -70,7 +70,19 @@ export async function sendEmail(options: SendEmailOptions): Promise<{ success: b
     }
 
     // Build email payload - Resend requires at least one of html or text
-    const emailPayload: any = {
+    interface ResendEmailPayload {
+      from: string;
+      to: string[];
+      subject: string;
+      html?: string;
+      text?: string;
+      replyTo?: string;
+      cc?: string[];
+      bcc?: string[];
+      tags?: Array<{ name: string; value: string }>;
+    }
+    
+    const emailPayload: ResendEmailPayload = {
       from: from || getFromEmail(),
       to: Array.isArray(to) ? to : [to],
       subject,

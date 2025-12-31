@@ -3,11 +3,20 @@
  * Replicates the frontend filtering logic
  */
 
-import Job from '@/models/Job';
+import mongoose from 'mongoose';
+import Job, { IJob } from '@/models/Job';
 import { ISavedSearch } from '@/models/SavedSearch';
 
+interface PopulatedJob extends Omit<IJob, 'recruiter'> {
+  recruiter?: {
+    _id: mongoose.Types.ObjectId;
+    name: string;
+    email: string;
+  };
+}
+
 export interface JobMatch {
-  job: any;
+  job: PopulatedJob;
   matchReasons: string[];
 }
 
@@ -15,12 +24,17 @@ export interface JobMatch {
  * Match jobs against a saved search criteria
  */
 export async function findMatchingJobs(
-  savedSearch: ISavedSearch | any,
+  savedSearch: ISavedSearch,
   sinceDate?: Date
 ): Promise<JobMatch[]> {
   // Build query for published jobs
   // Note: Database connection should be established by the caller
-  const query: any = {
+  interface JobQuery {
+    published: { $ne: boolean };
+    createdAt?: { $gte: Date };
+  }
+  
+  const query: JobQuery = {
     published: { $ne: false }, // Exclude only explicitly unpublished jobs
   };
 
@@ -34,7 +48,7 @@ export async function findMatchingJobs(
   const jobs = await Job.find(query)
     .populate('recruiter', 'name email')
     .sort({ createdAt: -1 })
-    .lean() as any[];
+    .lean() as unknown as PopulatedJob[];
   
   // Ensure we have an array
   const jobsArray = Array.isArray(jobs) ? jobs : [];

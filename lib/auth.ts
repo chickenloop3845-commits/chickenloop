@@ -23,7 +23,7 @@ export function verifyAuth(request: NextRequest): JWTPayload | null {
       return null;
     }
     return verifyToken(token);
-  } catch (error) {
+  } catch {
     return null;
   }
 }

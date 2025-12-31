@@ -8,14 +8,14 @@ export interface IAuditLog extends Document {
   userEmail: string;
   userName: string;
   changes?: {
-    before?: any;
-    after?: any;
+    before?: Record<string, unknown>;
+    after?: Record<string, unknown>;
     fields?: string[];
   };
   reason?: string;
   ipAddress?: string;
   userAgent?: string;
-  metadata?: Record<string, any>;
+  metadata?: Record<string, unknown>;
   createdAt: Date;
 }
 

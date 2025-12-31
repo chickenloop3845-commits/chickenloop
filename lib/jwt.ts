@@ -11,7 +11,7 @@ export interface JWTPayload {
 
 export function generateToken(user: IUser): string {
   const payload: JWTPayload = {
-    userId: (user._id as any).toString(),
+    userId: user._id.toString(),
     email: user.email,
     role: user.role,
   };
@@ -22,7 +22,7 @@ export function generateToken(user: IUser): string {
 export function verifyToken(token: string): JWTPayload {
   try {
     return jwt.verify(token, JWT_SECRET) as JWTPayload;
-  } catch (error) {
+  } catch {
     throw new Error('Invalid or expired token');
   }
 }

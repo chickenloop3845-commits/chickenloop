@@ -7,10 +7,9 @@
  * Normalizes an image URL to ensure it works in both local and production environments
  * 
  * @param url - The image URL (can be `/uploads/...` or `https://...blob.vercel-storage.com/...`)
- * @param baseUrl - Optional base URL for the site (defaults to empty string for relative URLs)
  * @returns A normalized URL that works in the current environment
  */
-export function normalizeImageUrl(url: string | undefined | null, baseUrl: string = ''): string {
+export function normalizeImageUrl(url: string | undefined | null): string {
   if (!url) {
     return '/placeholder-image.png'; // You can add a placeholder image later
   }

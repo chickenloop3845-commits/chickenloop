@@ -359,7 +359,7 @@ This is a ${frequencyText} job alert. You're receiving this because you have an 
  * Sent to: Recruiter
  */
 export function getApplicationWithdrawnEmail(data: ApplicationEmailData): { subject: string; html: string; text: string } {
-  const { candidateName, candidateEmail, recruiterName, recruiterEmail, jobTitle, jobCompany, jobLocation } = data;
+  const { candidateName, candidateEmail, recruiterName, jobTitle, jobCompany, jobLocation } = data;
 
   const subject = `Application Withdrawn: ${candidateName} withdrew from ${jobTitle || 'your job posting'}`;
 
