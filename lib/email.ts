@@ -70,7 +70,7 @@ export async function sendEmail(options: SendEmailOptions): Promise<{ success: b
     }
 
     // Build email payload - Resend requires at least one of html or text
-    interface ResendEmailPayload {
+    const emailPayload: {
       from: string;
       to: string[];
       subject: string;
@@ -80,20 +80,16 @@ export async function sendEmail(options: SendEmailOptions): Promise<{ success: b
       cc?: string[];
       bcc?: string[];
       tags?: Array<{ name: string; value: string }>;
-    }
-    
-    const emailPayload: ResendEmailPayload = {
+    } = {
       from: from || getFromEmail(),
       to: Array.isArray(to) ? to : [to],
       subject,
     };
 
-    // Only include html if provided (Resend requires string, not undefined)
+    // Add html or text (at least one is required)
     if (html) {
       emailPayload.html = html;
     }
-
-    // Only include text if provided
     if (text) {
       emailPayload.text = text;
     }
@@ -115,7 +111,7 @@ export async function sendEmail(options: SendEmailOptions): Promise<{ success: b
       emailPayload.tags = tags;
     }
 
-    const result = await client.emails.send(emailPayload);
+    const result = await client.emails.send(emailPayload as Parameters<typeof client.emails.send>[0]);
 
     if (result.error) {
       console.error('Resend API error:', result.error);
