@@ -84,7 +84,7 @@ check_branch() {
     echo ""
     echo "🔍 Searching for similar branch names..."
     
-    local similar_branches=$(git branch -a | grep -i "$branch_name" | head -5)
+    local similar_branches=$(git branch -a | grep -iF "$branch_name" | head -5)
     if [ -n "$similar_branches" ]; then
         echo ""
         echo "   Similar branches found:"
@@ -101,9 +101,9 @@ check_user_access() {
     echo ""
     echo "👤 Checking user access..."
     
-    # Get git config
-    local git_user=$(git config user.name)
-    local git_email=$(git config user.email)
+    # Get git config with error handling
+    local git_user=$(git config --get user.name 2>/dev/null || echo "")
+    local git_email=$(git config --get user.email 2>/dev/null || echo "")
     
     if [ -n "$git_user" ] && [ -n "$git_email" ]; then
         echo "✅ Git user configured"
@@ -152,8 +152,11 @@ main() {
     
     if [ -n "$1" ]; then
         # Branch name provided
-        check_branch "$1" || result=$?
-        result=${result:-0}
+        # Capture result without triggering set -e
+        set +e
+        check_branch "$1"
+        result=$?
+        set -e
         
         list_branches
         
