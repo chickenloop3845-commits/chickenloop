@@ -44,14 +44,14 @@ export async function findMatchingJobs(
   }
 
   // Fetch all jobs that might match
-  // Use explicit typing to avoid TypeScript issues with lean()
   const jobs = await Job.find(query)
     .populate('recruiter', 'name email')
     .sort({ createdAt: -1 })
-    .lean() as unknown as PopulatedJob[];
+    .lean();
   
-  // Ensure we have an array
-  const jobsArray = Array.isArray(jobs) ? jobs : [];
+  // Type assertion: lean() with populate returns objects that match PopulatedJob
+  // Using 'as unknown' first because mongoose's type inference doesn't handle populated fields
+  const jobsArray = (Array.isArray(jobs) ? jobs : []) as unknown as PopulatedJob[];
 
   // Apply filters (matching frontend logic)
   const matches: JobMatch[] = [];

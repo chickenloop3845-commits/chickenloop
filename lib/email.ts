@@ -111,7 +111,9 @@ export async function sendEmail(options: SendEmailOptions): Promise<{ success: b
       emailPayload.tags = tags;
     }
 
-    const result = await client.emails.send(emailPayload as Parameters<typeof client.emails.send>[0]);
+    // Send email with type assertion for compatibility
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const result = await client.emails.send(emailPayload as any);
 
     if (result.error) {
       console.error('Resend API error:', result.error);
