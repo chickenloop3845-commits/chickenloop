@@ -469,4 +469,4 @@ chmod +x .git/hooks/pre-commit
 ## 🧠 Agent Rules & Preferences
 
 ### Browser Management
-- **Tab Minimization**: If too many browser tabs are open, determine the minimum amount needed for the current context and close the rest. Ideally keep only essential tabs open.
+- **Tab Minimization**: When opening a new browser tab, check if too many tabs are open. If so, determine the minimum amount needed for the current context and close the rest. Ideally keep only essential tabs open.
