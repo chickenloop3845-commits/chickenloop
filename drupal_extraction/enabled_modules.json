@@ -1,0 +1,1598 @@
+{
+    "acl": {
+        "package": "Access control",
+        "name": "ACL (acl)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-1.4"
+    },
+    "content_access": {
+        "package": "Access control",
+        "name": "Content Access (content_access)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-1.2-beta3"
+    },
+    "content_access_rules": {
+        "package": "Access control",
+        "name": "Content Access Rules Integrations (content_access_rules)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-1.2-beta3"
+    },
+    "admin_menu": {
+        "package": "Administration",
+        "name": "Administration menu (admin_menu)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-3.0-rc6"
+    },
+    "admin_menu_toolbar": {
+        "package": "Administration",
+        "name": "Administration menu Toolbar style (admin_menu_toolbar)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-3.0-rc6"
+    },
+    "admin_views": {
+        "package": "Administration",
+        "name": "Administration views (admin_views)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-1.7"
+    },
+    "block_country": {
+        "package": "Block",
+        "name": "Block Country (block_country)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-1.0"
+    },
+    "ctools": {
+        "package": "Chaos tool suite",
+        "name": "Chaos tools (ctools)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-1.19"
+    },
+    "page_manager": {
+        "package": "Chaos tool suite",
+        "name": "Page manager (page_manager)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-1.19"
+    },
+    "pm_existing_pages": {
+        "package": "Chaos tool suite",
+        "name": "Page manager existing pages (pm_existing_pages)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-1.4"
+    },
+    "views_content": {
+        "package": "Chaos tool suite",
+        "name": "Views content panes (views_content)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-1.19"
+    },
+    "context": {
+        "package": "Context",
+        "name": "Context (context)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-3.12"
+    },
+    "context_ui": {
+        "package": "Context",
+        "name": "Context UI (context_ui)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-3.12"
+    },
+    "context_admin": {
+        "package": "Contextual Administration",
+        "name": "Contextual Administration (context_admin)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-1.2"
+    },
+    "contextual_view_modes": {
+        "package": "Contextual View Modes",
+        "name": "Contextual View Modes (contextual_view_modes)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-3.1"
+    },
+    "contextual_view_modes_nodes": {
+        "package": "Contextual View Modes",
+        "name": "Contextual View Modes Nodes (contextual_view_modes_nodes)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-3.1"
+    },
+    "contextual_view_modes_users": {
+        "package": "Contextual View Modes",
+        "name": "Contextual View Modes Users (contextual_view_modes_users)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-3.1"
+    },
+    "block": {
+        "package": "Core",
+        "name": "Block (block)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.82"
+    },
+    "color": {
+        "package": "Core",
+        "name": "Color (color)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.82"
+    },
+    "comment": {
+        "package": "Core",
+        "name": "Comment (comment)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.82"
+    },
+    "contextual": {
+        "package": "Core",
+        "name": "Contextual links (contextual)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.82"
+    },
+    "dashboard": {
+        "package": "Core",
+        "name": "Dashboard (dashboard)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.82"
+    },
+    "dblog": {
+        "package": "Core",
+        "name": "Database logging (dblog)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.82"
+    },
+    "field": {
+        "package": "Core",
+        "name": "Field (field)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.82"
+    },
+    "field_sql_storage": {
+        "package": "Core",
+        "name": "Field SQL storage (field_sql_storage)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.82"
+    },
+    "field_ui": {
+        "package": "Core",
+        "name": "Field UI (field_ui)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.82"
+    },
+    "file": {
+        "package": "Core",
+        "name": "File (file)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.82"
+    },
+    "filter": {
+        "package": "Core",
+        "name": "Filter (filter)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.82"
+    },
+    "help": {
+        "package": "Core",
+        "name": "Help (help)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.82"
+    },
+    "image": {
+        "package": "Core",
+        "name": "Image (image)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.82"
+    },
+    "list": {
+        "package": "Core",
+        "name": "List (list)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.82"
+    },
+    "locale": {
+        "package": "Core",
+        "name": "Locale (locale)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.82"
+    },
+    "menu": {
+        "package": "Core",
+        "name": "Menu (menu)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.82"
+    },
+    "node": {
+        "package": "Core",
+        "name": "Node (node)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.82"
+    },
+    "number": {
+        "package": "Core",
+        "name": "Number (number)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.82"
+    },
+    "options": {
+        "package": "Core",
+        "name": "Options (options)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.82"
+    },
+    "overlay": {
+        "package": "Core",
+        "name": "Overlay (overlay)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.82"
+    },
+    "path": {
+        "package": "Core",
+        "name": "Path (path)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.82"
+    },
+    "rdf": {
+        "package": "Core",
+        "name": "RDF (rdf)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.82"
+    },
+    "shortcut": {
+        "package": "Core",
+        "name": "Shortcut (shortcut)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.82"
+    },
+    "statistics": {
+        "package": "Core",
+        "name": "Statistics (statistics)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.82"
+    },
+    "system": {
+        "package": "Core",
+        "name": "System (system)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.82"
+    },
+    "taxonomy": {
+        "package": "Core",
+        "name": "Taxonomy (taxonomy)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.82"
+    },
+    "text": {
+        "package": "Core",
+        "name": "Text (text)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.82"
+    },
+    "trigger": {
+        "package": "Core",
+        "name": "Trigger (trigger)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.82"
+    },
+    "update": {
+        "package": "Core",
+        "name": "Update manager (update)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.82"
+    },
+    "user": {
+        "package": "Core",
+        "name": "User (user)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.82"
+    },
+    "date": {
+        "package": "Date\/Time",
+        "name": "Date (date)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-2.11"
+    },
+    "date_all_day": {
+        "package": "Date\/Time",
+        "name": "Date All Day (date_all_day)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-2.11"
+    },
+    "date_api": {
+        "package": "Date\/Time",
+        "name": "Date API (date_api)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-2.11"
+    },
+    "date_context": {
+        "package": "Date\/Time",
+        "name": "Date Context (date_context)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-2.11"
+    },
+    "date_popup": {
+        "package": "Date\/Time",
+        "name": "Date Popup (date_popup)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-2.11"
+    },
+    "date_repeat": {
+        "package": "Date\/Time",
+        "name": "Date Repeat API (date_repeat)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-2.11"
+    },
+    "date_repeat_field": {
+        "package": "Date\/Time",
+        "name": "Date Repeat Field (date_repeat_field)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-2.11"
+    },
+    "date_tools": {
+        "package": "Date\/Time",
+        "name": "Date Tools (date_tools)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-2.11"
+    },
+    "date_views": {
+        "package": "Date\/Time",
+        "name": "Date Views (date_views)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-2.11"
+    },
+    "migrate_extras": {
+        "package": "Development",
+        "name": "Migrate Extras (migrate_extras)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-2.5"
+    },
+    "node_type_count": {
+        "package": "Development",
+        "name": "Node Type count (node_type_count)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-1.2"
+    },
+    "ds": {
+        "package": "Display Suite",
+        "name": "Display Suite (ds)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-2.16"
+    },
+    "ds_extras": {
+        "package": "Display Suite",
+        "name": "Display Suite Extras (ds_extras)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-2.16"
+    },
+    "ds_forms": {
+        "package": "Display Suite",
+        "name": "Display Suite Forms (ds_forms)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-2.16"
+    },
+    "ds_ui": {
+        "package": "Display Suite",
+        "name": "Display Suite UI (ds_ui)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-2.16"
+    },
+    "eck_services": {
+        "package": "ECK",
+        "name": "ECK Services (eck_services)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-2.0-rc10"
+    },
+    "eck": {
+        "package": "ECK",
+        "name": "Entity Construction Kit (eck)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-2.0-rc10"
+    },
+    "simple_fb_connect": {
+        "package": "Facebook",
+        "name": "Simple FB Connect (simple_fb_connect)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-2.9"
+    },
+    "features": {
+        "package": "Features",
+        "name": "Features (features)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-2.13"
+    },
+    "feeds": {
+        "package": "Feeds",
+        "name": "Feeds (feeds)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-2.0-beta5"
+    },
+    "feeds_ui": {
+        "package": "Feeds",
+        "name": "Feeds Admin UI (feeds_ui)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-2.0-beta5"
+    },
+    "feeds_import": {
+        "package": "Feeds",
+        "name": "Feeds Import (feeds_import)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-2.0-beta5"
+    },
+    "feeds_news": {
+        "package": "Feeds",
+        "name": "Feeds News (feeds_news)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-2.0-beta5"
+    },
+    "addressfield": {
+        "package": "Fields",
+        "name": "Address Field (addressfield)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-1.3"
+    },
+    "computed_field": {
+        "package": "Fields",
+        "name": "Computed Field (computed_field)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-1.1"
+    },
+    "content_taxonomy": {
+        "package": "Fields",
+        "name": "Content Taxonomy (content_taxonomy)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-1.0-rc1"
+    },
+    "content_taxonomy_autocomplete": {
+        "package": "Fields",
+        "name": "Content Taxonomy Autocomplete (content_taxonomy_autocomplete)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-1.0-rc1"
+    },
+    "email": {
+        "package": "Fields",
+        "name": "Email (email)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-1.3"
+    },
+    "entityreference": {
+        "package": "Fields",
+        "name": "Entity Reference (entityreference)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-1.5"
+    },
+    "field_collection": {
+        "package": "Fields",
+        "name": "Field Collection (field_collection)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-1.2"
+    },
+    "field_delimiter": {
+        "package": "Fields",
+        "name": "Field Delimiter (field_delimiter)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-1.2"
+    },
+    "field_permissions": {
+        "package": "Fields",
+        "name": "Field Permissions (field_permissions)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-1.1"
+    },
+    "geofield": {
+        "package": "Fields",
+        "name": "Geofield (geofield)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-2.4"
+    },
+    "imagefield_tokens": {
+        "package": "Fields",
+        "name": "ImageField Tokens (imagefield_tokens)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-1.12"
+    },
+    "link": {
+        "package": "Fields",
+        "name": "Link (link)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-1.11"
+    },
+    "taxonomy_formatter": {
+        "package": "Fields",
+        "name": "Taxonomy Formatter (taxonomy_formatter)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-1.4"
+    },
+    "viewfield": {
+        "package": "Fields",
+        "name": "Viewfield (viewfield)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-2.2"
+    },
+    "opengraph_filter": {
+        "package": "Filters",
+        "name": "OpenGraph Filter (opengraph_filter)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-1.0-beta1"
+    },
+    "flag": {
+        "package": "Flags",
+        "name": "Flag (flag)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-3.9"
+    },
+    "flickr": {
+        "package": "Flickr",
+        "name": "Flickr (flickr)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-1.9"
+    },
+    "flickr_block": {
+        "package": "Flickr",
+        "name": "Flickr Block (flickr_block)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-1.9"
+    },
+    "flickrfield": {
+        "package": "Flickr",
+        "name": "Flickr Field (flickrfield)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-1.9"
+    },
+    "flickr_filter": {
+        "package": "Flickr",
+        "name": "Flickr Filter (flickr_filter)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-1.9"
+    },
+    "flickr_sets": {
+        "package": "Flickr",
+        "name": "Flickr Sets (flickr_sets)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-1.9"
+    },
+    "flickr_tags": {
+        "package": "Flickr",
+        "name": "Flickr Tags (flickr_tags)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-1.9"
+    },
+    "geolocation": {
+        "package": "Geolocation",
+        "name": "Geolocation (geolocation)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-1.7"
+    },
+    "geolocation_googlemaps": {
+        "package": "Geolocation",
+        "name": "Geolocation Google Maps (geolocation_googlemaps)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-1.7"
+    },
+    "geolocation_html5": {
+        "package": "Geolocation",
+        "name": "Geolocation HTML5 (geolocation_html5)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-1.7"
+    },
+    "ip2country": {
+        "package": "Location",
+        "name": "IP-based determination of Country (ip2country)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-1.6"
+    },
+    "phpmailer": {
+        "package": "Mail",
+        "name": "PHPMailer (phpmailer)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-3.1"
+    },
+    "colorbox": {
+        "package": "Media",
+        "name": "Colorbox (colorbox)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-2.17"
+    },
+    "video_embed_brightcove": {
+        "package": "Media",
+        "name": "Video Embed Brightcove (video_embed_brightcove)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-2.0-beta11"
+    },
+    "video_embed_facebook": {
+        "package": "Media",
+        "name": "Video Embed Facebook (video_embed_facebook)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-2.0-beta11"
+    },
+    "video_embed_field": {
+        "package": "Media",
+        "name": "Video Embed Field (video_embed_field)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-2.0-beta11"
+    },
+    "message": {
+        "package": "Message",
+        "name": "Message (message)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-1.12"
+    },
+    "migrate": {
+        "package": "Migration",
+        "name": "Migrate (migrate)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-2.11"
+    },
+    "i18n": {
+        "package": "Multilingual - Internationalization",
+        "name": "Internationalization (i18n)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-1.31"
+    },
+    "node_export": {
+        "package": "Node export",
+        "name": "Node export (node_export)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-3.1"
+    },
+    "node_export_features": {
+        "package": "Node export",
+        "name": "Node export features (node_export_features)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-3.1"
+    },
+    "node_export_features_ui": {
+        "package": "Node export",
+        "name": "Node Export Features UI (node_export_features_ui)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-3.1"
+    },
+    "advuser": {
+        "package": "Other",
+        "name": "Advanced User Management (advuser)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-3.0-beta1"
+    },
+    "astra_security": {
+        "package": "Other",
+        "name": "Astra Security (Drupal) (astra_security)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-1.0"
+    },
+    "better_formats": {
+        "package": "Other",
+        "name": "Better Formats (better_formats)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-1.0-beta2"
+    },
+    "block_class": {
+        "package": "Other",
+        "name": "Block Class (block_class)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-2.4"
+    },
+    "bulk_apply_comment_settings": {
+        "package": "Other",
+        "name": "Bulk apply comment settings (bulk_apply_comment_settings)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-1.0"
+    },
+    "cron_debug": {
+        "package": "Other",
+        "name": "Cron Debug (cron_debug)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-1.2"
+    },
+    "entity": {
+        "package": "Other",
+        "name": "Entity API (entity)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-1.9"
+    },
+    "entity_token": {
+        "package": "Other",
+        "name": "Entity tokens (entity_token)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-1.9"
+    },
+    "fblikebutton": {
+        "package": "Other",
+        "name": "Facebook Like Button (fblikebutton)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-2.6"
+    },
+    "featured_content": {
+        "package": "Other",
+        "name": "Featured Content (featured_content)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-1.6"
+    },
+    "field_formatter_settings": {
+        "package": "Other",
+        "name": "Field formatter settings API (field_formatter_settings)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-1.1"
+    },
+    "geocoder": {
+        "package": "Other",
+        "name": "Geocoder (geocoder)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-1.7"
+    },
+    "geofield_map": {
+        "package": "Other",
+        "name": "Geofield Map (geofield_map)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-2.4"
+    },
+    "geophp": {
+        "package": "Other",
+        "name": "geoPHP (geophp)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-1.8"
+    },
+    "ip_geoloc": {
+        "package": "Other",
+        "name": "IP Geolocation Views \u0026 Maps (ip_geoloc)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-1.30"
+    },
+    "job_scheduler": {
+        "package": "Other",
+        "name": "Job Scheduler (job_scheduler)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-2.0"
+    },
+    "job_scheduler_trigger": {
+        "package": "Other",
+        "name": "Job Scheduler Trigger (job_scheduler_trigger)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-2.0"
+    },
+    "libraries": {
+        "package": "Other",
+        "name": "Libraries (libraries)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-2.5"
+    },
+    "nodeownership": {
+        "package": "Other",
+        "name": "Node Ownership (nodeownership)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-1.5"
+    },
+    "node_save_redirect": {
+        "package": "Other",
+        "name": "Node Save Redirect (node_save_redirect)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-1.3"
+    },
+    "pathauto": {
+        "package": "Other",
+        "name": "Pathauto (pathauto)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-1.3"
+    },
+    "pinterest_hover": {
+        "package": "Other",
+        "name": "Pinterest Hover button (pinterest_hover)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-1.1"
+    },
+    "profile2": {
+        "package": "Other",
+        "name": "Profile2 (profile2)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-1.7"
+    },
+    "profile2_page": {
+        "package": "Other",
+        "name": "Profile2 pages (profile2_page)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-1.7"
+    },
+    "role_export": {
+        "package": "Other",
+        "name": "Role Export (role_export)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-1.0"
+    },
+    "security_review": {
+        "package": "Other",
+        "name": "Security Review (security_review)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-1.3"
+    },
+    "strongarm": {
+        "package": "Other",
+        "name": "Strongarm (strongarm)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-2.0"
+    },
+    "term_level": {
+        "package": "Other",
+        "name": "Term Level Field (term_level)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-1.2+4-dev"
+    },
+    "token": {
+        "package": "Other",
+        "name": "Token (token)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-1.8"
+    },
+    "tweetbutton": {
+        "package": "Other",
+        "name": "Tweetbutton (tweetbutton)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-2.0-beta2"
+    },
+    "upgrade_status": {
+        "package": "Other",
+        "name": "Upgrade status (upgrade_status)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-1.0-beta1"
+    },
+    "user_restrictions": {
+        "package": "Other",
+        "name": "User restrictions (user_restrictions)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-1.1"
+    },
+    "user_restrictions_ui": {
+        "package": "Other",
+        "name": "User restrictions UI (user_restrictions_ui)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-1.1"
+    },
+    "xautoload": {
+        "package": "Other",
+        "name": "X Autoload (xautoload)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-5.8"
+    },
+    "panels_mini": {
+        "package": "Panels",
+        "name": "Mini panels (panels_mini)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-3.10"
+    },
+    "panels": {
+        "package": "Panels",
+        "name": "Panels (panels)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-3.10"
+    },
+    "recruiter_cloudy": {
+        "package": "Recruiter",
+        "name": "Recruiter cloudy (recruiter_cloudy)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-1.3"
+    },
+    "recruiter_common": {
+        "package": "Recruiter",
+        "name": "Recruiter common (recruiter_common)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-1.3"
+    },
+    "recruiter_front": {
+        "package": "Recruiter",
+        "name": "Recruiter Front (recruiter_front)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-1.3"
+    },
+    "recruiter_job": {
+        "package": "Recruiter",
+        "name": "Recruiter job (recruiter_job)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-1.3"
+    },
+    "recruiter_job_search": {
+        "package": "Recruiter",
+        "name": "Recruiter job search (recruiter_job_search)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-1.3"
+    },
+    "recruiter_job_search_notifications": {
+        "package": "Recruiter",
+        "name": "Recruiter job search notifications (recruiter_job_search_notifications)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-1.3"
+    },
+    "recruiter_menu": {
+        "package": "Recruiter",
+        "name": "Recruiter menu (recruiter_menu)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-1.3"
+    },
+    "recruiter_register": {
+        "package": "Recruiter",
+        "name": "Recruiter register (recruiter_register)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-1.3"
+    },
+    "recruiter_resume": {
+        "package": "Recruiter",
+        "name": "Recruiter resume (recruiter_resume)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-1.3"
+    },
+    "recruiter_resume_search": {
+        "package": "Recruiter",
+        "name": "Recruiter resume search (recruiter_resume_search)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-1.3"
+    },
+    "recruiter_resume_search_notifications": {
+        "package": "Recruiter",
+        "name": "Recruiter resume search notifications (recruiter_resume_search_notifications)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-1.3"
+    },
+    "recruiter_search": {
+        "package": "Recruiter",
+        "name": "Recruiter search (recruiter_search)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-1.3"
+    },
+    "rules": {
+        "package": "Rules",
+        "name": "Rules (rules)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-2.12"
+    },
+    "rules_link": {
+        "package": "Rules",
+        "name": "Rules Link (rules_link)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-1.1"
+    },
+    "rules_admin": {
+        "package": "Rules",
+        "name": "Rules UI (rules_admin)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-2.12"
+    },
+    "schemaorg": {
+        "package": "Schema.org",
+        "name": "Schema.org (schemaorg)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-1.0-rc1"
+    },
+    "schemaorg_contrib": {
+        "package": "Schema.org",
+        "name": "Schema.org support for contributed modules (schemaorg_contrib)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-1.0-rc1"
+    },
+    "schemaorg_ui": {
+        "package": "Schema.org",
+        "name": "Schema.org UI (schemaorg_ui)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-1.0-rc1"
+    },
+    "search_api_db": {
+        "package": "Search",
+        "name": "Database search (search_api_db)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-1.8"
+    },
+    "search_api": {
+        "package": "Search",
+        "name": "Search API (search_api)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-1.28"
+    },
+    "search_api_saved_searches": {
+        "package": "Search",
+        "name": "Search API saved searches (search_api_saved_searches)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-1.7"
+    },
+    "search_api_facetapi": {
+        "package": "Search",
+        "name": "Search Facets (search_api_facetapi)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-1.28"
+    },
+    "search_api_views": {
+        "package": "Search",
+        "name": "Search Views (search_api_views)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-1.28"
+    },
+    "current_search": {
+        "package": "Search Toolkit",
+        "name": "Current Search Blocks (current_search)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-1.6"
+    },
+    "facetapi": {
+        "package": "Search Toolkit",
+        "name": "Facet API (facetapi)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-1.6"
+    },
+    "facetapi_pretty_paths": {
+        "package": "Search Toolkit",
+        "name": "Facet API Pretty Paths (facetapi_pretty_paths)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-1.4"
+    },
+    "metatag": {
+        "package": "SEO",
+        "name": "Metatag (metatag)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-1.28"
+    },
+    "metatag_importer": {
+        "package": "SEO",
+        "name": "Metatag Importer (metatag_importer)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-1.28"
+    },
+    "metatag_app_links": {
+        "package": "SEO",
+        "name": "Metatag: App Links (metatag_app_links)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-1.28"
+    },
+    "metatag_context": {
+        "package": "SEO",
+        "name": "Metatag: Context (metatag_context)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-1.28"
+    },
+    "metatag_dc": {
+        "package": "SEO",
+        "name": "Metatag: Dublin Core (metatag_dc)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-1.28"
+    },
+    "metatag_dc_advanced": {
+        "package": "SEO",
+        "name": "Metatag: Dublin Core Advanced (metatag_dc_advanced)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-1.28"
+    },
+    "metatag_facebook": {
+        "package": "SEO",
+        "name": "Metatag: Facebook (metatag_facebook)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-1.28"
+    },
+    "metatag_favicons": {
+        "package": "SEO",
+        "name": "Metatag: favicons (metatag_favicons)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-1.28"
+    },
+    "metatag_google_plus": {
+        "package": "SEO",
+        "name": "Metatag: Google+ (metatag_google_plus)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-1.28"
+    },
+    "metatag_hreflang": {
+        "package": "SEO",
+        "name": "Metatag: hreflang (metatag_hreflang)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-1.28"
+    },
+    "metatag_mobile": {
+        "package": "SEO",
+        "name": "Metatag: Mobile \u0026 UI Adjustments (metatag_mobile)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-1.28"
+    },
+    "metatag_opengraph": {
+        "package": "SEO",
+        "name": "Metatag: OpenGraph (metatag_opengraph)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-1.28"
+    },
+    "metatag_opengraph_products": {
+        "package": "SEO",
+        "name": "Metatag: OpenGraph Products (metatag_opengraph_products)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-1.28"
+    },
+    "metatag_panels": {
+        "package": "SEO",
+        "name": "Metatag: Panels (metatag_panels)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-1.28"
+    },
+    "metatag_twitter_cards": {
+        "package": "SEO",
+        "name": "Metatag: Twitter Cards (metatag_twitter_cards)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-1.28"
+    },
+    "metatag_verification": {
+        "package": "SEO",
+        "name": "Metatag: Verification (metatag_verification)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-1.28"
+    },
+    "metatag_views": {
+        "package": "SEO",
+        "name": "Metatag: Views (metatag_views)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-1.28"
+    },
+    "schema_metatag": {
+        "package": "SEO",
+        "name": "Schema.org Metatag (schema_metatag)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-1.4"
+    },
+    "schema_job_posting": {
+        "package": "SEO",
+        "name": "Schema.org: JobPosting (schema_job_posting)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-1.4"
+    },
+    "services": {
+        "package": "Services",
+        "name": "Services (services)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-3.27"
+    },
+    "uuid_services": {
+        "package": "Services - resources",
+        "name": "UUID Services (uuid_services)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-1.3"
+    },
+    "record_shorten": {
+        "package": "Shorten URLs",
+        "name": "Record Shorten (record_shorten)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-1.4"
+    },
+    "shorten": {
+        "package": "Shorten URLs",
+        "name": "Shorten URLs (shorten)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-1.4"
+    },
+    "shortener": {
+        "package": "Shorten URLs",
+        "name": "Shorten URLs Input Filter (shortener)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-1.4"
+    },
+    "simpleads_campaigns": {
+        "package": "SimpleAds",
+        "name": "Campaigns (simpleads_campaigns)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-1.9"
+    },
+    "simpleads": {
+        "package": "SimpleAds",
+        "name": "SimpleAds (simpleads)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-1.9"
+    },
+    "captcha": {
+        "package": "Spam control",
+        "name": "CAPTCHA (captcha)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-1.7"
+    },
+    "image_captcha": {
+        "package": "Spam control",
+        "name": "Image CAPTCHA (image_captcha)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-1.7"
+    },
+    "spambot": {
+        "package": "Spam control",
+        "name": "Spambot (spambot)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-1.5"
+    },
+    "googleanalytics": {
+        "package": "Statistics",
+        "name": "Google Analytics (googleanalytics)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-2.6"
+    },
+    "statuses": {
+        "package": "Statuses",
+        "name": "Statuses (statuses)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-1.0-beta2"
+    },
+    "taxonomy_xml": {
+        "package": "Taxonomy",
+        "name": "Taxonomy Import\/Export via XML (taxonomy_xml)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-1.x-dev"
+    },
+    "taxonomy_manager": {
+        "package": "Taxonomy",
+        "name": "Taxonomy Manager (taxonomy_manager)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-1.1"
+    },
+    "term_merge": {
+        "package": "Taxonomy",
+        "name": "Term Merge (term_merge)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-1.4"
+    },
+    "autocomplete_deluxe": {
+        "package": "User interface",
+        "name": "Autocomplete Deluxe (autocomplete_deluxe)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-2.3"
+    },
+    "extlink": {
+        "package": "User interface",
+        "name": "External Links (extlink)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-1.21"
+    },
+    "wysiwyg": {
+        "package": "User interface",
+        "name": "Wysiwyg (wysiwyg)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-2.9"
+    },
+    "wysiwyg_linebreaks": {
+        "package": "User interface",
+        "name": "Wysiwyg Linebreaks (wysiwyg_linebreaks)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-1.8"
+    },
+    "uuid": {
+        "package": "UUID",
+        "name": "Universally Unique ID (uuid)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-1.3"
+    },
+    "uuid_path": {
+        "package": "UUID",
+        "name": "UUID Path (uuid_path)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-1.3"
+    },
+    "variable": {
+        "package": "Variable",
+        "name": "Variable (variable)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-2.5"
+    },
+    "views": {
+        "package": "Views",
+        "name": "Views (views)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-3.24"
+    },
+    "views_accordion": {
+        "package": "Views",
+        "name": "Views Accordion (views_accordion)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-1.6"
+    },
+    "views_block_area": {
+        "package": "Views",
+        "name": "Views block area (views_block_area)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-1.2"
+    },
+    "views_bulk_operations": {
+        "package": "Views",
+        "name": "Views Bulk Operations (views_bulk_operations)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-3.6"
+    },
+    "views_field_view": {
+        "package": "Views",
+        "name": "Views Field View (views_field_view)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-1.2"
+    },
+    "views_fluid_grid": {
+        "package": "Views",
+        "name": "Views Fluid Grid (views_fluid_grid)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-3.0"
+    },
+    "views_responsive_grid": {
+        "package": "Views",
+        "name": "Views Responsive Grid (views_responsive_grid)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-1.3"
+    },
+    "views_filters_selective": {
+        "package": "Views",
+        "name": "Views Selective Exposed Filters (views_filters_selective)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-1.6"
+    },
+    "views_ui": {
+        "package": "Views",
+        "name": "Views UI (views_ui)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-3.24"
+    },
+    "fivestar": {
+        "package": "Voting",
+        "name": "Fivestar (fivestar)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-2.3"
+    },
+    "votingapi": {
+        "package": "Voting",
+        "name": "Voting API (votingapi)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-2.15"
+    },
+    "webform": {
+        "package": "Webform",
+        "name": "Webform (webform)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-4.24"
+    },
+    "webform_node_element": {
+        "package": "Webform",
+        "name": "Webform Node Element (webform_node_element)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-1.2"
+    },
+    "xmlsitemap": {
+        "package": "XML sitemap",
+        "name": "XML sitemap (xmlsitemap)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-2.6"
+    },
+    "xmlsitemap_engines": {
+        "package": "XML sitemap",
+        "name": "XML sitemap engines (xmlsitemap_engines)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-2.6"
+    },
+    "xmlsitemap_menu": {
+        "package": "XML sitemap",
+        "name": "XML sitemap menu (xmlsitemap_menu)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-2.6"
+    },
+    "xmlsitemap_node": {
+        "package": "XML sitemap",
+        "name": "XML sitemap node (xmlsitemap_node)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-2.6"
+    },
+    "xmlsitemap_taxonomy": {
+        "package": "XML sitemap",
+        "name": "XML sitemap taxonomy (xmlsitemap_taxonomy)",
+        "type": "Module",
+        "status": "Enabled",
+        "version": "7.x-2.6"
+    }
+}

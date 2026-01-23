@@ -1,0 +1,4239 @@
+{
+    "body": {
+        "type": "text_with_summary",
+        "cardinality": "1",
+        "module": "text",
+        "storage": {
+            "type": "field_sql_storage",
+            "settings": [],
+            "module": "field_sql_storage",
+            "active": "1",
+            "details": {
+                "sql": {
+                    "FIELD_LOAD_CURRENT": {
+                        "field_data_body": {
+                            "value": "body_value",
+                            "summary": "body_summary",
+                            "format": "body_format"
+                        }
+                    },
+                    "FIELD_LOAD_REVISION": {
+                        "field_revision_body": {
+                            "value": "body_value",
+                            "summary": "body_summary",
+                            "format": "body_format"
+                        }
+                    }
+                }
+            }
+        },
+        "instances": [
+            {
+                "entity_type": "node",
+                "bundle": "job_per_template",
+                "label": "Job description",
+                "required": 1
+            },
+            {
+                "entity_type": "node",
+                "bundle": "ad_test_in_grid_type",
+                "label": "Body",
+                "required": 0
+            },
+            {
+                "entity_type": "node",
+                "bundle": "ad_test_type",
+                "label": "Body",
+                "required": false
+            },
+            {
+                "entity_type": "node",
+                "bundle": "article",
+                "label": "Body",
+                "required": false
+            },
+            {
+                "entity_type": "node",
+                "bundle": "page",
+                "label": "Body",
+                "required": false
+            },
+            {
+                "entity_type": "node",
+                "bundle": "job_application",
+                "label": "Body",
+                "required": 0
+            },
+            {
+                "entity_type": "node",
+                "bundle": "job_per_link",
+                "label": "Description",
+                "required": 1
+            },
+            {
+                "entity_type": "node",
+                "bundle": "kitesurf_centers",
+                "label": "Body",
+                "required": 0
+            },
+            {
+                "entity_type": "node",
+                "bundle": "kitesurf_centers_countries",
+                "label": "Body",
+                "required": false
+            },
+            {
+                "entity_type": "node",
+                "bundle": "date_migrate_example",
+                "label": "Body",
+                "required": false
+            },
+            {
+                "entity_type": "node",
+                "bundle": "test_type",
+                "label": "Body",
+                "required": false
+            },
+            {
+                "entity_type": "node",
+                "bundle": "website_listing",
+                "label": "Body",
+                "required": 0
+            }
+        ]
+    },
+    "field_job_email": {
+        "type": "email",
+        "cardinality": "1",
+        "module": "email",
+        "storage": {
+            "type": "field_sql_storage",
+            "settings": [],
+            "module": "field_sql_storage",
+            "active": "1",
+            "details": {
+                "sql": {
+                    "FIELD_LOAD_CURRENT": {
+                        "field_data_field_job_email": {
+                            "email": "field_job_email_email"
+                        }
+                    },
+                    "FIELD_LOAD_REVISION": {
+                        "field_revision_field_job_email": {
+                            "email": "field_job_email_email"
+                        }
+                    }
+                }
+            }
+        },
+        "instances": [
+            {
+                "entity_type": "node",
+                "bundle": "job_per_template",
+                "label": "Application email",
+                "required": 1
+            },
+            {
+                "entity_type": "node",
+                "bundle": "job_per_link",
+                "label": "Application email",
+                "required": 0
+            }
+        ]
+    },
+    "field_job_employment_type_term": {
+        "type": "taxonomy_term_reference",
+        "cardinality": "-1",
+        "module": "taxonomy",
+        "storage": {
+            "type": "field_sql_storage",
+            "settings": [],
+            "module": "field_sql_storage",
+            "active": "1",
+            "details": {
+                "sql": {
+                    "FIELD_LOAD_CURRENT": {
+                        "field_data_field_job_employment_type_term": {
+                            "tid": "field_job_employment_type_term_tid"
+                        }
+                    },
+                    "FIELD_LOAD_REVISION": {
+                        "field_revision_field_job_employment_type_term": {
+                            "tid": "field_job_employment_type_term_tid"
+                        }
+                    }
+                }
+            }
+        },
+        "instances": [
+            {
+                "entity_type": "node",
+                "bundle": "job_per_template",
+                "label": "Employment type",
+                "required": 0
+            },
+            {
+                "entity_type": "node",
+                "bundle": "job_per_link",
+                "label": "Employment type",
+                "required": 0
+            }
+        ]
+    },
+    "field_job_experience_term": {
+        "type": "taxonomy_term_reference",
+        "cardinality": "1",
+        "module": "taxonomy",
+        "storage": {
+            "type": "field_sql_storage",
+            "settings": [],
+            "module": "field_sql_storage",
+            "active": "1",
+            "details": {
+                "sql": {
+                    "FIELD_LOAD_CURRENT": {
+                        "field_data_field_job_experience_term": {
+                            "tid": "field_job_experience_term_tid"
+                        }
+                    },
+                    "FIELD_LOAD_REVISION": {
+                        "field_revision_field_job_experience_term": {
+                            "tid": "field_job_experience_term_tid"
+                        }
+                    }
+                }
+            }
+        },
+        "instances": [
+            {
+                "entity_type": "node",
+                "bundle": "job_per_template",
+                "label": "Years of experience",
+                "required": 0
+            },
+            {
+                "entity_type": "node",
+                "bundle": "job_per_link",
+                "label": "Years of experience",
+                "required": 0
+            }
+        ]
+    },
+    "field_job_languages": {
+        "type": "taxonomy_term_reference",
+        "cardinality": "-1",
+        "module": "taxonomy",
+        "storage": {
+            "type": "field_sql_storage",
+            "settings": [],
+            "module": "field_sql_storage",
+            "active": "1",
+            "details": {
+                "sql": {
+                    "FIELD_LOAD_CURRENT": {
+                        "field_data_field_job_languages": {
+                            "tid": "field_job_languages_tid"
+                        }
+                    },
+                    "FIELD_LOAD_REVISION": {
+                        "field_revision_field_job_languages": {
+                            "tid": "field_job_languages_tid"
+                        }
+                    }
+                }
+            }
+        },
+        "instances": [
+            {
+                "entity_type": "node",
+                "bundle": "job_per_template",
+                "label": "Required languages",
+                "required": 0
+            },
+            {
+                "entity_type": "node",
+                "bundle": "job_per_link",
+                "label": "Required languages",
+                "required": 0
+            }
+        ]
+    },
+    "field_job_location": {
+        "type": "text",
+        "cardinality": "1",
+        "module": "text",
+        "storage": {
+            "type": "field_sql_storage",
+            "settings": [],
+            "module": "field_sql_storage",
+            "active": "1",
+            "details": {
+                "sql": {
+                    "FIELD_LOAD_CURRENT": {
+                        "field_data_field_job_location": {
+                            "value": "field_job_location_value",
+                            "format": "field_job_location_format"
+                        }
+                    },
+                    "FIELD_LOAD_REVISION": {
+                        "field_revision_field_job_location": {
+                            "value": "field_job_location_value",
+                            "format": "field_job_location_format"
+                        }
+                    }
+                }
+            }
+        },
+        "instances": [
+            {
+                "entity_type": "node",
+                "bundle": "job_per_template",
+                "label": "Location",
+                "required": 0
+            },
+            {
+                "entity_type": "node",
+                "bundle": "job_per_link",
+                "label": "Location",
+                "required": 0
+            }
+        ]
+    },
+    "field_job_occupational_field": {
+        "type": "taxonomy_term_reference",
+        "cardinality": "-1",
+        "module": "taxonomy",
+        "storage": {
+            "type": "field_sql_storage",
+            "settings": [],
+            "module": "field_sql_storage",
+            "active": "1",
+            "details": {
+                "sql": {
+                    "FIELD_LOAD_CURRENT": {
+                        "field_data_field_job_occupational_field": {
+                            "tid": "field_job_occupational_field_tid"
+                        }
+                    },
+                    "FIELD_LOAD_REVISION": {
+                        "field_revision_field_job_occupational_field": {
+                            "tid": "field_job_occupational_field_tid"
+                        }
+                    }
+                }
+            }
+        },
+        "instances": [
+            {
+                "entity_type": "node",
+                "bundle": "job_per_template",
+                "label": "Occupational fields",
+                "required": 1
+            },
+            {
+                "entity_type": "node",
+                "bundle": "job_per_link",
+                "label": "Occupational fields",
+                "required": 0
+            }
+        ]
+    },
+    "field_job_organization": {
+        "type": "text",
+        "cardinality": "1",
+        "module": "text",
+        "storage": {
+            "type": "field_sql_storage",
+            "settings": [],
+            "module": "field_sql_storage",
+            "active": "1",
+            "details": {
+                "sql": {
+                    "FIELD_LOAD_CURRENT": {
+                        "field_data_field_job_organization": {
+                            "value": "field_job_organization_value",
+                            "format": "field_job_organization_format"
+                        }
+                    },
+                    "FIELD_LOAD_REVISION": {
+                        "field_revision_field_job_organization": {
+                            "value": "field_job_organization_value",
+                            "format": "field_job_organization_format"
+                        }
+                    }
+                }
+            }
+        },
+        "instances": [
+            {
+                "entity_type": "node",
+                "bundle": "job_per_template",
+                "label": "Organization",
+                "required": 1
+            },
+            {
+                "entity_type": "node",
+                "bundle": "job_per_link",
+                "label": "Organization",
+                "required": 1
+            }
+        ]
+    },
+    "field_job_region": {
+        "type": "taxonomy_term_reference",
+        "cardinality": "1",
+        "module": "taxonomy",
+        "storage": {
+            "type": "field_sql_storage",
+            "settings": [],
+            "module": "field_sql_storage",
+            "active": "1",
+            "details": {
+                "sql": {
+                    "FIELD_LOAD_CURRENT": {
+                        "field_data_field_job_region": {
+                            "tid": "field_job_region_tid"
+                        }
+                    },
+                    "FIELD_LOAD_REVISION": {
+                        "field_revision_field_job_region": {
+                            "tid": "field_job_region_tid"
+                        }
+                    }
+                }
+            }
+        },
+        "instances": [
+            {
+                "entity_type": "node",
+                "bundle": "job_per_template",
+                "label": "Country",
+                "required": 1
+            },
+            {
+                "entity_type": "node",
+                "bundle": "job_per_link",
+                "label": "Country",
+                "required": 1
+            },
+            {
+                "entity_type": "node",
+                "bundle": "kitesurf_centers",
+                "label": "Country Old",
+                "required": 0
+            },
+            {
+                "entity_type": "node",
+                "bundle": "kitesurf_centers_countries",
+                "label": "Country",
+                "required": 0
+            }
+        ]
+    },
+    "field_job_salary": {
+        "type": "number_decimal",
+        "cardinality": "1",
+        "module": "number",
+        "storage": {
+            "type": "field_sql_storage",
+            "settings": [],
+            "module": "field_sql_storage",
+            "active": "1",
+            "details": {
+                "sql": {
+                    "FIELD_LOAD_CURRENT": {
+                        "field_data_field_job_salary": {
+                            "value": "field_job_salary_value"
+                        }
+                    },
+                    "FIELD_LOAD_REVISION": {
+                        "field_revision_field_job_salary": {
+                            "value": "field_job_salary_value"
+                        }
+                    }
+                }
+            }
+        },
+        "instances": [
+            {
+                "entity_type": "node",
+                "bundle": "job_per_template",
+                "label": "Salary",
+                "required": 0
+            },
+            {
+                "entity_type": "node",
+                "bundle": "job_per_link",
+                "label": "Salary",
+                "required": 0
+            }
+        ]
+    },
+    "field_job_skills_general": {
+        "type": "taxonomy_term_reference",
+        "cardinality": "-1",
+        "module": "taxonomy",
+        "storage": {
+            "type": "field_sql_storage",
+            "settings": [],
+            "module": "field_sql_storage",
+            "active": "1",
+            "details": {
+                "sql": {
+                    "FIELD_LOAD_CURRENT": {
+                        "field_data_field_job_skills_general": {
+                            "tid": "field_job_skills_general_tid"
+                        }
+                    },
+                    "FIELD_LOAD_REVISION": {
+                        "field_revision_field_job_skills_general": {
+                            "tid": "field_job_skills_general_tid"
+                        }
+                    }
+                }
+            }
+        },
+        "instances": [
+            {
+                "entity_type": "node",
+                "bundle": "job_per_template",
+                "label": "Required general skills",
+                "required": 0
+            },
+            {
+                "entity_type": "node",
+                "bundle": "job_per_link",
+                "label": "Required general skills",
+                "required": 0
+            }
+        ]
+    },
+    "field_job_skills_it": {
+        "type": "taxonomy_term_reference",
+        "cardinality": "-1",
+        "module": "taxonomy",
+        "storage": {
+            "type": "field_sql_storage",
+            "settings": [],
+            "module": "field_sql_storage",
+            "active": "1",
+            "details": {
+                "sql": {
+                    "FIELD_LOAD_CURRENT": {
+                        "field_data_field_job_skills_it": {
+                            "tid": "field_job_skills_it_tid"
+                        }
+                    },
+                    "FIELD_LOAD_REVISION": {
+                        "field_revision_field_job_skills_it": {
+                            "tid": "field_job_skills_it_tid"
+                        }
+                    }
+                }
+            }
+        },
+        "instances": [
+            {
+                "entity_type": "node",
+                "bundle": "job_per_template",
+                "label": "Required IT skills",
+                "required": 0
+            }
+        ]
+    },
+    "field_job_workflow_state": {
+        "type": "list_text",
+        "cardinality": "1",
+        "module": "list",
+        "storage": {
+            "type": "field_sql_storage",
+            "settings": [],
+            "module": "field_sql_storage",
+            "active": "1",
+            "details": {
+                "sql": {
+                    "FIELD_LOAD_CURRENT": {
+                        "field_data_field_job_workflow_state": {
+                            "value": "field_job_workflow_state_value"
+                        }
+                    },
+                    "FIELD_LOAD_REVISION": {
+                        "field_revision_field_job_workflow_state": {
+                            "value": "field_job_workflow_state_value"
+                        }
+                    }
+                }
+            }
+        },
+        "instances": [
+            {
+                "entity_type": "node",
+                "bundle": "job_per_template",
+                "label": "Workflow state",
+                "required": 1
+            },
+            {
+                "entity_type": "node",
+                "bundle": "job_per_link",
+                "label": "Workflow state",
+                "required": 1
+            }
+        ]
+    },
+    "field_required_qualifications": {
+        "type": "taxonomy_term_reference",
+        "cardinality": "-1",
+        "module": "taxonomy",
+        "storage": {
+            "type": "field_sql_storage",
+            "settings": [],
+            "module": "field_sql_storage",
+            "active": "1",
+            "details": {
+                "sql": {
+                    "FIELD_LOAD_CURRENT": {
+                        "field_data_field_required_qualifications": {
+                            "tid": "field_required_qualifications_tid"
+                        }
+                    },
+                    "FIELD_LOAD_REVISION": {
+                        "field_revision_field_required_qualifications": {
+                            "tid": "field_required_qualifications_tid"
+                        }
+                    }
+                }
+            }
+        },
+        "instances": [
+            {
+                "entity_type": "node",
+                "bundle": "job_per_template",
+                "label": "Required qualifications",
+                "required": 0
+            },
+            {
+                "entity_type": "node",
+                "bundle": "job_per_link",
+                "label": "Required qualifications",
+                "required": 0
+            },
+            {
+                "entity_type": "field_collection_item",
+                "bundle": "field_resume_skills_general",
+                "label": "Qualifications",
+                "required": 0
+            }
+        ]
+    },
+    "field_picture": {
+        "type": "image",
+        "cardinality": "5",
+        "module": "image",
+        "storage": {
+            "type": "field_sql_storage",
+            "settings": [],
+            "module": "field_sql_storage",
+            "active": "1",
+            "details": {
+                "sql": {
+                    "FIELD_LOAD_CURRENT": {
+                        "field_data_field_picture": {
+                            "fid": "field_picture_fid",
+                            "alt": "field_picture_alt",
+                            "title": "field_picture_title",
+                            "width": "field_picture_width",
+                            "height": "field_picture_height"
+                        }
+                    },
+                    "FIELD_LOAD_REVISION": {
+                        "field_revision_field_picture": {
+                            "fid": "field_picture_fid",
+                            "alt": "field_picture_alt",
+                            "title": "field_picture_title",
+                            "width": "field_picture_width",
+                            "height": "field_picture_height"
+                        }
+                    }
+                }
+            }
+        },
+        "instances": [
+            {
+                "entity_type": "node",
+                "bundle": "job_per_template",
+                "label": "Picture",
+                "required": 1
+            },
+            {
+                "entity_type": "node",
+                "bundle": "kitesurf_centers",
+                "label": "Picture",
+                "required": 0
+            }
+        ]
+    },
+    "field_tweet": {
+        "type": "tweetbutton",
+        "cardinality": "1",
+        "module": "tweetbutton",
+        "storage": {
+            "type": "field_sql_storage",
+            "settings": [],
+            "module": "field_sql_storage",
+            "active": "1",
+            "details": {
+                "sql": {
+                    "FIELD_LOAD_CURRENT": {
+                        "field_data_field_tweet": {
+                            "text": "field_tweet_text",
+                            "account": "field_tweet_account"
+                        }
+                    },
+                    "FIELD_LOAD_REVISION": {
+                        "field_revision_field_tweet": {
+                            "text": "field_tweet_text",
+                            "account": "field_tweet_account"
+                        }
+                    }
+                }
+            }
+        },
+        "instances": [
+            {
+                "entity_type": "node",
+                "bundle": "job_per_template",
+                "label": "Tweet",
+                "required": 0
+            },
+            {
+                "entity_type": "node",
+                "bundle": "article",
+                "label": "Tweet",
+                "required": 0
+            }
+        ]
+    },
+    "field_listing_count": {
+        "type": "number_integer",
+        "cardinality": "1",
+        "module": "number",
+        "storage": {
+            "type": "field_sql_storage",
+            "settings": [],
+            "module": "field_sql_storage",
+            "active": "1",
+            "details": {
+                "sql": {
+                    "FIELD_LOAD_CURRENT": {
+                        "field_data_field_listing_count": {
+                            "value": "field_listing_count_value"
+                        }
+                    },
+                    "FIELD_LOAD_REVISION": {
+                        "field_revision_field_listing_count": {
+                            "value": "field_listing_count_value"
+                        }
+                    }
+                }
+            }
+        },
+        "instances": [
+            {
+                "entity_type": "node",
+                "bundle": "job_per_template",
+                "label": "listing_count",
+                "required": 0
+            },
+            {
+                "entity_type": "node",
+                "bundle": "job_per_link",
+                "label": "listing count",
+                "required": 0
+            }
+        ]
+    },
+    "field_website": {
+        "type": "text",
+        "cardinality": "1",
+        "module": "text",
+        "storage": {
+            "type": "field_sql_storage",
+            "settings": [],
+            "module": "field_sql_storage",
+            "active": "1",
+            "details": {
+                "sql": {
+                    "FIELD_LOAD_CURRENT": {
+                        "field_data_field_website": {
+                            "value": "field_website_value",
+                            "format": "field_website_format"
+                        }
+                    },
+                    "FIELD_LOAD_REVISION": {
+                        "field_revision_field_website": {
+                            "value": "field_website_value",
+                            "format": "field_website_format"
+                        }
+                    }
+                }
+            }
+        },
+        "instances": [
+            {
+                "entity_type": "node",
+                "bundle": "job_per_template",
+                "label": "Website",
+                "required": 0
+            },
+            {
+                "entity_type": "node",
+                "bundle": "kitesurf_centers",
+                "label": "Website",
+                "required": 1
+            }
+        ]
+    },
+    "field_activity": {
+        "type": "taxonomy_term_reference",
+        "cardinality": "5",
+        "module": "taxonomy",
+        "storage": {
+            "type": "field_sql_storage",
+            "settings": [],
+            "module": "field_sql_storage",
+            "active": "1",
+            "details": {
+                "sql": {
+                    "FIELD_LOAD_CURRENT": {
+                        "field_data_field_activity": {
+                            "tid": "field_activity_tid"
+                        }
+                    },
+                    "FIELD_LOAD_REVISION": {
+                        "field_revision_field_activity": {
+                            "tid": "field_activity_tid"
+                        }
+                    }
+                }
+            }
+        },
+        "instances": [
+            {
+                "entity_type": "node",
+                "bundle": "job_per_template",
+                "label": "Watersports activity",
+                "required": 1
+            }
+        ]
+    },
+    "field_test_login": {
+        "type": "text",
+        "cardinality": "1",
+        "module": "text",
+        "storage": {
+            "type": "field_sql_storage",
+            "settings": [],
+            "module": "field_sql_storage",
+            "active": "1",
+            "details": {
+                "sql": {
+                    "FIELD_LOAD_CURRENT": {
+                        "field_data_field_test_login": {
+                            "value": "field_test_login_value",
+                            "format": "field_test_login_format"
+                        }
+                    },
+                    "FIELD_LOAD_REVISION": {
+                        "field_revision_field_test_login": {
+                            "value": "field_test_login_value",
+                            "format": "field_test_login_format"
+                        }
+                    }
+                }
+            }
+        },
+        "instances": [
+            {
+                "entity_type": "node",
+                "bundle": "job_per_template",
+                "label": "Test",
+                "required": 0
+            }
+        ]
+    },
+    "field_job_application_link": {
+        "type": "link_field",
+        "cardinality": "1",
+        "module": "link",
+        "storage": {
+            "type": "field_sql_storage",
+            "settings": [],
+            "module": "field_sql_storage",
+            "active": "1",
+            "details": {
+                "sql": {
+                    "FIELD_LOAD_CURRENT": {
+                        "field_data_field_job_application_link": {
+                            "url": "field_job_application_link_url",
+                            "title": "field_job_application_link_title",
+                            "attributes": "field_job_application_link_attributes"
+                        }
+                    },
+                    "FIELD_LOAD_REVISION": {
+                        "field_revision_field_job_application_link": {
+                            "url": "field_job_application_link_url",
+                            "title": "field_job_application_link_title",
+                            "attributes": "field_job_application_link_attributes"
+                        }
+                    }
+                }
+            }
+        },
+        "instances": [
+            {
+                "entity_type": "node",
+                "bundle": "job_per_template",
+                "label": "Link to application system",
+                "required": 0
+            },
+            {
+                "entity_type": "node",
+                "bundle": "job_per_file",
+                "label": "Link to application system",
+                "required": 0
+            },
+            {
+                "entity_type": "node",
+                "bundle": "job_per_link",
+                "label": "Link to application system",
+                "required": 0
+            }
+        ]
+    },
+    "field_job_application_workflow": {
+        "type": "list_text",
+        "cardinality": "1",
+        "module": "list",
+        "storage": {
+            "type": "field_sql_storage",
+            "settings": [],
+            "module": "field_sql_storage",
+            "active": "1",
+            "details": {
+                "sql": {
+                    "FIELD_LOAD_CURRENT": {
+                        "field_data_field_job_application_workflow": {
+                            "value": "field_job_application_workflow_value"
+                        }
+                    },
+                    "FIELD_LOAD_REVISION": {
+                        "field_revision_field_job_application_workflow": {
+                            "value": "field_job_application_workflow_value"
+                        }
+                    }
+                }
+            }
+        },
+        "instances": [
+            {
+                "entity_type": "node",
+                "bundle": "job_per_template",
+                "label": "Application workflow",
+                "required": 0
+            },
+            {
+                "entity_type": "node",
+                "bundle": "job_per_file",
+                "label": "Application workflow",
+                "required": 1
+            },
+            {
+                "entity_type": "node",
+                "bundle": "job_per_link",
+                "label": "Application workflow",
+                "required": 1
+            }
+        ]
+    },
+    "field_mention_us": {
+        "type": "text",
+        "cardinality": "1",
+        "module": "text",
+        "storage": {
+            "type": "field_sql_storage",
+            "settings": [],
+            "module": "field_sql_storage",
+            "active": "1",
+            "details": {
+                "sql": {
+                    "FIELD_LOAD_CURRENT": {
+                        "field_data_field_mention_us": {
+                            "value": "field_mention_us_value",
+                            "format": "field_mention_us_format"
+                        }
+                    },
+                    "FIELD_LOAD_REVISION": {
+                        "field_revision_field_mention_us": {
+                            "value": "field_mention_us_value",
+                            "format": "field_mention_us_format"
+                        }
+                    }
+                }
+            }
+        },
+        "instances": [
+            {
+                "entity_type": "node",
+                "bundle": "job_per_template",
+                "label": "Mention us",
+                "required": 0
+            }
+        ]
+    },
+    "field_job_link": {
+        "type": "link_field",
+        "cardinality": "1",
+        "module": "link",
+        "storage": {
+            "type": "field_sql_storage",
+            "settings": [],
+            "module": "field_sql_storage",
+            "active": "1",
+            "details": {
+                "sql": {
+                    "FIELD_LOAD_CURRENT": {
+                        "field_data_field_job_link": {
+                            "url": "field_job_link_url",
+                            "title": "field_job_link_title",
+                            "attributes": "field_job_link_attributes"
+                        }
+                    },
+                    "FIELD_LOAD_REVISION": {
+                        "field_revision_field_job_link": {
+                            "url": "field_job_link_url",
+                            "title": "field_job_link_title",
+                            "attributes": "field_job_link_attributes"
+                        }
+                    }
+                }
+            }
+        },
+        "instances": [
+            {
+                "entity_type": "node",
+                "bundle": "job_per_link",
+                "label": "Link",
+                "required": 1
+            }
+        ]
+    },
+    "field_resume_attachments_file": {
+        "type": "file",
+        "cardinality": "-1",
+        "module": "file",
+        "storage": {
+            "type": "field_sql_storage",
+            "settings": [],
+            "module": "field_sql_storage",
+            "active": "1",
+            "details": {
+                "sql": {
+                    "FIELD_LOAD_CURRENT": {
+                        "field_data_field_resume_attachments_file": {
+                            "fid": "field_resume_attachments_file_fid",
+                            "display": "field_resume_attachments_file_display",
+                            "description": "field_resume_attachments_file_description"
+                        }
+                    },
+                    "FIELD_LOAD_REVISION": {
+                        "field_revision_field_resume_attachments_file": {
+                            "fid": "field_resume_attachments_file_fid",
+                            "display": "field_resume_attachments_file_display",
+                            "description": "field_resume_attachments_file_description"
+                        }
+                    }
+                }
+            }
+        },
+        "instances": [
+            {
+                "entity_type": "field_collection_item",
+                "bundle": "field_resume_attachments",
+                "label": "Attachments",
+                "required": 0
+            }
+        ]
+    },
+    "field_resume_summary": {
+        "type": "text_long",
+        "cardinality": "1",
+        "module": "text",
+        "storage": {
+            "type": "field_sql_storage",
+            "settings": [],
+            "module": "field_sql_storage",
+            "active": "1",
+            "details": {
+                "sql": {
+                    "FIELD_LOAD_CURRENT": {
+                        "field_data_field_resume_summary": {
+                            "value": "field_resume_summary_value",
+                            "format": "field_resume_summary_format"
+                        }
+                    },
+                    "FIELD_LOAD_REVISION": {
+                        "field_revision_field_resume_summary": {
+                            "value": "field_resume_summary_value",
+                            "format": "field_resume_summary_format"
+                        }
+                    }
+                }
+            }
+        },
+        "instances": [
+            {
+                "entity_type": "field_collection_item",
+                "bundle": "field_resume_job_preferences",
+                "label": "Additional notes",
+                "required": 0
+            },
+            {
+                "entity_type": "field_collection_item",
+                "bundle": "field_resume_personal_info",
+                "label": "About me",
+                "required": 0
+            },
+            {
+                "entity_type": "field_collection_item",
+                "bundle": "field_resume_xp",
+                "label": "Summary",
+                "required": 0
+            }
+        ]
+    },
+    "field_resume_time_period": {
+        "type": "datestamp",
+        "cardinality": "1",
+        "module": "date",
+        "storage": {
+            "type": "field_sql_storage",
+            "settings": [],
+            "module": "field_sql_storage",
+            "active": "1",
+            "details": {
+                "sql": {
+                    "FIELD_LOAD_CURRENT": {
+                        "field_data_field_resume_time_period": {
+                            "value": "field_resume_time_period_value",
+                            "value2": "field_resume_time_period_value2"
+                        }
+                    },
+                    "FIELD_LOAD_REVISION": {
+                        "field_revision_field_resume_time_period": {
+                            "value": "field_resume_time_period_value",
+                            "value2": "field_resume_time_period_value2"
+                        }
+                    }
+                }
+            }
+        },
+        "instances": [
+            {
+                "entity_type": "field_collection_item",
+                "bundle": "field_resume_xp",
+                "label": "Time period",
+                "required": 0
+            }
+        ]
+    },
+    "field_resume_career_status": {
+        "type": "taxonomy_term_reference",
+        "cardinality": "1",
+        "module": "taxonomy",
+        "storage": {
+            "type": "field_sql_storage",
+            "settings": [],
+            "module": "field_sql_storage",
+            "active": "1",
+            "details": {
+                "sql": {
+                    "FIELD_LOAD_CURRENT": {
+                        "field_data_field_resume_career_status": {
+                            "tid": "field_resume_career_status_tid"
+                        }
+                    },
+                    "FIELD_LOAD_REVISION": {
+                        "field_revision_field_resume_career_status": {
+                            "tid": "field_resume_career_status_tid"
+                        }
+                    }
+                }
+            }
+        },
+        "instances": [
+            {
+                "entity_type": "field_collection_item",
+                "bundle": "field_resume_job_preferences",
+                "label": "Career status",
+                "required": 0
+            }
+        ]
+    },
+    "field_resume_desired_salary": {
+        "type": "number_decimal",
+        "cardinality": "1",
+        "module": "number",
+        "storage": {
+            "type": "field_sql_storage",
+            "settings": [],
+            "module": "field_sql_storage",
+            "active": "1",
+            "details": {
+                "sql": {
+                    "FIELD_LOAD_CURRENT": {
+                        "field_data_field_resume_desired_salary": {
+                            "value": "field_resume_desired_salary_value"
+                        }
+                    },
+                    "FIELD_LOAD_REVISION": {
+                        "field_revision_field_resume_desired_salary": {
+                            "value": "field_resume_desired_salary_value"
+                        }
+                    }
+                }
+            }
+        },
+        "instances": [
+            {
+                "entity_type": "field_collection_item",
+                "bundle": "field_resume_job_preferences",
+                "label": "Desired salary",
+                "required": 0
+            }
+        ]
+    },
+    "field_resume_employment_term": {
+        "type": "taxonomy_term_reference",
+        "cardinality": "-1",
+        "module": "taxonomy",
+        "storage": {
+            "type": "field_sql_storage",
+            "settings": [],
+            "module": "field_sql_storage",
+            "active": "1",
+            "details": {
+                "sql": {
+                    "FIELD_LOAD_CURRENT": {
+                        "field_data_field_resume_employment_term": {
+                            "tid": "field_resume_employment_term_tid"
+                        }
+                    },
+                    "FIELD_LOAD_REVISION": {
+                        "field_revision_field_resume_employment_term": {
+                            "tid": "field_resume_employment_term_tid"
+                        }
+                    }
+                }
+            }
+        },
+        "instances": [
+            {
+                "entity_type": "field_collection_item",
+                "bundle": "field_resume_job_preferences",
+                "label": "Employment type",
+                "required": 0
+            },
+            {
+                "entity_type": "field_collection_item",
+                "bundle": "field_resume_xp",
+                "label": "Employment type",
+                "required": 0
+            }
+        ]
+    },
+    "field_resume_job_availability": {
+        "type": "datestamp",
+        "cardinality": "1",
+        "module": "date",
+        "storage": {
+            "type": "field_sql_storage",
+            "settings": [],
+            "module": "field_sql_storage",
+            "active": "1",
+            "details": {
+                "sql": {
+                    "FIELD_LOAD_CURRENT": {
+                        "field_data_field_resume_job_availability": {
+                            "value": "field_resume_job_availability_value"
+                        }
+                    },
+                    "FIELD_LOAD_REVISION": {
+                        "field_revision_field_resume_job_availability": {
+                            "value": "field_resume_job_availability_value"
+                        }
+                    }
+                }
+            }
+        },
+        "instances": [
+            {
+                "entity_type": "field_collection_item",
+                "bundle": "field_resume_job_preferences",
+                "label": "Available to start",
+                "required": 1
+            }
+        ]
+    },
+    "field_resume_job_title": {
+        "type": "text",
+        "cardinality": "1",
+        "module": "text",
+        "storage": {
+            "type": "field_sql_storage",
+            "settings": [],
+            "module": "field_sql_storage",
+            "active": "1",
+            "details": {
+                "sql": {
+                    "FIELD_LOAD_CURRENT": {
+                        "field_data_field_resume_job_title": {
+                            "value": "field_resume_job_title_value",
+                            "format": "field_resume_job_title_format"
+                        }
+                    },
+                    "FIELD_LOAD_REVISION": {
+                        "field_revision_field_resume_job_title": {
+                            "value": "field_resume_job_title_value",
+                            "format": "field_resume_job_title_format"
+                        }
+                    }
+                }
+            }
+        },
+        "instances": [
+            {
+                "entity_type": "field_collection_item",
+                "bundle": "field_resume_job_preferences",
+                "label": "Desired job title",
+                "required": 1
+            },
+            {
+                "entity_type": "field_collection_item",
+                "bundle": "field_resume_xp",
+                "label": "Job title",
+                "required": 0
+            }
+        ]
+    },
+    "field_resume_jobpref_field": {
+        "type": "taxonomy_term_reference",
+        "cardinality": "-1",
+        "module": "taxonomy",
+        "storage": {
+            "type": "field_sql_storage",
+            "settings": [],
+            "module": "field_sql_storage",
+            "active": "1",
+            "details": {
+                "sql": {
+                    "FIELD_LOAD_CURRENT": {
+                        "field_data_field_resume_jobpref_field": {
+                            "tid": "field_resume_jobpref_field_tid"
+                        }
+                    },
+                    "FIELD_LOAD_REVISION": {
+                        "field_revision_field_resume_jobpref_field": {
+                            "tid": "field_resume_jobpref_field_tid"
+                        }
+                    }
+                }
+            }
+        },
+        "instances": [
+            {
+                "entity_type": "field_collection_item",
+                "bundle": "field_resume_job_preferences",
+                "label": "Desired occupation",
+                "required": 1
+            }
+        ]
+    },
+    "field_resume_region": {
+        "type": "taxonomy_term_reference",
+        "cardinality": "-1",
+        "module": "taxonomy",
+        "storage": {
+            "type": "field_sql_storage",
+            "settings": [],
+            "module": "field_sql_storage",
+            "active": "1",
+            "details": {
+                "sql": {
+                    "FIELD_LOAD_CURRENT": {
+                        "field_data_field_resume_region": {
+                            "tid": "field_resume_region_tid"
+                        }
+                    },
+                    "FIELD_LOAD_REVISION": {
+                        "field_revision_field_resume_region": {
+                            "tid": "field_resume_region_tid"
+                        }
+                    }
+                }
+            }
+        },
+        "instances": [
+            {
+                "entity_type": "field_collection_item",
+                "bundle": "field_resume_job_preferences",
+                "label": "Desired region",
+                "required": 0
+            }
+        ]
+    },
+    "field_resume_languages_level": {
+        "type": "term_level",
+        "cardinality": "-1",
+        "module": "term_level",
+        "storage": {
+            "type": "field_sql_storage",
+            "settings": [],
+            "module": "field_sql_storage",
+            "active": "1",
+            "details": {
+                "sql": {
+                    "FIELD_LOAD_CURRENT": {
+                        "field_data_field_resume_languages_level": {
+                            "tid": "field_resume_languages_level_tid",
+                            "level": "field_resume_languages_level_level"
+                        }
+                    },
+                    "FIELD_LOAD_REVISION": {
+                        "field_revision_field_resume_languages_level": {
+                            "tid": "field_resume_languages_level_tid",
+                            "level": "field_resume_languages_level_level"
+                        }
+                    }
+                }
+            }
+        },
+        "instances": [
+            {
+                "entity_type": "field_collection_item",
+                "bundle": "field_resume_languages",
+                "label": "Languages",
+                "required": 1
+            }
+        ]
+    },
+    "field_resume_notes": {
+        "type": "text_long",
+        "cardinality": "1",
+        "module": "text",
+        "storage": {
+            "type": "field_sql_storage",
+            "settings": [],
+            "module": "field_sql_storage",
+            "active": "1",
+            "details": {
+                "sql": {
+                    "FIELD_LOAD_CURRENT": {
+                        "field_data_field_resume_notes": {
+                            "value": "field_resume_notes_value",
+                            "format": "field_resume_notes_format"
+                        }
+                    },
+                    "FIELD_LOAD_REVISION": {
+                        "field_revision_field_resume_notes": {
+                            "value": "field_resume_notes_value",
+                            "format": "field_resume_notes_format"
+                        }
+                    }
+                }
+            }
+        },
+        "instances": [
+            {
+                "entity_type": "field_collection_item",
+                "bundle": "field_resume_languages",
+                "label": "Additional notes",
+                "required": 0
+            },
+            {
+                "entity_type": "field_collection_item",
+                "bundle": "field_resume_skills_general",
+                "label": "Additional notes",
+                "required": 0
+            }
+        ]
+    },
+    "field_resume_address": {
+        "type": "addressfield",
+        "cardinality": "1",
+        "module": "addressfield",
+        "storage": {
+            "type": "field_sql_storage",
+            "settings": [],
+            "module": "field_sql_storage",
+            "active": "1",
+            "details": {
+                "sql": {
+                    "FIELD_LOAD_CURRENT": {
+                        "field_data_field_resume_address": {
+                            "country": "field_resume_address_country",
+                            "administrative_area": "field_resume_address_administrative_area",
+                            "sub_administrative_area": "field_resume_address_sub_administrative_area",
+                            "locality": "field_resume_address_locality",
+                            "dependent_locality": "field_resume_address_dependent_locality",
+                            "postal_code": "field_resume_address_postal_code",
+                            "thoroughfare": "field_resume_address_thoroughfare",
+                            "premise": "field_resume_address_premise",
+                            "sub_premise": "field_resume_address_sub_premise",
+                            "organisation_name": "field_resume_address_organisation_name",
+                            "name_line": "field_resume_address_name_line",
+                            "first_name": "field_resume_address_first_name",
+                            "last_name": "field_resume_address_last_name",
+                            "data": "field_resume_address_data"
+                        }
+                    },
+                    "FIELD_LOAD_REVISION": {
+                        "field_revision_field_resume_address": {
+                            "country": "field_resume_address_country",
+                            "administrative_area": "field_resume_address_administrative_area",
+                            "sub_administrative_area": "field_resume_address_sub_administrative_area",
+                            "locality": "field_resume_address_locality",
+                            "dependent_locality": "field_resume_address_dependent_locality",
+                            "postal_code": "field_resume_address_postal_code",
+                            "thoroughfare": "field_resume_address_thoroughfare",
+                            "premise": "field_resume_address_premise",
+                            "sub_premise": "field_resume_address_sub_premise",
+                            "organisation_name": "field_resume_address_organisation_name",
+                            "name_line": "field_resume_address_name_line",
+                            "first_name": "field_resume_address_first_name",
+                            "last_name": "field_resume_address_last_name",
+                            "data": "field_resume_address_data"
+                        }
+                    }
+                }
+            }
+        },
+        "instances": [
+            {
+                "entity_type": "field_collection_item",
+                "bundle": "field_resume_personal_info",
+                "label": "Address",
+                "required": 0
+            }
+        ]
+    },
+    "field_resume_birthday": {
+        "type": "datestamp",
+        "cardinality": "1",
+        "module": "date",
+        "storage": {
+            "type": "field_sql_storage",
+            "settings": [],
+            "module": "field_sql_storage",
+            "active": "1",
+            "details": {
+                "sql": {
+                    "FIELD_LOAD_CURRENT": {
+                        "field_data_field_resume_birthday": {
+                            "value": "field_resume_birthday_value"
+                        }
+                    },
+                    "FIELD_LOAD_REVISION": {
+                        "field_revision_field_resume_birthday": {
+                            "value": "field_resume_birthday_value"
+                        }
+                    }
+                }
+            }
+        },
+        "instances": [
+            {
+                "entity_type": "field_collection_item",
+                "bundle": "field_resume_personal_info",
+                "label": "Birthday",
+                "required": 0
+            }
+        ]
+    },
+    "field_resume_firstname": {
+        "type": "text",
+        "cardinality": "1",
+        "module": "text",
+        "storage": {
+            "type": "field_sql_storage",
+            "settings": [],
+            "module": "field_sql_storage",
+            "active": "1",
+            "details": {
+                "sql": {
+                    "FIELD_LOAD_CURRENT": {
+                        "field_data_field_resume_firstname": {
+                            "value": "field_resume_firstname_value",
+                            "format": "field_resume_firstname_format"
+                        }
+                    },
+                    "FIELD_LOAD_REVISION": {
+                        "field_revision_field_resume_firstname": {
+                            "value": "field_resume_firstname_value",
+                            "format": "field_resume_firstname_format"
+                        }
+                    }
+                }
+            }
+        },
+        "instances": [
+            {
+                "entity_type": "field_collection_item",
+                "bundle": "field_resume_personal_info",
+                "label": "First name",
+                "required": 1
+            }
+        ]
+    },
+    "field_resume_lastname": {
+        "type": "text",
+        "cardinality": "1",
+        "module": "text",
+        "storage": {
+            "type": "field_sql_storage",
+            "settings": [],
+            "module": "field_sql_storage",
+            "active": "1",
+            "details": {
+                "sql": {
+                    "FIELD_LOAD_CURRENT": {
+                        "field_data_field_resume_lastname": {
+                            "value": "field_resume_lastname_value",
+                            "format": "field_resume_lastname_format"
+                        }
+                    },
+                    "FIELD_LOAD_REVISION": {
+                        "field_revision_field_resume_lastname": {
+                            "value": "field_resume_lastname_value",
+                            "format": "field_resume_lastname_format"
+                        }
+                    }
+                }
+            }
+        },
+        "instances": [
+            {
+                "entity_type": "field_collection_item",
+                "bundle": "field_resume_personal_info",
+                "label": "Last name",
+                "required": 0
+            }
+        ]
+    },
+    "field_resume_phone": {
+        "type": "text",
+        "cardinality": "1",
+        "module": "text",
+        "storage": {
+            "type": "field_sql_storage",
+            "settings": [],
+            "module": "field_sql_storage",
+            "active": "1",
+            "details": {
+                "sql": {
+                    "FIELD_LOAD_CURRENT": {
+                        "field_data_field_resume_phone": {
+                            "value": "field_resume_phone_value",
+                            "format": "field_resume_phone_format"
+                        }
+                    },
+                    "FIELD_LOAD_REVISION": {
+                        "field_revision_field_resume_phone": {
+                            "value": "field_resume_phone_value",
+                            "format": "field_resume_phone_format"
+                        }
+                    }
+                }
+            }
+        },
+        "instances": [
+            {
+                "entity_type": "field_collection_item",
+                "bundle": "field_resume_personal_info",
+                "label": "Phone",
+                "required": 0
+            }
+        ]
+    },
+    "field_resume_photo": {
+        "type": "image",
+        "cardinality": "1",
+        "module": "image",
+        "storage": {
+            "type": "field_sql_storage",
+            "settings": [],
+            "module": "field_sql_storage",
+            "active": "1",
+            "details": {
+                "sql": {
+                    "FIELD_LOAD_CURRENT": {
+                        "field_data_field_resume_photo": {
+                            "fid": "field_resume_photo_fid",
+                            "alt": "field_resume_photo_alt",
+                            "title": "field_resume_photo_title",
+                            "width": "field_resume_photo_width",
+                            "height": "field_resume_photo_height"
+                        }
+                    },
+                    "FIELD_LOAD_REVISION": {
+                        "field_revision_field_resume_photo": {
+                            "fid": "field_resume_photo_fid",
+                            "alt": "field_resume_photo_alt",
+                            "title": "field_resume_photo_title",
+                            "width": "field_resume_photo_width",
+                            "height": "field_resume_photo_height"
+                        }
+                    }
+                }
+            }
+        },
+        "instances": [
+            {
+                "entity_type": "field_collection_item",
+                "bundle": "field_resume_personal_info",
+                "label": "Photo",
+                "required": 0
+            }
+        ]
+    },
+    "field_resume_salutation": {
+        "type": "list_text",
+        "cardinality": "1",
+        "module": "list",
+        "storage": {
+            "type": "field_sql_storage",
+            "settings": [],
+            "module": "field_sql_storage",
+            "active": "1",
+            "details": {
+                "sql": {
+                    "FIELD_LOAD_CURRENT": {
+                        "field_data_field_resume_salutation": {
+                            "value": "field_resume_salutation_value"
+                        }
+                    },
+                    "FIELD_LOAD_REVISION": {
+                        "field_revision_field_resume_salutation": {
+                            "value": "field_resume_salutation_value"
+                        }
+                    }
+                }
+            }
+        },
+        "instances": [
+            {
+                "entity_type": "field_collection_item",
+                "bundle": "field_resume_personal_info",
+                "label": "Salutation",
+                "required": false
+            }
+        ]
+    },
+    "field_resume_skills_general_lev": {
+        "type": "term_level",
+        "cardinality": "-1",
+        "module": "term_level",
+        "storage": {
+            "type": "field_sql_storage",
+            "settings": [],
+            "module": "field_sql_storage",
+            "active": "1",
+            "details": {
+                "sql": {
+                    "FIELD_LOAD_CURRENT": {
+                        "field_data_field_resume_skills_general_lev": {
+                            "tid": "field_resume_skills_general_lev_tid",
+                            "level": "field_resume_skills_general_lev_level"
+                        }
+                    },
+                    "FIELD_LOAD_REVISION": {
+                        "field_revision_field_resume_skills_general_lev": {
+                            "tid": "field_resume_skills_general_lev_tid",
+                            "level": "field_resume_skills_general_lev_level"
+                        }
+                    }
+                }
+            }
+        },
+        "instances": [
+            {
+                "entity_type": "field_collection_item",
+                "bundle": "field_resume_skills_general",
+                "label": "General skills",
+                "required": 0
+            }
+        ]
+    },
+    "field_resume_xp_link": {
+        "type": "link_field",
+        "cardinality": "1",
+        "module": "link",
+        "storage": {
+            "type": "field_sql_storage",
+            "settings": [],
+            "module": "field_sql_storage",
+            "active": "1",
+            "details": {
+                "sql": {
+                    "FIELD_LOAD_CURRENT": {
+                        "field_data_field_resume_xp_link": {
+                            "url": "field_resume_xp_link_url",
+                            "title": "field_resume_xp_link_title",
+                            "attributes": "field_resume_xp_link_attributes"
+                        }
+                    },
+                    "FIELD_LOAD_REVISION": {
+                        "field_revision_field_resume_xp_link": {
+                            "url": "field_resume_xp_link_url",
+                            "title": "field_resume_xp_link_title",
+                            "attributes": "field_resume_xp_link_attributes"
+                        }
+                    }
+                }
+            }
+        },
+        "instances": [
+            {
+                "entity_type": "field_collection_item",
+                "bundle": "field_resume_xp",
+                "label": "Company link",
+                "required": 0
+            }
+        ]
+    },
+    "field_resume_xp_location": {
+        "type": "text",
+        "cardinality": "1",
+        "module": "text",
+        "storage": {
+            "type": "field_sql_storage",
+            "settings": [],
+            "module": "field_sql_storage",
+            "active": "1",
+            "details": {
+                "sql": {
+                    "FIELD_LOAD_CURRENT": {
+                        "field_data_field_resume_xp_location": {
+                            "value": "field_resume_xp_location_value",
+                            "format": "field_resume_xp_location_format"
+                        }
+                    },
+                    "FIELD_LOAD_REVISION": {
+                        "field_revision_field_resume_xp_location": {
+                            "value": "field_resume_xp_location_value",
+                            "format": "field_resume_xp_location_format"
+                        }
+                    }
+                }
+            }
+        },
+        "instances": [
+            {
+                "entity_type": "field_collection_item",
+                "bundle": "field_resume_xp",
+                "label": "Location",
+                "required": 0
+            }
+        ]
+    },
+    "field_resume_xp_occupation_field": {
+        "type": "taxonomy_term_reference",
+        "cardinality": "-1",
+        "module": "taxonomy",
+        "storage": {
+            "type": "field_sql_storage",
+            "settings": [],
+            "module": "field_sql_storage",
+            "active": "1",
+            "details": {
+                "sql": {
+                    "FIELD_LOAD_CURRENT": {
+                        "field_data_field_resume_xp_occupation_field": {
+                            "tid": "field_resume_xp_occupation_field_tid"
+                        }
+                    },
+                    "FIELD_LOAD_REVISION": {
+                        "field_revision_field_resume_xp_occupation_field": {
+                            "tid": "field_resume_xp_occupation_field_tid"
+                        }
+                    }
+                }
+            }
+        },
+        "instances": [
+            {
+                "entity_type": "field_collection_item",
+                "bundle": "field_resume_xp",
+                "label": "Occupational field",
+                "required": 0
+            }
+        ]
+    },
+    "field_resume_xp_organization": {
+        "type": "text",
+        "cardinality": "1",
+        "module": "text",
+        "storage": {
+            "type": "field_sql_storage",
+            "settings": [],
+            "module": "field_sql_storage",
+            "active": "1",
+            "details": {
+                "sql": {
+                    "FIELD_LOAD_CURRENT": {
+                        "field_data_field_resume_xp_organization": {
+                            "value": "field_resume_xp_organization_value",
+                            "format": "field_resume_xp_organization_format"
+                        }
+                    },
+                    "FIELD_LOAD_REVISION": {
+                        "field_revision_field_resume_xp_organization": {
+                            "value": "field_resume_xp_organization_value",
+                            "format": "field_resume_xp_organization_format"
+                        }
+                    }
+                }
+            }
+        },
+        "instances": [
+            {
+                "entity_type": "field_collection_item",
+                "bundle": "field_resume_xp",
+                "label": "Company name",
+                "required": 0
+            }
+        ]
+    },
+    "field_resume_attachments": {
+        "type": "field_collection",
+        "cardinality": "1",
+        "module": "field_collection",
+        "storage": {
+            "type": "field_sql_storage",
+            "settings": [],
+            "module": "field_sql_storage",
+            "active": "1",
+            "details": {
+                "sql": {
+                    "FIELD_LOAD_CURRENT": {
+                        "field_data_field_resume_attachments": {
+                            "value": "field_resume_attachments_value",
+                            "revision_id": "field_resume_attachments_revision_id"
+                        }
+                    },
+                    "FIELD_LOAD_REVISION": {
+                        "field_revision_field_resume_attachments": {
+                            "value": "field_resume_attachments_value",
+                            "revision_id": "field_resume_attachments_revision_id"
+                        }
+                    }
+                }
+            }
+        },
+        "instances": [
+            {
+                "entity_type": "profile2",
+                "bundle": "resume",
+                "label": "Attachments",
+                "required": 0
+            }
+        ]
+    },
+    "field_resume_job_preferences": {
+        "type": "field_collection",
+        "cardinality": "1",
+        "module": "field_collection",
+        "storage": {
+            "type": "field_sql_storage",
+            "settings": [],
+            "module": "field_sql_storage",
+            "active": "1",
+            "details": {
+                "sql": {
+                    "FIELD_LOAD_CURRENT": {
+                        "field_data_field_resume_job_preferences": {
+                            "value": "field_resume_job_preferences_value",
+                            "revision_id": "field_resume_job_preferences_revision_id"
+                        }
+                    },
+                    "FIELD_LOAD_REVISION": {
+                        "field_revision_field_resume_job_preferences": {
+                            "value": "field_resume_job_preferences_value",
+                            "revision_id": "field_resume_job_preferences_revision_id"
+                        }
+                    }
+                }
+            }
+        },
+        "instances": [
+            {
+                "entity_type": "profile2",
+                "bundle": "resume",
+                "label": "Job preferences",
+                "required": 0
+            }
+        ]
+    },
+    "field_resume_languages": {
+        "type": "field_collection",
+        "cardinality": "1",
+        "module": "field_collection",
+        "storage": {
+            "type": "field_sql_storage",
+            "settings": [],
+            "module": "field_sql_storage",
+            "active": "1",
+            "details": {
+                "sql": {
+                    "FIELD_LOAD_CURRENT": {
+                        "field_data_field_resume_languages": {
+                            "value": "field_resume_languages_value",
+                            "revision_id": "field_resume_languages_revision_id"
+                        }
+                    },
+                    "FIELD_LOAD_REVISION": {
+                        "field_revision_field_resume_languages": {
+                            "value": "field_resume_languages_value",
+                            "revision_id": "field_resume_languages_revision_id"
+                        }
+                    }
+                }
+            }
+        },
+        "instances": [
+            {
+                "entity_type": "profile2",
+                "bundle": "resume",
+                "label": "Language",
+                "required": 0
+            }
+        ]
+    },
+    "field_resume_personal_info": {
+        "type": "field_collection",
+        "cardinality": "1",
+        "module": "field_collection",
+        "storage": {
+            "type": "field_sql_storage",
+            "settings": [],
+            "module": "field_sql_storage",
+            "active": "1",
+            "details": {
+                "sql": {
+                    "FIELD_LOAD_CURRENT": {
+                        "field_data_field_resume_personal_info": {
+                            "value": "field_resume_personal_info_value",
+                            "revision_id": "field_resume_personal_info_revision_id"
+                        }
+                    },
+                    "FIELD_LOAD_REVISION": {
+                        "field_revision_field_resume_personal_info": {
+                            "value": "field_resume_personal_info_value",
+                            "revision_id": "field_resume_personal_info_revision_id"
+                        }
+                    }
+                }
+            }
+        },
+        "instances": [
+            {
+                "entity_type": "profile2",
+                "bundle": "resume",
+                "label": "Personal information",
+                "required": 0
+            }
+        ]
+    },
+    "field_resume_skills_general": {
+        "type": "field_collection",
+        "cardinality": "1",
+        "module": "field_collection",
+        "storage": {
+            "type": "field_sql_storage",
+            "settings": [],
+            "module": "field_sql_storage",
+            "active": "1",
+            "details": {
+                "sql": {
+                    "FIELD_LOAD_CURRENT": {
+                        "field_data_field_resume_skills_general": {
+                            "value": "field_resume_skills_general_value",
+                            "revision_id": "field_resume_skills_general_revision_id"
+                        }
+                    },
+                    "FIELD_LOAD_REVISION": {
+                        "field_revision_field_resume_skills_general": {
+                            "value": "field_resume_skills_general_value",
+                            "revision_id": "field_resume_skills_general_revision_id"
+                        }
+                    }
+                }
+            }
+        },
+        "instances": [
+            {
+                "entity_type": "profile2",
+                "bundle": "resume",
+                "label": "Qualifications and Skills",
+                "required": 0
+            }
+        ]
+    },
+    "field_resume_state": {
+        "type": "list_text",
+        "cardinality": "1",
+        "module": "list",
+        "storage": {
+            "type": "field_sql_storage",
+            "settings": [],
+            "module": "field_sql_storage",
+            "active": "1",
+            "details": {
+                "sql": {
+                    "FIELD_LOAD_CURRENT": {
+                        "field_data_field_resume_state": {
+                            "value": "field_resume_state_value"
+                        }
+                    },
+                    "FIELD_LOAD_REVISION": {
+                        "field_revision_field_resume_state": {
+                            "value": "field_resume_state_value"
+                        }
+                    }
+                }
+            }
+        },
+        "instances": [
+            {
+                "entity_type": "profile2",
+                "bundle": "resume",
+                "label": "Resume state",
+                "required": 0
+            }
+        ]
+    },
+    "field_resume_xp": {
+        "type": "field_collection",
+        "cardinality": "-1",
+        "module": "field_collection",
+        "storage": {
+            "type": "field_sql_storage",
+            "settings": [],
+            "module": "field_sql_storage",
+            "active": "1",
+            "details": {
+                "sql": {
+                    "FIELD_LOAD_CURRENT": {
+                        "field_data_field_resume_xp": {
+                            "value": "field_resume_xp_value",
+                            "revision_id": "field_resume_xp_revision_id"
+                        }
+                    },
+                    "FIELD_LOAD_REVISION": {
+                        "field_revision_field_resume_xp": {
+                            "value": "field_resume_xp_value",
+                            "revision_id": "field_resume_xp_revision_id"
+                        }
+                    }
+                }
+            }
+        },
+        "instances": [
+            {
+                "entity_type": "profile2",
+                "bundle": "resume",
+                "label": "Work experience",
+                "required": 0
+            }
+        ]
+    },
+    "field_tags": {
+        "type": "taxonomy_term_reference",
+        "cardinality": "-1",
+        "module": "taxonomy",
+        "storage": {
+            "type": "field_sql_storage",
+            "settings": [],
+            "module": "field_sql_storage",
+            "active": "1",
+            "details": {
+                "sql": {
+                    "FIELD_LOAD_CURRENT": {
+                        "field_data_field_tags": {
+                            "tid": "field_tags_tid"
+                        }
+                    },
+                    "FIELD_LOAD_REVISION": {
+                        "field_revision_field_tags": {
+                            "tid": "field_tags_tid"
+                        }
+                    }
+                }
+            }
+        },
+        "instances": [
+            {
+                "entity_type": "node",
+                "bundle": "article",
+                "label": "Tags",
+                "required": false
+            }
+        ]
+    },
+    "field_image": {
+        "type": "image",
+        "cardinality": "2",
+        "module": "image",
+        "storage": {
+            "type": "field_sql_storage",
+            "settings": [],
+            "module": "field_sql_storage",
+            "active": "1",
+            "details": {
+                "sql": {
+                    "FIELD_LOAD_CURRENT": {
+                        "field_data_field_image": {
+                            "fid": "field_image_fid",
+                            "alt": "field_image_alt",
+                            "title": "field_image_title",
+                            "width": "field_image_width",
+                            "height": "field_image_height"
+                        }
+                    },
+                    "FIELD_LOAD_REVISION": {
+                        "field_revision_field_image": {
+                            "fid": "field_image_fid",
+                            "alt": "field_image_alt",
+                            "title": "field_image_title",
+                            "width": "field_image_width",
+                            "height": "field_image_height"
+                        }
+                    }
+                }
+            }
+        },
+        "instances": [
+            {
+                "entity_type": "node",
+                "bundle": "article",
+                "label": "Image",
+                "required": 0
+            }
+        ]
+    },
+    "field_date": {
+        "type": "date",
+        "cardinality": "-1",
+        "module": "date",
+        "storage": {
+            "type": "field_sql_storage",
+            "settings": [],
+            "module": "field_sql_storage",
+            "active": "1",
+            "details": {
+                "sql": {
+                    "FIELD_LOAD_CURRENT": {
+                        "field_data_field_date": {
+                            "value": "field_date_value"
+                        }
+                    },
+                    "FIELD_LOAD_REVISION": {
+                        "field_revision_field_date": {
+                            "value": "field_date_value"
+                        }
+                    }
+                }
+            }
+        },
+        "instances": [
+            {
+                "entity_type": "node",
+                "bundle": "date_migrate_example",
+                "label": "Date",
+                "required": 0
+            }
+        ]
+    },
+    "field_date_range": {
+        "type": "date",
+        "cardinality": "-1",
+        "module": "date",
+        "storage": {
+            "type": "field_sql_storage",
+            "settings": [],
+            "module": "field_sql_storage",
+            "active": "1",
+            "details": {
+                "sql": {
+                    "FIELD_LOAD_CURRENT": {
+                        "field_data_field_date_range": {
+                            "value": "field_date_range_value",
+                            "value2": "field_date_range_value2"
+                        }
+                    },
+                    "FIELD_LOAD_REVISION": {
+                        "field_revision_field_date_range": {
+                            "value": "field_date_range_value",
+                            "value2": "field_date_range_value2"
+                        }
+                    }
+                }
+            }
+        },
+        "instances": [
+            {
+                "entity_type": "node",
+                "bundle": "date_migrate_example",
+                "label": "Date range",
+                "required": 0
+            }
+        ]
+    },
+    "field_date_repeat": {
+        "type": "date",
+        "cardinality": "-1",
+        "module": "date",
+        "storage": {
+            "type": "field_sql_storage",
+            "settings": [],
+            "module": "field_sql_storage",
+            "active": "1",
+            "details": {
+                "sql": {
+                    "FIELD_LOAD_CURRENT": {
+                        "field_data_field_date_repeat": {
+                            "value": "field_date_repeat_value",
+                            "rrule": "field_date_repeat_rrule"
+                        }
+                    },
+                    "FIELD_LOAD_REVISION": {
+                        "field_revision_field_date_repeat": {
+                            "value": "field_date_repeat_value",
+                            "rrule": "field_date_repeat_rrule"
+                        }
+                    }
+                }
+            }
+        },
+        "instances": [
+            {
+                "entity_type": "node",
+                "bundle": "date_migrate_example",
+                "label": "Date with repeat",
+                "required": 0
+            }
+        ]
+    },
+    "field_datestamp": {
+        "type": "datestamp",
+        "cardinality": "1",
+        "module": "date",
+        "storage": {
+            "type": "field_sql_storage",
+            "settings": [],
+            "module": "field_sql_storage",
+            "active": "1",
+            "details": {
+                "sql": {
+                    "FIELD_LOAD_CURRENT": {
+                        "field_data_field_datestamp": {
+                            "value": "field_datestamp_value"
+                        }
+                    },
+                    "FIELD_LOAD_REVISION": {
+                        "field_revision_field_datestamp": {
+                            "value": "field_datestamp_value"
+                        }
+                    }
+                }
+            }
+        },
+        "instances": [
+            {
+                "entity_type": "node",
+                "bundle": "date_migrate_example",
+                "label": "Datestamp",
+                "required": 0
+            }
+        ]
+    },
+    "field_datestamp_range": {
+        "type": "datestamp",
+        "cardinality": "1",
+        "module": "date",
+        "storage": {
+            "type": "field_sql_storage",
+            "settings": [],
+            "module": "field_sql_storage",
+            "active": "1",
+            "details": {
+                "sql": {
+                    "FIELD_LOAD_CURRENT": {
+                        "field_data_field_datestamp_range": {
+                            "value": "field_datestamp_range_value",
+                            "value2": "field_datestamp_range_value2"
+                        }
+                    },
+                    "FIELD_LOAD_REVISION": {
+                        "field_revision_field_datestamp_range": {
+                            "value": "field_datestamp_range_value",
+                            "value2": "field_datestamp_range_value2"
+                        }
+                    }
+                }
+            }
+        },
+        "instances": [
+            {
+                "entity_type": "node",
+                "bundle": "date_migrate_example",
+                "label": "Datestamp range",
+                "required": 0
+            }
+        ]
+    },
+    "field_datetime": {
+        "type": "datetime",
+        "cardinality": "1",
+        "module": "date",
+        "storage": {
+            "type": "field_sql_storage",
+            "settings": [],
+            "module": "field_sql_storage",
+            "active": "1",
+            "details": {
+                "sql": {
+                    "FIELD_LOAD_CURRENT": {
+                        "field_data_field_datetime": {
+                            "value": "field_datetime_value"
+                        }
+                    },
+                    "FIELD_LOAD_REVISION": {
+                        "field_revision_field_datetime": {
+                            "value": "field_datetime_value"
+                        }
+                    }
+                }
+            }
+        },
+        "instances": [
+            {
+                "entity_type": "node",
+                "bundle": "date_migrate_example",
+                "label": "Datetime",
+                "required": 0
+            }
+        ]
+    },
+    "field_datetime_range": {
+        "type": "datetime",
+        "cardinality": "1",
+        "module": "date",
+        "storage": {
+            "type": "field_sql_storage",
+            "settings": [],
+            "module": "field_sql_storage",
+            "active": "1",
+            "details": {
+                "sql": {
+                    "FIELD_LOAD_CURRENT": {
+                        "field_data_field_datetime_range": {
+                            "value": "field_datetime_range_value",
+                            "value2": "field_datetime_range_value2"
+                        }
+                    },
+                    "FIELD_LOAD_REVISION": {
+                        "field_revision_field_datetime_range": {
+                            "value": "field_datetime_range_value",
+                            "value2": "field_datetime_range_value2"
+                        }
+                    }
+                }
+            }
+        },
+        "instances": [
+            {
+                "entity_type": "node",
+                "bundle": "date_migrate_example",
+                "label": "Datetime range",
+                "required": 0
+            }
+        ]
+    },
+    "field_video": {
+        "type": "video_embed_field",
+        "cardinality": "1",
+        "module": "video_embed_field",
+        "storage": {
+            "type": "field_sql_storage",
+            "settings": [],
+            "module": "field_sql_storage",
+            "active": "1",
+            "details": {
+                "sql": {
+                    "FIELD_LOAD_CURRENT": {
+                        "field_data_field_video": {
+                            "video_url": "field_video_video_url",
+                            "thumbnail_path": "field_video_thumbnail_path",
+                            "video_data": "field_video_video_data",
+                            "embed_code": "field_video_embed_code",
+                            "description": "field_video_description"
+                        }
+                    },
+                    "FIELD_LOAD_REVISION": {
+                        "field_revision_field_video": {
+                            "video_url": "field_video_video_url",
+                            "thumbnail_path": "field_video_thumbnail_path",
+                            "video_data": "field_video_video_data",
+                            "embed_code": "field_video_embed_code",
+                            "description": "field_video_description"
+                        }
+                    }
+                }
+            }
+        },
+        "instances": [
+            {
+                "entity_type": "node",
+                "bundle": "article",
+                "label": "Video",
+                "required": false
+            }
+        ]
+    },
+    "comment_body": {
+        "type": "text_long",
+        "cardinality": "1",
+        "module": "text",
+        "storage": {
+            "type": "field_sql_storage",
+            "settings": [],
+            "module": "field_sql_storage",
+            "active": "1",
+            "details": {
+                "sql": {
+                    "FIELD_LOAD_CURRENT": {
+                        "field_data_comment_body": {
+                            "value": "comment_body_value",
+                            "format": "comment_body_format"
+                        }
+                    },
+                    "FIELD_LOAD_REVISION": {
+                        "field_revision_comment_body": {
+                            "value": "comment_body_value",
+                            "format": "comment_body_format"
+                        }
+                    }
+                }
+            }
+        },
+        "instances": [
+            {
+                "entity_type": "comment",
+                "bundle": "comment_node_ad_test_in_grid_type",
+                "label": "Comment",
+                "required": true
+            },
+            {
+                "entity_type": "comment",
+                "bundle": "comment_node_ad_test_type",
+                "label": "Comment",
+                "required": true
+            },
+            {
+                "entity_type": "comment",
+                "bundle": "comment_node_article",
+                "label": "Comment",
+                "required": 1
+            },
+            {
+                "entity_type": "comment",
+                "bundle": "comment_node_page",
+                "label": "Comment",
+                "required": true
+            },
+            {
+                "entity_type": "comment",
+                "bundle": "comment_node_feed",
+                "label": "Comment",
+                "required": true
+            },
+            {
+                "entity_type": "comment",
+                "bundle": "comment_node_feed_item",
+                "label": "Comment",
+                "required": true
+            },
+            {
+                "entity_type": "comment",
+                "bundle": "comment_node_job_application",
+                "label": "Comment",
+                "required": true
+            },
+            {
+                "entity_type": "comment",
+                "bundle": "comment_node_job_per_file",
+                "label": "Comment",
+                "required": true
+            },
+            {
+                "entity_type": "comment",
+                "bundle": "comment_node_job_per_link",
+                "label": "Comment",
+                "required": true
+            },
+            {
+                "entity_type": "comment",
+                "bundle": "comment_node_job_per_template",
+                "label": "Comment",
+                "required": true
+            },
+            {
+                "entity_type": "comment",
+                "bundle": "comment_node_kitesurf_centers",
+                "label": "Comment",
+                "required": true
+            },
+            {
+                "entity_type": "comment",
+                "bundle": "comment_node_kitesurf_centers_countries",
+                "label": "Comment",
+                "required": true
+            },
+            {
+                "entity_type": "comment",
+                "bundle": "comment_node_date_migrate_example",
+                "label": "Comment",
+                "required": true
+            },
+            {
+                "entity_type": "comment",
+                "bundle": "comment_node_simpleads",
+                "label": "Comment",
+                "required": true
+            },
+            {
+                "entity_type": "comment",
+                "bundle": "comment_node_simpleads_campaign",
+                "label": "Comment",
+                "required": true
+            },
+            {
+                "entity_type": "comment",
+                "bundle": "comment_node_test_type",
+                "label": "Comment",
+                "required": true
+            },
+            {
+                "entity_type": "comment",
+                "bundle": "comment_node_webform",
+                "label": "Comment",
+                "required": true
+            },
+            {
+                "entity_type": "comment",
+                "bundle": "comment_node_website_listing",
+                "label": "Comment",
+                "required": true
+            }
+        ]
+    },
+    "field_ad_type": {
+        "type": "list_text",
+        "cardinality": "1",
+        "module": "list",
+        "storage": {
+            "type": "field_sql_storage",
+            "settings": [],
+            "module": "field_sql_storage",
+            "active": "1",
+            "details": {
+                "sql": {
+                    "FIELD_LOAD_CURRENT": {
+                        "field_data_field_ad_type": {
+                            "value": "field_ad_type_value"
+                        }
+                    },
+                    "FIELD_LOAD_REVISION": {
+                        "field_revision_field_ad_type": {
+                            "value": "field_ad_type_value"
+                        }
+                    }
+                }
+            }
+        },
+        "instances": [
+            {
+                "entity_type": "node",
+                "bundle": "simpleads",
+                "label": "Ad Type",
+                "required": true
+            }
+        ]
+    },
+    "field_ad_image": {
+        "type": "image",
+        "cardinality": "1",
+        "module": "image",
+        "storage": {
+            "type": "field_sql_storage",
+            "settings": [],
+            "module": "field_sql_storage",
+            "active": "1",
+            "details": {
+                "sql": {
+                    "FIELD_LOAD_CURRENT": {
+                        "field_data_field_ad_image": {
+                            "fid": "field_ad_image_fid",
+                            "alt": "field_ad_image_alt",
+                            "title": "field_ad_image_title",
+                            "width": "field_ad_image_width",
+                            "height": "field_ad_image_height"
+                        }
+                    },
+                    "FIELD_LOAD_REVISION": {
+                        "field_revision_field_ad_image": {
+                            "fid": "field_ad_image_fid",
+                            "alt": "field_ad_image_alt",
+                            "title": "field_ad_image_title",
+                            "width": "field_ad_image_width",
+                            "height": "field_ad_image_height"
+                        }
+                    }
+                }
+            }
+        },
+        "instances": [
+            {
+                "entity_type": "node",
+                "bundle": "simpleads",
+                "label": "Ad Image",
+                "required": false
+            }
+        ]
+    },
+    "field_ad_flash": {
+        "type": "file",
+        "cardinality": "1",
+        "module": "file",
+        "storage": {
+            "type": "field_sql_storage",
+            "settings": [],
+            "module": "field_sql_storage",
+            "active": "1",
+            "details": {
+                "sql": {
+                    "FIELD_LOAD_CURRENT": {
+                        "field_data_field_ad_flash": {
+                            "fid": "field_ad_flash_fid",
+                            "display": "field_ad_flash_display",
+                            "description": "field_ad_flash_description"
+                        }
+                    },
+                    "FIELD_LOAD_REVISION": {
+                        "field_revision_field_ad_flash": {
+                            "fid": "field_ad_flash_fid",
+                            "display": "field_ad_flash_display",
+                            "description": "field_ad_flash_description"
+                        }
+                    }
+                }
+            }
+        },
+        "instances": [
+            {
+                "entity_type": "node",
+                "bundle": "simpleads",
+                "label": "Ad Flash",
+                "required": 0
+            }
+        ]
+    },
+    "field_ad_text": {
+        "type": "text_long",
+        "cardinality": "1",
+        "module": "text",
+        "storage": {
+            "type": "field_sql_storage",
+            "settings": [],
+            "module": "field_sql_storage",
+            "active": "1",
+            "details": {
+                "sql": {
+                    "FIELD_LOAD_CURRENT": {
+                        "field_data_field_ad_text": {
+                            "value": "field_ad_text_value",
+                            "format": "field_ad_text_format"
+                        }
+                    },
+                    "FIELD_LOAD_REVISION": {
+                        "field_revision_field_ad_text": {
+                            "value": "field_ad_text_value",
+                            "format": "field_ad_text_format"
+                        }
+                    }
+                }
+            }
+        },
+        "instances": [
+            {
+                "entity_type": "node",
+                "bundle": "simpleads",
+                "label": "Text Ad",
+                "required": false
+            }
+        ]
+    },
+    "field_ad_url": {
+        "type": "text",
+        "cardinality": "1",
+        "module": "text",
+        "storage": {
+            "type": "field_sql_storage",
+            "settings": [],
+            "module": "field_sql_storage",
+            "active": "1",
+            "details": {
+                "sql": {
+                    "FIELD_LOAD_CURRENT": {
+                        "field_data_field_ad_url": {
+                            "value": "field_ad_url_value",
+                            "format": "field_ad_url_format"
+                        }
+                    },
+                    "FIELD_LOAD_REVISION": {
+                        "field_revision_field_ad_url": {
+                            "value": "field_ad_url_value",
+                            "format": "field_ad_url_format"
+                        }
+                    }
+                }
+            }
+        },
+        "instances": [
+            {
+                "entity_type": "node",
+                "bundle": "simpleads",
+                "label": "URL Address",
+                "required": false
+            }
+        ]
+    },
+    "field_ad_category": {
+        "type": "taxonomy_term_reference",
+        "cardinality": "1",
+        "module": "taxonomy",
+        "storage": {
+            "type": "field_sql_storage",
+            "settings": [],
+            "module": "field_sql_storage",
+            "active": "1",
+            "details": {
+                "sql": {
+                    "FIELD_LOAD_CURRENT": {
+                        "field_data_field_ad_category": {
+                            "tid": "field_ad_category_tid"
+                        }
+                    },
+                    "FIELD_LOAD_REVISION": {
+                        "field_revision_field_ad_category": {
+                            "tid": "field_ad_category_tid"
+                        }
+                    }
+                }
+            }
+        },
+        "instances": [
+            {
+                "entity_type": "node",
+                "bundle": "simpleads",
+                "label": "Ad Group",
+                "required": true
+            }
+        ]
+    },
+    "field_ad_start_date": {
+        "type": "text",
+        "cardinality": "1",
+        "module": "text",
+        "storage": {
+            "type": "field_sql_storage",
+            "settings": [],
+            "module": "field_sql_storage",
+            "active": "1",
+            "details": {
+                "sql": {
+                    "FIELD_LOAD_CURRENT": {
+                        "field_data_field_ad_start_date": {
+                            "value": "field_ad_start_date_value",
+                            "format": "field_ad_start_date_format"
+                        }
+                    },
+                    "FIELD_LOAD_REVISION": {
+                        "field_revision_field_ad_start_date": {
+                            "value": "field_ad_start_date_value",
+                            "format": "field_ad_start_date_format"
+                        }
+                    }
+                }
+            }
+        },
+        "instances": [
+            {
+                "entity_type": "node",
+                "bundle": "simpleads",
+                "label": "Active Date",
+                "required": false
+            }
+        ]
+    },
+    "field_ad_end_date": {
+        "type": "text",
+        "cardinality": "1",
+        "module": "text",
+        "storage": {
+            "type": "field_sql_storage",
+            "settings": [],
+            "module": "field_sql_storage",
+            "active": "1",
+            "details": {
+                "sql": {
+                    "FIELD_LOAD_CURRENT": {
+                        "field_data_field_ad_end_date": {
+                            "value": "field_ad_end_date_value",
+                            "format": "field_ad_end_date_format"
+                        }
+                    },
+                    "FIELD_LOAD_REVISION": {
+                        "field_revision_field_ad_end_date": {
+                            "value": "field_ad_end_date_value",
+                            "format": "field_ad_end_date_format"
+                        }
+                    }
+                }
+            }
+        },
+        "instances": [
+            {
+                "entity_type": "node",
+                "bundle": "simpleads",
+                "label": "End Date",
+                "required": false
+            }
+        ]
+    },
+    "field_ad_url_taget": {
+        "type": "list_boolean",
+        "cardinality": "1",
+        "module": "list",
+        "storage": {
+            "type": "field_sql_storage",
+            "settings": [],
+            "module": "field_sql_storage",
+            "active": "1",
+            "details": {
+                "sql": {
+                    "FIELD_LOAD_CURRENT": {
+                        "field_data_field_ad_url_taget": {
+                            "value": "field_ad_url_taget_value"
+                        }
+                    },
+                    "FIELD_LOAD_REVISION": {
+                        "field_revision_field_ad_url_taget": {
+                            "value": "field_ad_url_taget_value"
+                        }
+                    }
+                }
+            }
+        },
+        "instances": [
+            {
+                "entity_type": "node",
+                "bundle": "simpleads",
+                "label": "Link Target",
+                "required": false
+            }
+        ]
+    },
+    "field_ad_status": {
+        "type": "list_boolean",
+        "cardinality": "1",
+        "module": "list",
+        "storage": {
+            "type": "field_sql_storage",
+            "settings": [],
+            "module": "field_sql_storage",
+            "active": "1",
+            "details": {
+                "sql": {
+                    "FIELD_LOAD_CURRENT": {
+                        "field_data_field_ad_status": {
+                            "value": "field_ad_status_value"
+                        }
+                    },
+                    "FIELD_LOAD_REVISION": {
+                        "field_revision_field_ad_status": {
+                            "value": "field_ad_status_value"
+                        }
+                    }
+                }
+            }
+        },
+        "instances": [
+            {
+                "entity_type": "node",
+                "bundle": "simpleads",
+                "label": "Status",
+                "required": false
+            }
+        ]
+    },
+    "field_adcamp_list": {
+        "type": "text",
+        "cardinality": "1",
+        "module": "text",
+        "storage": {
+            "type": "field_sql_storage",
+            "settings": [],
+            "module": "field_sql_storage",
+            "active": "1",
+            "details": {
+                "sql": {
+                    "FIELD_LOAD_CURRENT": {
+                        "field_data_field_adcamp_list": {
+                            "value": "field_adcamp_list_value",
+                            "format": "field_adcamp_list_format"
+                        }
+                    },
+                    "FIELD_LOAD_REVISION": {
+                        "field_revision_field_adcamp_list": {
+                            "value": "field_adcamp_list_value",
+                            "format": "field_adcamp_list_format"
+                        }
+                    }
+                }
+            }
+        },
+        "instances": [
+            {
+                "entity_type": "node",
+                "bundle": "simpleads",
+                "label": "Campaign",
+                "required": false
+            }
+        ]
+    },
+    "field_adcamp_impression": {
+        "type": "list_boolean",
+        "cardinality": "1",
+        "module": "list",
+        "storage": {
+            "type": "field_sql_storage",
+            "settings": [],
+            "module": "field_sql_storage",
+            "active": "1",
+            "details": {
+                "sql": {
+                    "FIELD_LOAD_CURRENT": {
+                        "field_data_field_adcamp_impression": {
+                            "value": "field_adcamp_impression_value"
+                        }
+                    },
+                    "FIELD_LOAD_REVISION": {
+                        "field_revision_field_adcamp_impression": {
+                            "value": "field_adcamp_impression_value"
+                        }
+                    }
+                }
+            }
+        },
+        "instances": [
+            {
+                "entity_type": "node",
+                "bundle": "simpleads_campaign",
+                "label": "Impressions",
+                "required": false
+            }
+        ]
+    },
+    "field_adcamp_impressions": {
+        "type": "text",
+        "cardinality": "1",
+        "module": "text",
+        "storage": {
+            "type": "field_sql_storage",
+            "settings": [],
+            "module": "field_sql_storage",
+            "active": "1",
+            "details": {
+                "sql": {
+                    "FIELD_LOAD_CURRENT": {
+                        "field_data_field_adcamp_impressions": {
+                            "value": "field_adcamp_impressions_value",
+                            "format": "field_adcamp_impressions_format"
+                        }
+                    },
+                    "FIELD_LOAD_REVISION": {
+                        "field_revision_field_adcamp_impressions": {
+                            "value": "field_adcamp_impressions_value",
+                            "format": "field_adcamp_impressions_format"
+                        }
+                    }
+                }
+            }
+        },
+        "instances": [
+            {
+                "entity_type": "node",
+                "bundle": "simpleads_campaign",
+                "label": "Number of impressions",
+                "required": false
+            }
+        ]
+    },
+    "field_adcamp_click": {
+        "type": "list_boolean",
+        "cardinality": "1",
+        "module": "list",
+        "storage": {
+            "type": "field_sql_storage",
+            "settings": [],
+            "module": "field_sql_storage",
+            "active": "1",
+            "details": {
+                "sql": {
+                    "FIELD_LOAD_CURRENT": {
+                        "field_data_field_adcamp_click": {
+                            "value": "field_adcamp_click_value"
+                        }
+                    },
+                    "FIELD_LOAD_REVISION": {
+                        "field_revision_field_adcamp_click": {
+                            "value": "field_adcamp_click_value"
+                        }
+                    }
+                }
+            }
+        },
+        "instances": [
+            {
+                "entity_type": "node",
+                "bundle": "simpleads_campaign",
+                "label": "Clicks",
+                "required": false
+            }
+        ]
+    },
+    "field_adcamp_clicks": {
+        "type": "text",
+        "cardinality": "1",
+        "module": "text",
+        "storage": {
+            "type": "field_sql_storage",
+            "settings": [],
+            "module": "field_sql_storage",
+            "active": "1",
+            "details": {
+                "sql": {
+                    "FIELD_LOAD_CURRENT": {
+                        "field_data_field_adcamp_clicks": {
+                            "value": "field_adcamp_clicks_value",
+                            "format": "field_adcamp_clicks_format"
+                        }
+                    },
+                    "FIELD_LOAD_REVISION": {
+                        "field_revision_field_adcamp_clicks": {
+                            "value": "field_adcamp_clicks_value",
+                            "format": "field_adcamp_clicks_format"
+                        }
+                    }
+                }
+            }
+        },
+        "instances": [
+            {
+                "entity_type": "node",
+                "bundle": "simpleads_campaign",
+                "label": "Number of clicks",
+                "required": false
+            }
+        ]
+    },
+    "field_adcamp_day": {
+        "type": "list_boolean",
+        "cardinality": "1",
+        "module": "list",
+        "storage": {
+            "type": "field_sql_storage",
+            "settings": [],
+            "module": "field_sql_storage",
+            "active": "1",
+            "details": {
+                "sql": {
+                    "FIELD_LOAD_CURRENT": {
+                        "field_data_field_adcamp_day": {
+                            "value": "field_adcamp_day_value"
+                        }
+                    },
+                    "FIELD_LOAD_REVISION": {
+                        "field_revision_field_adcamp_day": {
+                            "value": "field_adcamp_day_value"
+                        }
+                    }
+                }
+            }
+        },
+        "instances": [
+            {
+                "entity_type": "node",
+                "bundle": "simpleads_campaign",
+                "label": "Days",
+                "required": false
+            }
+        ]
+    },
+    "field_adcamp_days": {
+        "type": "text",
+        "cardinality": "1",
+        "module": "text",
+        "storage": {
+            "type": "field_sql_storage",
+            "settings": [],
+            "module": "field_sql_storage",
+            "active": "1",
+            "details": {
+                "sql": {
+                    "FIELD_LOAD_CURRENT": {
+                        "field_data_field_adcamp_days": {
+                            "value": "field_adcamp_days_value",
+                            "format": "field_adcamp_days_format"
+                        }
+                    },
+                    "FIELD_LOAD_REVISION": {
+                        "field_revision_field_adcamp_days": {
+                            "value": "field_adcamp_days_value",
+                            "format": "field_adcamp_days_format"
+                        }
+                    }
+                }
+            }
+        },
+        "instances": [
+            {
+                "entity_type": "node",
+                "bundle": "simpleads_campaign",
+                "label": "Number of days",
+                "required": false
+            }
+        ]
+    },
+    "field_adcamp_start": {
+        "type": "text",
+        "cardinality": "1",
+        "module": "text",
+        "storage": {
+            "type": "field_sql_storage",
+            "settings": [],
+            "module": "field_sql_storage",
+            "active": "1",
+            "details": {
+                "sql": {
+                    "FIELD_LOAD_CURRENT": {
+                        "field_data_field_adcamp_start": {
+                            "value": "field_adcamp_start_value",
+                            "format": "field_adcamp_start_format"
+                        }
+                    },
+                    "FIELD_LOAD_REVISION": {
+                        "field_revision_field_adcamp_start": {
+                            "value": "field_adcamp_start_value",
+                            "format": "field_adcamp_start_format"
+                        }
+                    }
+                }
+            }
+        },
+        "instances": [
+            {
+                "entity_type": "node",
+                "bundle": "simpleads_campaign",
+                "label": "Start date",
+                "required": true
+            }
+        ]
+    },
+    "field_product_category": {
+        "type": "list_text",
+        "cardinality": "5",
+        "module": "list",
+        "storage": {
+            "type": "field_sql_storage",
+            "settings": [],
+            "module": "field_sql_storage",
+            "active": "1",
+            "details": {
+                "sql": {
+                    "FIELD_LOAD_CURRENT": {
+                        "field_data_field_product_category": {
+                            "value": "field_product_category_value"
+                        }
+                    },
+                    "FIELD_LOAD_REVISION": {
+                        "field_revision_field_product_category": {
+                            "value": "field_product_category_value"
+                        }
+                    }
+                }
+            }
+        },
+        "instances": [
+            {
+                "entity_type": "node",
+                "bundle": "website_listing",
+                "label": "Product Category",
+                "required": 1
+            }
+        ]
+    },
+    "field_view": {
+        "type": "viewfield",
+        "cardinality": "1",
+        "module": "viewfield",
+        "storage": {
+            "type": "field_sql_storage",
+            "settings": [],
+            "module": "field_sql_storage",
+            "active": "1",
+            "details": {
+                "sql": {
+                    "FIELD_LOAD_CURRENT": {
+                        "field_data_field_view": {
+                            "vname": "field_view_vname",
+                            "vargs": "field_view_vargs"
+                        }
+                    },
+                    "FIELD_LOAD_REVISION": {
+                        "field_revision_field_view": {
+                            "vname": "field_view_vname",
+                            "vargs": "field_view_vargs"
+                        }
+                    }
+                }
+            }
+        },
+        "instances": [
+            {
+                "entity_type": "node",
+                "bundle": "article",
+                "label": "View",
+                "required": 0
+            }
+        ]
+    },
+    "field_affiliated_with": {
+        "type": "list_text",
+        "cardinality": "1",
+        "module": "list",
+        "storage": {
+            "type": "field_sql_storage",
+            "settings": [],
+            "module": "field_sql_storage",
+            "active": "1",
+            "details": {
+                "sql": {
+                    "FIELD_LOAD_CURRENT": {
+                        "field_data_field_affiliated_with": {
+                            "value": "field_affiliated_with_value"
+                        }
+                    },
+                    "FIELD_LOAD_REVISION": {
+                        "field_revision_field_affiliated_with": {
+                            "value": "field_affiliated_with_value"
+                        }
+                    }
+                }
+            }
+        },
+        "instances": [
+            {
+                "entity_type": "node",
+                "bundle": "kitesurf_centers",
+                "label": "Affiliated with",
+                "required": 0
+            }
+        ]
+    },
+    "field_logo": {
+        "type": "image",
+        "cardinality": "1",
+        "module": "image",
+        "storage": {
+            "type": "field_sql_storage",
+            "settings": [],
+            "module": "field_sql_storage",
+            "active": "1",
+            "details": {
+                "sql": {
+                    "FIELD_LOAD_CURRENT": {
+                        "field_data_field_logo": {
+                            "fid": "field_logo_fid",
+                            "alt": "field_logo_alt",
+                            "title": "field_logo_title",
+                            "width": "field_logo_width",
+                            "height": "field_logo_height"
+                        }
+                    },
+                    "FIELD_LOAD_REVISION": {
+                        "field_revision_field_logo": {
+                            "fid": "field_logo_fid",
+                            "alt": "field_logo_alt",
+                            "title": "field_logo_title",
+                            "width": "field_logo_width",
+                            "height": "field_logo_height"
+                        }
+                    }
+                }
+            }
+        },
+        "instances": [
+            {
+                "entity_type": "node",
+                "bundle": "kitesurf_centers",
+                "label": "logo",
+                "required": 0
+            }
+        ]
+    },
+    "field_contact_e_mail": {
+        "type": "email",
+        "cardinality": "1",
+        "module": "email",
+        "storage": {
+            "type": "field_sql_storage",
+            "settings": [],
+            "module": "field_sql_storage",
+            "active": "1",
+            "details": {
+                "sql": {
+                    "FIELD_LOAD_CURRENT": {
+                        "field_data_field_contact_e_mail": {
+                            "email": "field_contact_e_mail_email"
+                        }
+                    },
+                    "FIELD_LOAD_REVISION": {
+                        "field_revision_field_contact_e_mail": {
+                            "email": "field_contact_e_mail_email"
+                        }
+                    }
+                }
+            }
+        },
+        "instances": [
+            {
+                "entity_type": "node",
+                "bundle": "kitesurf_centers",
+                "label": "Contact e-mail",
+                "required": 1
+            }
+        ]
+    },
+    "field_first_month_of_season": {
+        "type": "list_text",
+        "cardinality": "1",
+        "module": "list",
+        "storage": {
+            "type": "field_sql_storage",
+            "settings": [],
+            "module": "field_sql_storage",
+            "active": "1",
+            "details": {
+                "sql": {
+                    "FIELD_LOAD_CURRENT": {
+                        "field_data_field_first_month_of_season": {
+                            "value": "field_first_month_of_season_value"
+                        }
+                    },
+                    "FIELD_LOAD_REVISION": {
+                        "field_revision_field_first_month_of_season": {
+                            "value": "field_first_month_of_season_value"
+                        }
+                    }
+                }
+            }
+        },
+        "instances": [
+            {
+                "entity_type": "node",
+                "bundle": "kitesurf_centers",
+                "label": "First month of season",
+                "required": 0
+            }
+        ]
+    },
+    "field_last_month_of_the_season": {
+        "type": "list_text",
+        "cardinality": "1",
+        "module": "list",
+        "storage": {
+            "type": "field_sql_storage",
+            "settings": [],
+            "module": "field_sql_storage",
+            "active": "1",
+            "details": {
+                "sql": {
+                    "FIELD_LOAD_CURRENT": {
+                        "field_data_field_last_month_of_the_season": {
+                            "value": "field_last_month_of_the_season_value"
+                        }
+                    },
+                    "FIELD_LOAD_REVISION": {
+                        "field_revision_field_last_month_of_the_season": {
+                            "value": "field_last_month_of_the_season_value"
+                        }
+                    }
+                }
+            }
+        },
+        "instances": [
+            {
+                "entity_type": "node",
+                "bundle": "kitesurf_centers",
+                "label": "Last month of the season",
+                "required": 0
+            }
+        ]
+    },
+    "field_activities": {
+        "type": "taxonomy_term_reference",
+        "cardinality": "10",
+        "module": "taxonomy",
+        "storage": {
+            "type": "field_sql_storage",
+            "settings": [],
+            "module": "field_sql_storage",
+            "active": "1",
+            "details": {
+                "sql": {
+                    "FIELD_LOAD_CURRENT": {
+                        "field_data_field_activities": {
+                            "tid": "field_activities_tid"
+                        }
+                    },
+                    "FIELD_LOAD_REVISION": {
+                        "field_revision_field_activities": {
+                            "tid": "field_activities_tid"
+                        }
+                    }
+                }
+            }
+        },
+        "instances": [
+            {
+                "entity_type": "node",
+                "bundle": "kitesurf_centers",
+                "label": "Activities",
+                "required": 0
+            }
+        ]
+    },
+    "field_offerings": {
+        "type": "taxonomy_term_reference",
+        "cardinality": "10",
+        "module": "taxonomy",
+        "storage": {
+            "type": "field_sql_storage",
+            "settings": [],
+            "module": "field_sql_storage",
+            "active": "1",
+            "details": {
+                "sql": {
+                    "FIELD_LOAD_CURRENT": {
+                        "field_data_field_offerings": {
+                            "tid": "field_offerings_tid"
+                        }
+                    },
+                    "FIELD_LOAD_REVISION": {
+                        "field_revision_field_offerings": {
+                            "tid": "field_offerings_tid"
+                        }
+                    }
+                }
+            }
+        },
+        "instances": [
+            {
+                "entity_type": "node",
+                "bundle": "kitesurf_centers",
+                "label": "Offerings",
+                "required": 0
+            }
+        ]
+    },
+    "field_feed_item_description": {
+        "type": "text_with_summary",
+        "cardinality": "1",
+        "module": "text",
+        "storage": {
+            "type": "field_sql_storage",
+            "settings": [],
+            "module": "field_sql_storage",
+            "active": "1",
+            "details": {
+                "sql": {
+                    "FIELD_LOAD_CURRENT": {
+                        "field_data_field_feed_item_description": {
+                            "value": "field_feed_item_description_value",
+                            "summary": "field_feed_item_description_summary",
+                            "format": "field_feed_item_description_format"
+                        }
+                    },
+                    "FIELD_LOAD_REVISION": {
+                        "field_revision_field_feed_item_description": {
+                            "value": "field_feed_item_description_value",
+                            "summary": "field_feed_item_description_summary",
+                            "format": "field_feed_item_description_format"
+                        }
+                    }
+                }
+            }
+        },
+        "instances": [
+            {
+                "entity_type": "node",
+                "bundle": "feed_item",
+                "label": "Description",
+                "required": 0
+            }
+        ]
+    },
+    "field_center_rating": {
+        "type": "fivestar",
+        "cardinality": "1",
+        "module": "fivestar",
+        "storage": {
+            "type": "field_sql_storage",
+            "settings": [],
+            "module": "field_sql_storage",
+            "active": "1",
+            "details": {
+                "sql": {
+                    "FIELD_LOAD_CURRENT": {
+                        "field_data_field_center_rating": {
+                            "rating": "field_center_rating_rating",
+                            "target": "field_center_rating_target"
+                        }
+                    },
+                    "FIELD_LOAD_REVISION": {
+                        "field_revision_field_center_rating": {
+                            "rating": "field_center_rating_rating",
+                            "target": "field_center_rating_target"
+                        }
+                    }
+                }
+            }
+        },
+        "instances": [
+            {
+                "entity_type": "node",
+                "bundle": "website_listing",
+                "label": "Manufacturer Rating",
+                "required": 0
+            }
+        ]
+    },
+    "field_center_star_rating": {
+        "type": "fivestar",
+        "cardinality": "1",
+        "module": "fivestar",
+        "storage": {
+            "type": "field_sql_storage",
+            "settings": [],
+            "module": "field_sql_storage",
+            "active": "1",
+            "details": {
+                "sql": {
+                    "FIELD_LOAD_CURRENT": {
+                        "field_data_field_center_star_rating": {
+                            "rating": "field_center_star_rating_rating",
+                            "target": "field_center_star_rating_target"
+                        }
+                    },
+                    "FIELD_LOAD_REVISION": {
+                        "field_revision_field_center_star_rating": {
+                            "rating": "field_center_star_rating_rating",
+                            "target": "field_center_star_rating_target"
+                        }
+                    }
+                }
+            }
+        },
+        "instances": [
+            {
+                "entity_type": "node",
+                "bundle": "kitesurf_centers",
+                "label": "Center Rating",
+                "required": 0
+            }
+        ]
+    },
+    "field_map_and_flag": {
+        "type": "image",
+        "cardinality": "1",
+        "module": "image",
+        "storage": {
+            "type": "field_sql_storage",
+            "settings": [],
+            "module": "field_sql_storage",
+            "active": "1",
+            "details": {
+                "sql": {
+                    "FIELD_LOAD_CURRENT": {
+                        "field_data_field_map_and_flag": {
+                            "fid": "field_map_and_flag_fid",
+                            "alt": "field_map_and_flag_alt",
+                            "title": "field_map_and_flag_title",
+                            "width": "field_map_and_flag_width",
+                            "height": "field_map_and_flag_height"
+                        }
+                    },
+                    "FIELD_LOAD_REVISION": {
+                        "field_revision_field_map_and_flag": {
+                            "fid": "field_map_and_flag_fid",
+                            "alt": "field_map_and_flag_alt",
+                            "title": "field_map_and_flag_title",
+                            "width": "field_map_and_flag_width",
+                            "height": "field_map_and_flag_height"
+                        }
+                    }
+                }
+            }
+        },
+        "instances": [
+            {
+                "entity_type": "node",
+                "bundle": "kitesurf_centers_countries",
+                "label": "Map and Flag",
+                "required": 0
+            }
+        ]
+    },
+    "field_state_region": {
+        "type": "text",
+        "cardinality": "1",
+        "module": "text",
+        "storage": {
+            "type": "field_sql_storage",
+            "settings": [],
+            "module": "field_sql_storage",
+            "active": "1",
+            "details": {
+                "sql": {
+                    "FIELD_LOAD_CURRENT": {
+                        "field_data_field_state_region": {
+                            "value": "field_state_region_value",
+                            "format": "field_state_region_format"
+                        }
+                    },
+                    "FIELD_LOAD_REVISION": {
+                        "field_revision_field_state_region": {
+                            "value": "field_state_region_value",
+                            "format": "field_state_region_format"
+                        }
+                    }
+                }
+            }
+        },
+        "instances": [
+            {
+                "entity_type": "node",
+                "bundle": "kitesurf_centers",
+                "label": "State \/ Region",
+                "required": 0
+            }
+        ]
+    },
+    "field_town_city": {
+        "type": "text",
+        "cardinality": "1",
+        "module": "text",
+        "storage": {
+            "type": "field_sql_storage",
+            "settings": [],
+            "module": "field_sql_storage",
+            "active": "1",
+            "details": {
+                "sql": {
+                    "FIELD_LOAD_CURRENT": {
+                        "field_data_field_town_city": {
+                            "value": "field_town_city_value",
+                            "format": "field_town_city_format"
+                        }
+                    },
+                    "FIELD_LOAD_REVISION": {
+                        "field_revision_field_town_city": {
+                            "value": "field_town_city_value",
+                            "format": "field_town_city_format"
+                        }
+                    }
+                }
+            }
+        },
+        "instances": [
+            {
+                "entity_type": "node",
+                "bundle": "kitesurf_centers",
+                "label": "Town \/ City",
+                "required": 0
+            }
+        ]
+    },
+    "field_test": {
+        "type": "taxonomy_term_reference",
+        "cardinality": "1",
+        "module": "taxonomy",
+        "storage": {
+            "type": "field_sql_storage",
+            "settings": [],
+            "module": "field_sql_storage",
+            "active": "1",
+            "details": {
+                "sql": {
+                    "FIELD_LOAD_CURRENT": {
+                        "field_data_field_test": {
+                            "tid": "field_test_tid"
+                        }
+                    },
+                    "FIELD_LOAD_REVISION": {
+                        "field_revision_field_test": {
+                            "tid": "field_test_tid"
+                        }
+                    }
+                }
+            }
+        },
+        "instances": [
+            {
+                "entity_type": "node",
+                "bundle": "kitesurf_centers",
+                "label": "Country -",
+                "required": 0
+            }
+        ]
+    },
+    "message_text": {
+        "type": "text_long",
+        "cardinality": "-1",
+        "module": "text",
+        "storage": {
+            "type": "field_sql_storage",
+            "settings": [],
+            "module": "field_sql_storage",
+            "active": "1",
+            "details": {
+                "sql": {
+                    "FIELD_LOAD_CURRENT": {
+                        "field_data_message_text": {
+                            "value": "message_text_value",
+                            "format": "message_text_format"
+                        }
+                    },
+                    "FIELD_LOAD_REVISION": {
+                        "field_revision_message_text": {
+                            "value": "message_text_value",
+                            "format": "message_text_format"
+                        }
+                    }
+                }
+            }
+        },
+        "instances": [
+            {
+                "entity_type": "message_type",
+                "bundle": "message_type",
+                "label": "Message text",
+                "required": true
+            }
+        ]
+    },
+    "field_job_application_attachment": {
+        "type": "file",
+        "cardinality": "5",
+        "module": "file",
+        "storage": {
+            "type": "field_sql_storage",
+            "settings": [],
+            "module": "field_sql_storage",
+            "active": "1",
+            "details": {
+                "sql": {
+                    "FIELD_LOAD_CURRENT": {
+                        "field_data_field_job_application_attachment": {
+                            "fid": "field_job_application_attachment_fid",
+                            "display": "field_job_application_attachment_display",
+                            "description": "field_job_application_attachment_description"
+                        }
+                    },
+                    "FIELD_LOAD_REVISION": {
+                        "field_revision_field_job_application_attachment": {
+                            "fid": "field_job_application_attachment_fid",
+                            "display": "field_job_application_attachment_display",
+                            "description": "field_job_application_attachment_description"
+                        }
+                    }
+                }
+            }
+        },
+        "instances": [
+            {
+                "entity_type": "node",
+                "bundle": "job_application",
+                "label": "Attachments",
+                "required": 0
+            }
+        ]
+    },
+    "field_job_application_job_ref": {
+        "type": "entityreference",
+        "cardinality": "1",
+        "module": "entityreference",
+        "storage": {
+            "type": "field_sql_storage",
+            "settings": [],
+            "module": "field_sql_storage",
+            "active": "1",
+            "details": {
+                "sql": {
+                    "FIELD_LOAD_CURRENT": {
+                        "field_data_field_job_application_job_ref": {
+                            "target_id": "field_job_application_job_ref_target_id"
+                        }
+                    },
+                    "FIELD_LOAD_REVISION": {
+                        "field_revision_field_job_application_job_ref": {
+                            "target_id": "field_job_application_job_ref_target_id"
+                        }
+                    }
+                }
+            }
+        },
+        "instances": [
+            {
+                "entity_type": "node",
+                "bundle": "job_application",
+                "label": "Job",
+                "required": 1
+            }
+        ]
+    },
+    "field_job_application_rej_msg": {
+        "type": "text_long",
+        "cardinality": "1",
+        "module": "text",
+        "storage": {
+            "type": "field_sql_storage",
+            "settings": [],
+            "module": "field_sql_storage",
+            "active": "1",
+            "details": {
+                "sql": {
+                    "FIELD_LOAD_CURRENT": {
+                        "field_data_field_job_application_rej_msg": {
+                            "value": "field_job_application_rej_msg_value",
+                            "format": "field_job_application_rej_msg_format"
+                        }
+                    },
+                    "FIELD_LOAD_REVISION": {
+                        "field_revision_field_job_application_rej_msg": {
+                            "value": "field_job_application_rej_msg_value",
+                            "format": "field_job_application_rej_msg_format"
+                        }
+                    }
+                }
+            }
+        },
+        "instances": [
+            {
+                "entity_type": "node",
+                "bundle": "job_application",
+                "label": "Rejection message",
+                "required": 0
+            }
+        ]
+    },
+    "field_job_application_rej_reason": {
+        "type": "taxonomy_term_reference",
+        "cardinality": "1",
+        "module": "taxonomy",
+        "storage": {
+            "type": "field_sql_storage",
+            "settings": [],
+            "module": "field_sql_storage",
+            "active": "1",
+            "details": {
+                "sql": {
+                    "FIELD_LOAD_CURRENT": {
+                        "field_data_field_job_application_rej_reason": {
+                            "tid": "field_job_application_rej_reason_tid"
+                        }
+                    },
+                    "FIELD_LOAD_REVISION": {
+                        "field_revision_field_job_application_rej_reason": {
+                            "tid": "field_job_application_rej_reason_tid"
+                        }
+                    }
+                }
+            }
+        },
+        "instances": [
+            {
+                "entity_type": "node",
+                "bundle": "job_application",
+                "label": "Rejection reason",
+                "required": 0
+            }
+        ]
+    },
+    "field_job_application_state": {
+        "type": "list_text",
+        "cardinality": "1",
+        "module": "list",
+        "storage": {
+            "type": "field_sql_storage",
+            "settings": [],
+            "module": "field_sql_storage",
+            "active": "1",
+            "details": {
+                "sql": {
+                    "FIELD_LOAD_CURRENT": {
+                        "field_data_field_job_application_state": {
+                            "value": "field_job_application_state_value"
+                        }
+                    },
+                    "FIELD_LOAD_REVISION": {
+                        "field_revision_field_job_application_state": {
+                            "value": "field_job_application_state_value"
+                        }
+                    }
+                }
+            }
+        },
+        "instances": [
+            {
+                "entity_type": "node",
+                "bundle": "job_application",
+                "label": "Application state",
+                "required": 0
+            }
+        ]
+    },
+    "synonyms_synonym": {
+        "type": "text",
+        "cardinality": "-1",
+        "module": "text",
+        "storage": {
+            "type": "field_sql_storage",
+            "settings": [],
+            "module": "field_sql_storage",
+            "active": "1",
+            "details": {
+                "sql": {
+                    "FIELD_LOAD_CURRENT": {
+                        "field_data_synonyms_synonym": {
+                            "value": "synonyms_synonym_value",
+                            "format": "synonyms_synonym_format"
+                        }
+                    },
+                    "FIELD_LOAD_REVISION": {
+                        "field_revision_synonyms_synonym": {
+                            "value": "synonyms_synonym_value",
+                            "format": "synonyms_synonym_format"
+                        }
+                    }
+                }
+            }
+        },
+        "instances": [
+            {
+                "entity_type": "taxonomy_term",
+                "bundle": "job_application_rejection_reason",
+                "label": "Synonyms for this term",
+                "required": false
+            }
+        ]
+    },
+    "field_e_mail": {
+        "type": "email",
+        "cardinality": "1",
+        "module": "email",
+        "storage": {
+            "type": "field_sql_storage",
+            "settings": [],
+            "module": "field_sql_storage",
+            "active": "1",
+            "details": {
+                "sql": {
+                    "FIELD_LOAD_CURRENT": {
+                        "field_data_field_e_mail": {
+                            "email": "field_e_mail_email"
+                        }
+                    },
+                    "FIELD_LOAD_REVISION": {
+                        "field_revision_field_e_mail": {
+                            "email": "field_e_mail_email"
+                        }
+                    }
+                }
+            }
+        },
+        "instances": [
+            {
+                "entity_type": "node",
+                "bundle": "test_type",
+                "label": "e-mail",
+                "required": 0
+            }
+        ]
+    },
+    "field_location": {
+        "type": "geolocation_latlng",
+        "cardinality": "1",
+        "module": "geolocation",
+        "storage": {
+            "type": "field_sql_storage",
+            "settings": [],
+            "module": "field_sql_storage",
+            "active": "1",
+            "details": {
+                "sql": {
+                    "FIELD_LOAD_CURRENT": {
+                        "field_data_field_location": {
+                            "lat": "field_location_lat",
+                            "lng": "field_location_lng",
+                            "lat_sin": "field_location_lat_sin",
+                            "lat_cos": "field_location_lat_cos",
+                            "lng_rad": "field_location_lng_rad"
+                        }
+                    },
+                    "FIELD_LOAD_REVISION": {
+                        "field_revision_field_location": {
+                            "lat": "field_location_lat",
+                            "lng": "field_location_lng",
+                            "lat_sin": "field_location_lat_sin",
+                            "lat_cos": "field_location_lat_cos",
+                            "lng_rad": "field_location_lng_rad"
+                        }
+                    }
+                }
+            }
+        },
+        "instances": [
+            {
+                "entity_type": "node",
+                "bundle": "kitesurf_centers",
+                "label": "Location",
+                "required": 0
+            }
+        ]
+    },
+    "field_address": {
+        "type": "addressfield",
+        "cardinality": "1",
+        "module": "addressfield",
+        "storage": {
+            "type": "field_sql_storage",
+            "settings": [],
+            "module": "field_sql_storage",
+            "active": "1",
+            "details": {
+                "sql": {
+                    "FIELD_LOAD_CURRENT": {
+                        "field_data_field_address": {
+                            "country": "field_address_country",
+                            "administrative_area": "field_address_administrative_area",
+                            "sub_administrative_area": "field_address_sub_administrative_area",
+                            "locality": "field_address_locality",
+                            "dependent_locality": "field_address_dependent_locality",
+                            "postal_code": "field_address_postal_code",
+                            "thoroughfare": "field_address_thoroughfare",
+                            "premise": "field_address_premise",
+                            "sub_premise": "field_address_sub_premise",
+                            "organisation_name": "field_address_organisation_name",
+                            "name_line": "field_address_name_line",
+                            "first_name": "field_address_first_name",
+                            "last_name": "field_address_last_name",
+                            "data": "field_address_data"
+                        }
+                    },
+                    "FIELD_LOAD_REVISION": {
+                        "field_revision_field_address": {
+                            "country": "field_address_country",
+                            "administrative_area": "field_address_administrative_area",
+                            "sub_administrative_area": "field_address_sub_administrative_area",
+                            "locality": "field_address_locality",
+                            "dependent_locality": "field_address_dependent_locality",
+                            "postal_code": "field_address_postal_code",
+                            "thoroughfare": "field_address_thoroughfare",
+                            "premise": "field_address_premise",
+                            "sub_premise": "field_address_sub_premise",
+                            "organisation_name": "field_address_organisation_name",
+                            "name_line": "field_address_name_line",
+                            "first_name": "field_address_first_name",
+                            "last_name": "field_address_last_name",
+                            "data": "field_address_data"
+                        }
+                    }
+                }
+            }
+        },
+        "instances": [
+            {
+                "entity_type": "node",
+                "bundle": "kitesurf_centers",
+                "label": "Address",
+                "required": 0
+            }
+        ]
+    },
+    "field_computed_date": {
+        "type": "computed",
+        "cardinality": "1",
+        "module": "computed_field",
+        "storage": {
+            "type": "field_sql_storage",
+            "settings": [],
+            "module": "field_sql_storage",
+            "active": "1",
+            "details": {
+                "sql": {
+                    "FIELD_LOAD_CURRENT": {
+                        "field_data_field_computed_date": {
+                            "value": "field_computed_date_value"
+                        }
+                    },
+                    "FIELD_LOAD_REVISION": {
+                        "field_revision_field_computed_date": {
+                            "value": "field_computed_date_value"
+                        }
+                    }
+                }
+            }
+        },
+        "instances": [
+            {
+                "entity_type": "node",
+                "bundle": "ad_test_in_grid_type",
+                "label": "Computed Date",
+                "required": false
+            }
+        ]
+    }
+}

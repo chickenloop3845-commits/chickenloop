@@ -1,0 +1,135 @@
+{
+    "occupational_fields": {
+        "name": "Occupational fields",
+        "description": "",
+        "vid": "11",
+        "term_count": 11,
+        "hierarchy": "1"
+    },
+    "fields_of_study": {
+        "name": "Fields of study",
+        "description": "",
+        "vid": "5",
+        "term_count": 36,
+        "hierarchy": "1"
+    },
+    "general_skills": {
+        "name": "General skills",
+        "description": "",
+        "vid": "6",
+        "term_count": 5,
+        "hierarchy": "0"
+    },
+    "it_skills": {
+        "name": "IT skills",
+        "description": "",
+        "vid": "9",
+        "term_count": 156,
+        "hierarchy": "0"
+    },
+    "languages": {
+        "name": "Languages",
+        "description": "",
+        "vid": "10",
+        "term_count": 9,
+        "hierarchy": "0"
+    },
+    "activities": {
+        "name": "Activities",
+        "description": "What does the center offer",
+        "vid": "19",
+        "term_count": 296,
+        "hierarchy": "0"
+    },
+    "ad_groups": {
+        "name": "Ad Groups",
+        "description": "Ad Groups",
+        "vid": "18",
+        "term_count": 3,
+        "hierarchy": "0"
+    },
+    "additional_qualifications": {
+        "name": "Additional Qualifications",
+        "description": "User added qualifications",
+        "vid": "14",
+        "term_count": 336,
+        "hierarchy": "0"
+    },
+    "advertisement_size": {
+        "name": "Advertisement size",
+        "description": "",
+        "vid": "15",
+        "term_count": 1,
+        "hierarchy": "0"
+    },
+    "career_status": {
+        "name": "Career Status",
+        "description": "Possible career statuses for applicants",
+        "vid": "2",
+        "term_count": 3,
+        "hierarchy": "0"
+    },
+    "degree_level": {
+        "name": "Degree level",
+        "description": "Degree levels for educations",
+        "vid": "3",
+        "term_count": 5,
+        "hierarchy": "0"
+    },
+    "employment_type": {
+        "name": "Employment type",
+        "description": "",
+        "vid": "4",
+        "term_count": 6,
+        "hierarchy": "0"
+    },
+    "geography": {
+        "name": "Geography",
+        "description": "",
+        "vid": "7",
+        "term_count": 237,
+        "hierarchy": "0"
+    },
+    "industry_fields": {
+        "name": "Industry fields",
+        "description": "",
+        "vid": "8",
+        "term_count": 54,
+        "hierarchy": "0"
+    },
+    "job_application_rejection_reason": {
+        "name": "Job application rejection reason",
+        "description": "Possible reasons for rejection",
+        "vid": "21",
+        "term_count": 0,
+        "hierarchy": "0"
+    },
+    "offerings": {
+        "name": "Offerings",
+        "description": "What the kite center offers",
+        "vid": "20",
+        "term_count": 71,
+        "hierarchy": "0"
+    },
+    "qualifications": {
+        "name": "Qualifications",
+        "description": "Official certifications and qualifications",
+        "vid": "13",
+        "term_count": 293,
+        "hierarchy": "0"
+    },
+    "tags": {
+        "name": "Tags",
+        "description": "Use tags to group articles on similar topics into categories.",
+        "vid": "1",
+        "term_count": 378,
+        "hierarchy": "0"
+    },
+    "years_of_experience": {
+        "name": "Years of experience",
+        "description": "",
+        "vid": "12",
+        "term_count": 4,
+        "hierarchy": "0"
+    }
+}

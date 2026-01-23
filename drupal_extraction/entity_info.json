@@ -1,0 +1,379 @@
+{
+    "comment": {
+        "label": "Comment",
+        "base_table": "comment",
+        "entity_keys": {
+            "id": "cid",
+            "bundle": "node_type",
+            "label": "subject",
+            "language": "language",
+            "revision": "",
+            "uuid": "uuid"
+        },
+        "bundles": [
+            "comment_node_ad_test_in_grid_type",
+            "comment_node_ad_test_type",
+            "comment_node_article",
+            "comment_node_page",
+            "comment_node_feed",
+            "comment_node_feed_item",
+            "comment_node_job_application",
+            "comment_node_job_per_file",
+            "comment_node_job_per_link",
+            "comment_node_job_per_template",
+            "comment_node_kitesurf_centers",
+            "comment_node_kitesurf_centers_countries",
+            "comment_node_date_migrate_example",
+            "comment_node_simpleads",
+            "comment_node_simpleads_campaign",
+            "comment_node_test_type",
+            "comment_node_webform",
+            "comment_node_website_listing"
+        ]
+    },
+    "tracked_event": {
+        "label": "Tracked Event",
+        "base_table": "eck_tracked_event",
+        "entity_keys": {
+            "id": "id",
+            "bundle": "type",
+            "revision": ""
+        },
+        "bundles": [
+            "click",
+            "impression"
+        ]
+    },
+    "field_collection_item": {
+        "label": "Field collection item",
+        "base_table": "field_collection_item",
+        "entity_keys": {
+            "id": "item_id",
+            "revision": "revision_id",
+            "bundle": "field_name",
+            "uuid": "uuid"
+        },
+        "bundles": [
+            "field_resume_attachments",
+            "field_resume_job_preferences",
+            "field_resume_languages",
+            "field_resume_personal_info",
+            "field_resume_skills_general",
+            "field_resume_xp"
+        ]
+    },
+    "flagging": {
+        "label": "Flagging",
+        "base_table": "flagging",
+        "entity_keys": {
+            "id": "flagging_id",
+            "bundle": "flag_name",
+            "revision": ""
+        },
+        "bundles": [
+            "job_bookmarks",
+            "resume_bookmarks"
+        ]
+    },
+    "message_type_category": {
+        "label": "Message type category",
+        "base_table": "message_type_category",
+        "entity_keys": {
+            "id": "id",
+            "label": "description",
+            "name": "category",
+            "language": "language",
+            "revision": "",
+            "bundle": ""
+        },
+        "bundles": [
+            "message_type_category"
+        ]
+    },
+    "message_type": {
+        "label": "Message type",
+        "base_table": "message_type",
+        "entity_keys": {
+            "id": "id",
+            "label": "description",
+            "name": "name",
+            "bundle": "category",
+            "language": "language",
+            "revision": ""
+        },
+        "bundles": [
+            "message_type"
+        ]
+    },
+    "message": {
+        "label": "Message",
+        "base_table": "message",
+        "entity_keys": {
+            "id": "mid",
+            "label": false,
+            "bundle": "type",
+            "language": "language",
+            "revision": ""
+        },
+        "bundles": []
+    },
+    "node": {
+        "label": "Content",
+        "base_table": "node",
+        "entity_keys": {
+            "id": "nid",
+            "revision": "vid",
+            "bundle": "type",
+            "label": "title",
+            "language": "language",
+            "uuid": "uuid",
+            "revision uuid": "vuuid"
+        },
+        "bundles": [
+            "ad_test_in_grid_type",
+            "ad_test_type",
+            "article",
+            "page",
+            "feed",
+            "feed_item",
+            "job_application",
+            "job_per_file",
+            "job_per_link",
+            "job_per_template",
+            "kitesurf_centers",
+            "kitesurf_centers_countries",
+            "date_migrate_example",
+            "simpleads",
+            "simpleads_campaign",
+            "test_type",
+            "webform",
+            "website_listing"
+        ]
+    },
+    "claim": {
+        "label": "Claim",
+        "base_table": "nodeownership",
+        "entity_keys": {
+            "id": "id",
+            "revision": "",
+            "bundle": ""
+        },
+        "bundles": [
+            "claim"
+        ]
+    },
+    "profile2": {
+        "label": "Profile",
+        "base_table": "profile",
+        "entity_keys": {
+            "id": "pid",
+            "bundle": "type",
+            "label": "label",
+            "revision": ""
+        },
+        "bundles": [
+            "resume"
+        ]
+    },
+    "profile2_type": {
+        "label": "Profile type",
+        "base_table": "profile_type",
+        "entity_keys": {
+            "id": "id",
+            "name": "type",
+            "label": "label",
+            "revision": "",
+            "bundle": ""
+        },
+        "bundles": [
+            "profile2_type"
+        ]
+    },
+    "rules_link": {
+        "label": "Rules Link",
+        "base_table": "rules_link",
+        "entity_keys": {
+            "id": "id",
+            "name": "name",
+            "label": "label",
+            "revision": "",
+            "bundle": ""
+        },
+        "bundles": [
+            "rules_link"
+        ]
+    },
+    "search_api_server": {
+        "label": "Search server",
+        "base_table": "search_api_server",
+        "entity_keys": {
+            "id": "id",
+            "label": "name",
+            "name": "machine_name",
+            "revision": "",
+            "bundle": ""
+        },
+        "bundles": [
+            "search_api_server"
+        ]
+    },
+    "search_api_index": {
+        "label": "Search index",
+        "base_table": "search_api_index",
+        "entity_keys": {
+            "id": "id",
+            "label": "name",
+            "name": "machine_name",
+            "revision": "",
+            "bundle": ""
+        },
+        "bundles": [
+            "search_api_index"
+        ]
+    },
+    "search_api_saved_searches_settings": {
+        "label": "Saved search settings",
+        "base_table": "search_api_saved_searches_settings",
+        "entity_keys": {
+            "id": "id",
+            "name": "delta",
+            "label": "delta",
+            "revision": "",
+            "bundle": ""
+        },
+        "bundles": [
+            "search_api_saved_searches_settings"
+        ]
+    },
+    "search_api_saved_search": {
+        "label": "Saved search",
+        "base_table": "search_api_saved_search",
+        "entity_keys": {
+            "id": "id",
+            "label": "name",
+            "revision": "",
+            "bundle": ""
+        },
+        "bundles": [
+            "search_api_saved_search"
+        ]
+    },
+    "file": {
+        "label": "File",
+        "base_table": "file_managed",
+        "entity_keys": {
+            "id": "fid",
+            "label": "filename",
+            "revision": "",
+            "bundle": "",
+            "uuid": "uuid"
+        },
+        "bundles": [
+            "file"
+        ]
+    },
+    "taxonomy_term": {
+        "label": "Taxonomy term",
+        "base_table": "taxonomy_term_data",
+        "entity_keys": {
+            "id": "tid",
+            "bundle": "vocabulary_machine_name",
+            "label": "name",
+            "revision": "",
+            "uuid": "uuid"
+        },
+        "bundles": [
+            "tags",
+            "career_status",
+            "degree_level",
+            "employment_type",
+            "fields_of_study",
+            "general_skills",
+            "geography",
+            "industry_fields",
+            "it_skills",
+            "languages",
+            "occupational_fields",
+            "years_of_experience",
+            "qualifications",
+            "additional_qualifications",
+            "advertisement_size",
+            "ad_groups",
+            "activities",
+            "offerings",
+            "job_application_rejection_reason"
+        ]
+    },
+    "taxonomy_vocabulary": {
+        "label": "Taxonomy vocabulary",
+        "base_table": "taxonomy_vocabulary",
+        "entity_keys": {
+            "id": "vid",
+            "label": "name",
+            "revision": "",
+            "bundle": ""
+        },
+        "bundles": [
+            "taxonomy_vocabulary"
+        ]
+    },
+    "user": {
+        "label": "User",
+        "base_table": "users",
+        "entity_keys": {
+            "id": "uid",
+            "revision": "",
+            "bundle": "",
+            "uuid": "uuid"
+        },
+        "bundles": [
+            "user"
+        ]
+    },
+    "wysiwyg_profile": {
+        "label": "Wysiwyg profile",
+        "base_table": "wysiwyg",
+        "entity_keys": {
+            "id": "format",
+            "revision": "",
+            "bundle": ""
+        },
+        "bundles": [
+            "wysiwyg_profile"
+        ]
+    },
+    "rules_config": {
+        "label": "Rules configuration",
+        "base_table": "rules_config",
+        "entity_keys": {
+            "id": "id",
+            "name": "name",
+            "label": "label",
+            "revision": "",
+            "bundle": ""
+        },
+        "bundles": [
+            "rules_config"
+        ]
+    },
+    "menu_link": {
+        "label": "Menu link",
+        "base_table": "menu_links",
+        "entity_keys": {
+            "id": "mlid",
+            "bundle": "menu_name",
+            "label": "link_title",
+            "revision": ""
+        },
+        "bundles": [
+            "menu-applicant-menu",
+            "menu-job-add-links",
+            "menu-login-menu",
+            "main-menu",
+            "management",
+            "navigation",
+            "menu-recruiter-menu",
+            "user-menu"
+        ]
+    }
+}

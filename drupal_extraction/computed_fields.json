@@ -1,0 +1,18 @@
+{
+    "field_computed_date": {
+        "code": "$entity_field[0]['value'] = date(\"Y\/m\/d\");",
+        "display_format": "$display_output = $entity_field_item['value'];",
+        "recalculate": 0,
+        "store": 1,
+        "database": {
+            "data_type": "varchar",
+            "data_length": "32",
+            "data_size": "normal",
+            "data_precision": "10",
+            "data_scale": "2",
+            "data_default": "",
+            "data_not_NULL": 0,
+            "data_index": 0
+        }
+    }
+}

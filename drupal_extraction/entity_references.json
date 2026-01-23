@@ -1,0 +1,335 @@
+{
+    "field_job_employment_type_term": {
+        "type": "taxonomy_term_reference",
+        "cardinality": "-1",
+        "settings": {
+            "allowed_values": [
+                {
+                    "vocabulary": "employment_type",
+                    "parent": "0",
+                    "depth": ""
+                }
+            ],
+            "options_list_callback": "content_taxonomy_allowed_values",
+            "profile2_private": false
+        }
+    },
+    "field_job_experience_term": {
+        "type": "taxonomy_term_reference",
+        "cardinality": "1",
+        "settings": {
+            "allowed_values": [
+                {
+                    "vocabulary": "years_of_experience",
+                    "parent": "0",
+                    "depth": ""
+                }
+            ],
+            "options_list_callback": "content_taxonomy_allowed_values",
+            "profile2_private": false
+        }
+    },
+    "field_job_languages": {
+        "type": "taxonomy_term_reference",
+        "cardinality": "-1",
+        "settings": {
+            "allowed_values": [
+                {
+                    "parent": "0",
+                    "vocabulary": "languages"
+                },
+                {
+                    "content_taxonomy_ignore_in_suggestions": 1,
+                    "parent": 0,
+                    "vocabulary": "tags"
+                }
+            ],
+            "options_list_callback": "content_taxonomy_allowed_values",
+            "profile2_private": false
+        }
+    },
+    "field_job_occupational_field": {
+        "type": "taxonomy_term_reference",
+        "cardinality": "-1",
+        "settings": {
+            "allowed_values": [
+                {
+                    "vocabulary": "occupational_fields",
+                    "parent": "0",
+                    "depth": ""
+                }
+            ],
+            "profile2_private": false,
+            "options_list_callback": "content_taxonomy_allowed_values"
+        }
+    },
+    "field_job_region": {
+        "type": "taxonomy_term_reference",
+        "cardinality": "1",
+        "settings": {
+            "allowed_values": [
+                {
+                    "vocabulary": "geography",
+                    "parent": "0"
+                }
+            ],
+            "profile2_private": false,
+            "options_list_callback": "content_taxonomy_allowed_values"
+        }
+    },
+    "field_job_skills_general": {
+        "type": "taxonomy_term_reference",
+        "cardinality": "-1",
+        "settings": {
+            "allowed_values": [
+                {
+                    "parent": "0",
+                    "vocabulary": "general_skills"
+                },
+                {
+                    "content_taxonomy_ignore_in_suggestions": 1,
+                    "parent": 0,
+                    "vocabulary": "tags"
+                }
+            ],
+            "options_list_callback": "content_taxonomy_allowed_values",
+            "profile2_private": false
+        }
+    },
+    "field_job_skills_it": {
+        "type": "taxonomy_term_reference",
+        "cardinality": "-1",
+        "settings": {
+            "allowed_values": [
+                {
+                    "parent": "0",
+                    "vocabulary": "it_skills"
+                },
+                {
+                    "content_taxonomy_ignore_in_suggestions": 1,
+                    "parent": 0,
+                    "vocabulary": "tags"
+                }
+            ],
+            "options_list_callback": "content_taxonomy_allowed_values",
+            "profile2_private": false
+        }
+    },
+    "field_required_qualifications": {
+        "type": "taxonomy_term_reference",
+        "cardinality": "-1",
+        "settings": {
+            "allowed_values": [
+                {
+                    "vocabulary": "qualifications",
+                    "parent": "0"
+                },
+                {
+                    "vocabulary": "additional_qualifications",
+                    "parent": 0
+                }
+            ],
+            "profile2_private": false,
+            "options_list_callback": "content_taxonomy_allowed_values"
+        }
+    },
+    "field_activity": {
+        "type": "taxonomy_term_reference",
+        "cardinality": "5",
+        "settings": {
+            "allowed_values": [
+                {
+                    "vocabulary": "activities",
+                    "parent": "0"
+                }
+            ],
+            "profile2_private": false,
+            "options_list_callback": "content_taxonomy_allowed_values"
+        }
+    },
+    "field_resume_career_status": {
+        "type": "taxonomy_term_reference",
+        "cardinality": "1",
+        "settings": {
+            "allowed_values": [
+                {
+                    "vocabulary": "career_status",
+                    "parent": "0",
+                    "depth": ""
+                }
+            ],
+            "options_list_callback": "content_taxonomy_allowed_values",
+            "profile2_private": false
+        }
+    },
+    "field_resume_employment_term": {
+        "type": "taxonomy_term_reference",
+        "cardinality": "-1",
+        "settings": {
+            "allowed_values": [
+                {
+                    "vocabulary": "employment_type",
+                    "parent": "0",
+                    "depth": ""
+                }
+            ],
+            "options_list_callback": "content_taxonomy_allowed_values",
+            "profile2_private": false
+        }
+    },
+    "field_resume_jobpref_field": {
+        "type": "taxonomy_term_reference",
+        "cardinality": "-1",
+        "settings": {
+            "allowed_values": [
+                {
+                    "vocabulary": "occupational_fields",
+                    "parent": "0",
+                    "depth": ""
+                }
+            ],
+            "options_list_callback": "content_taxonomy_allowed_values",
+            "profile2_private": false
+        }
+    },
+    "field_resume_region": {
+        "type": "taxonomy_term_reference",
+        "cardinality": "-1",
+        "settings": {
+            "allowed_values": [
+                {
+                    "vocabulary": "geography",
+                    "parent": "0",
+                    "depth": ""
+                }
+            ],
+            "profile2_private": false,
+            "options_list_callback": "content_taxonomy_allowed_values"
+        }
+    },
+    "field_resume_xp_occupation_field": {
+        "type": "taxonomy_term_reference",
+        "cardinality": "-1",
+        "settings": {
+            "allowed_values": [
+                {
+                    "vocabulary": "occupational_fields",
+                    "parent": "0"
+                },
+                {
+                    "content_taxonomy_ignore_in_suggestions": 1,
+                    "parent": 0,
+                    "vocabulary": "tags"
+                }
+            ],
+            "options_list_callback": "content_taxonomy_allowed_values",
+            "profile2_private": false
+        }
+    },
+    "field_tags": {
+        "type": "taxonomy_term_reference",
+        "cardinality": "-1",
+        "settings": {
+            "allowed_values": [
+                {
+                    "vocabulary": "tags",
+                    "parent": 0
+                }
+            ],
+            "options_list_callback": "content_taxonomy_allowed_values"
+        }
+    },
+    "field_ad_category": {
+        "type": "taxonomy_term_reference",
+        "cardinality": "1",
+        "settings": {
+            "allowed_values": [
+                {
+                    "vocabulary": "ad_groups",
+                    "parent": 0
+                }
+            ],
+            "options_list_callback": "content_taxonomy_allowed_values"
+        }
+    },
+    "field_activities": {
+        "type": "taxonomy_term_reference",
+        "cardinality": "10",
+        "settings": {
+            "allowed_values": [
+                {
+                    "vocabulary": "activities",
+                    "parent": "0"
+                }
+            ],
+            "profile2_private": false,
+            "options_list_callback": "content_taxonomy_allowed_values"
+        }
+    },
+    "field_offerings": {
+        "type": "taxonomy_term_reference",
+        "cardinality": "10",
+        "settings": {
+            "allowed_values": [
+                {
+                    "vocabulary": "offerings",
+                    "parent": "0"
+                }
+            ],
+            "profile2_private": false,
+            "options_list_callback": "content_taxonomy_allowed_values"
+        }
+    },
+    "field_test": {
+        "type": "taxonomy_term_reference",
+        "cardinality": "1",
+        "settings": {
+            "allowed_values": [
+                {
+                    "vocabulary": "geography",
+                    "parent": "0"
+                }
+            ],
+            "profile2_private": false,
+            "options_list_callback": "content_taxonomy_allowed_values"
+        }
+    },
+    "field_job_application_job_ref": {
+        "type": "entityreference",
+        "cardinality": "1",
+        "settings": {
+            "handler": "base",
+            "handler_settings": {
+                "behaviors": {
+                    "views-select-list": {
+                        "status": 0
+                    }
+                },
+                "sort": {
+                    "type": "none"
+                },
+                "target_bundles": {
+                    "job_per_file": "job_per_file",
+                    "job_per_link": "job_per_link",
+                    "job_per_template": "job_per_template"
+                }
+            },
+            "profile2_private": false,
+            "target_type": "node"
+        }
+    },
+    "field_job_application_rej_reason": {
+        "type": "taxonomy_term_reference",
+        "cardinality": "1",
+        "settings": {
+            "allowed_values": [
+                {
+                    "vocabulary": "job_application_rejection_reason",
+                    "parent": "0",
+                    "depth": ""
+                }
+            ],
+            "options_list_callback": "content_taxonomy_allowed_values",
+            "profile2_private": false
+        }
+    }

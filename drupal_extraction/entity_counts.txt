@@ -1,0 +1,6 @@
+3405	node
+4259	user
+1904	taxonomy_term
+207	comment
+5220	file
+2800	profile2
