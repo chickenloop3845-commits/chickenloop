@@ -271,10 +271,10 @@ class Migrator {
     this.stats.jobs.fetched = drupalJobs.length;
 
     console.log(`Found ${drupalJobs.length} jobs in Drupal`);
-    console.log(`Migrating first 10 jobs as sample...`);
+    console.log(`Migrating all jobs...`);
 
-    // Migrate first 10 as sample
-    const jobsToMigrate = drupalJobs.slice(0, 10);
+    // Migrate all jobs
+    const jobsToMigrate = drupalJobs;
 
     for (const dJob of jobsToMigrate) {
       try {
