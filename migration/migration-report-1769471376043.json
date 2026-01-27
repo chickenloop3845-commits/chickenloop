@@ -1,0 +1,41 @@
+{
+  "timestamp": "2026-01-26T23:49:36.042Z",
+  "dryRun": true,
+  "stats": {
+    "users": {
+      "fetched": 4263,
+      "migrated": 4263,
+      "skipped": 0,
+      "errors": 0
+    },
+    "jobs": {
+      "fetched": 2719,
+      "migrated": 0,
+      "skipped": 10,
+      "errors": 0
+    },
+    "cvs": {
+      "fetched": 0,
+      "migrated": 0,
+      "skipped": 0,
+      "errors": 0
+    },
+    "applications": {
+      "fetched": 0,
+      "migrated": 0,
+      "skipped": 0,
+      "errors": 0
+    },
+    "companies": {
+      "fetched": 0,
+      "migrated": 0,
+      "skipped": 0,
+      "errors": 0
+    }
+  },
+  "mappings": {
+    "users": 0,
+    "nodes": 0,
+    "profiles": 0
+  }
+}
