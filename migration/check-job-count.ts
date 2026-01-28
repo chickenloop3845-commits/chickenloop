@@ -12,6 +12,10 @@ async function checkJobCount() {
     await mongoose.connect(uri);
     const db = mongoose.connection.db;
 
+    if (!db) {
+      throw new Error('Database connection failed');
+    }
+
     const jobCount = await db.collection('jobs').countDocuments();
     console.log(`\n📊 Current job count in MongoDB: ${jobCount}`);
 

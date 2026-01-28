@@ -30,6 +30,13 @@ interface ImageInfo {
   filesize: string;
 }
 
+interface MigrationStats {
+  processed: number;
+  imagesFound: number;
+  imagesUploaded: number;
+  errors: number;
+}
+
 async function migrateJobImages() {
   try {
     console.log('🖼️  Migrating Job Images from Drupal');
@@ -52,7 +59,7 @@ async function migrateJobImages() {
     console.log(`Found ${jobs.length} jobs to process\n`);
 
     const fetcher = new DrupalFetcher();
-    const stats = {
+    const stats: MigrationStats = {
       processed: 0,
       imagesFound: 0,
       imagesUploaded: 0,
