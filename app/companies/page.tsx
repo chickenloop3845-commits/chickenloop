@@ -107,10 +107,19 @@ function CompaniesPageContent() {
   const [selectedCountry, setSelectedCountry] = useState<string>('');
   const [keyword, setKeyword] = useState<string>('');
   const [currentPage, setCurrentPage] = useState<number>(1);
+  const [mounted, setMounted] = useState(false);
   const companiesPerPage = 20;
 
   useEffect(() => {
-    // Read query parameters from URL on mount
+    setMounted(true);
+    // Load companies immediately
+    loadCompanies();
+  }, []);
+
+  useEffect(() => {
+    if (!mounted) return;
+
+    // Read query parameters from URL after mount
     const keywordParam = searchParams?.get('keyword');
     const countryParam = searchParams?.get('country');
 
@@ -120,10 +129,7 @@ function CompaniesPageContent() {
     if (countryParam) {
       setSelectedCountry(decodeURIComponent(countryParam));
     }
-
-    // Load companies regardless of authentication status
-    loadCompanies();
-  }, [searchParams]);
+  }, [searchParams, mounted]);
 
   useEffect(() => {
     // Filter companies when any filter changes
@@ -476,7 +482,12 @@ export default function CompaniesPage() {
       <div className="min-h-screen bg-gradient-to-br from-blue-50 to-cyan-50">
         <Navbar />
         <main className="max-w-7xl mx-auto px-4 py-8">
-          <div className="text-center py-12">Loading companies...</div>
+          <div className="flex items-center justify-center h-screen">
+            <div className="text-center">
+              <div className="text-xl mb-4">Loading companies...</div>
+              <div className="text-sm text-gray-600">If this takes too long, try refreshing the page.</div>
+            </div>
+          </div>
         </main>
       </div>
     }>
