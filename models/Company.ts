@@ -153,7 +153,7 @@ const CompanySchema: Schema = new Schema(
       type: Schema.Types.ObjectId,
       ref: 'User',
       required: true,
-      unique: true,
+      // unique: true, // Removed to allow users to own multiple companies/centers
     },
   },
   {

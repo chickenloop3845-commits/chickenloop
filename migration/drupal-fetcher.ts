@@ -100,6 +100,23 @@ export class DrupalFetcher {
   }
 
   /**
+   * Fetch user email by UID
+   */
+  async fetchUserEmail(uid: number): Promise<string | null> {
+    const query = `
+      SELECT mail
+      FROM users
+      WHERE uid = ${uid}
+      LIMIT 1
+    `;
+
+    const result = await this.sqlQuery(query);
+    const headers = ['mail'];
+    const data = this.parseTabularDataWithHeaders(result, headers);
+    return data.length > 0 ? data[0].mail : null;
+  }
+
+  /**
    * Fetch all job nodes (3 types combined)
    */
   async fetchJobs(): Promise<any[]> {
@@ -284,6 +301,141 @@ export class DrupalFetcher {
   }
 
   /**
+   * Fetch all kitesurf centers
+   */
+  async fetchKitesurfCenters(): Promise<any[]> {
+    console.log('📥 Fetching kitesurf centers from Drupal...');
+
+    const query = `
+      SELECT
+        n.nid,
+        n.vid,
+        n.type,
+        n.title,
+        n.uid,
+        n.status,
+        n.created,
+        n.changed
+      FROM node n
+      WHERE n.type = 'kitesurf_centers'
+      ORDER BY n.nid
+    `;
+
+    const result = await this.sqlQuery(query);
+    const headers = ['nid', 'vid', 'type', 'title', 'uid', 'status', 'created', 'changed'];
+    return this.parseTabularDataWithHeaders(result, headers);
+  }
+
+  /**
+   * Fetch field data for a kitesurf center node
+   */
+  async fetchCenterFields(nid: number): Promise<any> {
+    const fields: any = {};
+
+    // Fetch body field
+    const bodyQuery = `SELECT body_value FROM field_data_body WHERE entity_id = ${nid} AND entity_type = 'node' LIMIT 1`;
+    const bodyResult = await this.sqlQuery(bodyQuery);
+    const bodyData = this.parseTabularDataWithHeaders(bodyResult, ['body_value']);
+    fields.body = bodyData.length > 0 ? bodyData[0].body_value : null;
+
+    // Fetch activities (multi-value taxonomy term reference)
+    const activitiesQuery = `SELECT field_activities_tid FROM field_data_field_activities WHERE entity_id = ${nid} AND entity_type = 'node'`;
+    const activitiesResult = await this.sqlQuery(activitiesQuery);
+    const activitiesData = this.parseTabularDataWithHeaders(activitiesResult, ['field_activities_tid']);
+    const activityTids = activitiesData.map(a => parseInt(a.field_activities_tid)).filter(tid => !isNaN(tid));
+    fields.activities = activityTids.length > 0 ? await this.fetchTermNames(activityTids) : [];
+
+    // Fetch offerings (multi-value taxonomy term reference)
+    const offeringsQuery = `SELECT field_offerings_tid FROM field_data_field_offerings WHERE entity_id = ${nid} AND entity_type = 'node'`;
+    const offeringsResult = await this.sqlQuery(offeringsQuery);
+    const offeringsData = this.parseTabularDataWithHeaders(offeringsResult, ['field_offerings_tid']);
+    const offeringTids = offeringsData.map(o => parseInt(o.field_offerings_tid)).filter(tid => !isNaN(tid));
+    fields.offerings = offeringTids.length > 0 ? await this.fetchTermNames(offeringTids) : [];
+
+    // Fetch address fields
+    const addressQuery = `
+      SELECT
+        field_address_country,
+        field_address_administrative_area,
+        field_address_locality,
+        field_address_thoroughfare,
+        field_address_postal_code
+      FROM field_data_field_address
+      WHERE entity_id = ${nid} AND entity_type = 'node'
+      LIMIT 1
+    `;
+    const addressResult = await this.sqlQuery(addressQuery);
+    const addressData = this.parseTabularDataWithHeaders(addressResult, [
+      'field_address_country',
+      'field_address_administrative_area',
+      'field_address_locality',
+      'field_address_thoroughfare',
+      'field_address_postal_code'
+    ]);
+    fields.address = addressData.length > 0 ? addressData[0] : {};
+
+    // Fetch location (geolocation)
+    const locationQuery = `
+      SELECT
+        field_location_lat,
+        field_location_lng
+      FROM field_data_field_location
+      WHERE entity_id = ${nid} AND entity_type = 'node'
+      LIMIT 1
+    `;
+    const locationResult = await this.sqlQuery(locationQuery);
+    const locationData = this.parseTabularDataWithHeaders(locationResult, ['field_location_lat', 'field_location_lng']);
+    fields.location = locationData.length > 0 ? locationData[0] : {};
+
+    // Fetch town/city
+    const cityQuery = `SELECT field_town_city_value FROM field_data_field_town_city WHERE entity_id = ${nid} AND entity_type = 'node' LIMIT 1`;
+    const cityResult = await this.sqlQuery(cityQuery);
+    const cityData = this.parseTabularDataWithHeaders(cityResult, ['field_town_city_value']);
+    fields.city = cityData.length > 0 ? cityData[0].field_town_city_value : null;
+
+    // Fetch website
+    const websiteQuery = `SELECT field_website_value FROM field_data_field_website WHERE entity_id = ${nid} AND entity_type = 'node' LIMIT 1`;
+    const websiteResult = await this.sqlQuery(websiteQuery);
+    const websiteData = this.parseTabularDataWithHeaders(websiteResult, ['field_website_value']);
+    fields.website = websiteData.length > 0 ? websiteData[0].field_website_value : null;
+
+    // Fetch contact email
+    const emailQuery = `SELECT field_contact_e_mail_email FROM field_data_field_contact_e_mail WHERE entity_id = ${nid} AND entity_type = 'node' LIMIT 1`;
+    const emailResult = await this.sqlQuery(emailQuery);
+    const emailData = this.parseTabularDataWithHeaders(emailResult, ['field_contact_e_mail_email']);
+    fields.email = emailData.length > 0 ? emailData[0].field_contact_e_mail_email : null;
+
+    // Fetch logo (file reference)
+    const logoQuery = `SELECT fm.uri FROM field_data_field_logo fl LEFT JOIN file_managed fm ON fl.field_logo_fid = fm.fid WHERE fl.entity_id = ${nid} AND fl.entity_type = 'node' LIMIT 1`;
+    const logoResult = await this.sqlQuery(logoQuery);
+    const logoData = this.parseTabularDataWithHeaders(logoResult, ['uri']);
+    fields.logo = logoData.length > 0 ? logoData[0].uri : null;
+
+    // Fetch pictures (multiple file references)
+    const picturesQuery = `SELECT fm.uri FROM field_data_field_picture fp LEFT JOIN file_managed fm ON fp.field_picture_fid = fm.fid WHERE fp.entity_id = ${nid} AND fp.entity_type = 'node' ORDER BY fp.delta`;
+    const picturesResult = await this.sqlQuery(picturesQuery);
+    const picturesData = this.parseTabularDataWithHeaders(picturesResult, ['uri']);
+    fields.pictures = picturesData.map(p => p.uri).filter(uri => uri);
+
+    // Fetch star rating
+    const ratingQuery = `SELECT field_center_star_rating_rating FROM field_data_field_center_star_rating WHERE entity_id = ${nid} AND entity_type = 'node' LIMIT 1`;
+    const ratingResult = await this.sqlQuery(ratingQuery);
+    const ratingData = this.parseTabularDataWithHeaders(ratingResult, ['field_center_star_rating_rating']);
+    fields.rating = ratingData.length > 0 ? parseFloat(ratingData[0].field_center_star_rating_rating) : null;
+
+    // Fetch region (taxonomy term reference)
+    const regionQuery = `SELECT field_job_region_tid FROM field_data_field_job_region WHERE entity_id = ${nid} AND entity_type = 'node' LIMIT 1`;
+    const regionResult = await this.sqlQuery(regionQuery);
+    const regionData = this.parseTabularDataWithHeaders(regionResult, ['field_job_region_tid']);
+    if (regionData.length > 0 && regionData[0].field_job_region_tid) {
+      const regionNames = await this.fetchTermNames([parseInt(regionData[0].field_job_region_tid)]);
+      fields.region = regionNames.length > 0 ? regionNames[0] : null;
+    }
+
+    return fields;
+  }
+
+  /**
    * Get counts for validation
    */
   async getCounts(): Promise<any> {
@@ -294,6 +446,7 @@ export class DrupalFetcher {
       jobs: "SELECT COUNT(*) as count FROM node WHERE type IN ('job_per_template', 'job_per_link', 'job_per_file')",
       profiles: "SELECT COUNT(*) as count FROM profile WHERE type = 'resume'",
       applications: "SELECT COUNT(*) as count FROM node WHERE type = 'job_application'",
+      centers: "SELECT COUNT(*) as count FROM node WHERE type = 'kitesurf_centers'",
     };
 
     const counts: any = {};
