@@ -172,6 +172,20 @@ To contribute changes back to the upstream repository:
 - See [CONTRIBUTING.md](./CONTRIBUTING.md) for detailed guidelines
 - Use the helper script: `./create-upstream-pr.sh`
 
+### Branch Verification
+
+If you encounter issues accessing a branch or need to verify branch existence:
+
+```bash
+# Verify repository access and list all branches
+./scripts/verify-branch-access.sh
+
+# Check if a specific branch exists
+./scripts/verify-branch-access.sh "branch-name"
+```
+
+For detailed troubleshooting, see [BRANCH_VERIFICATION.md](./BRANCH_VERIFICATION.md).
+
 ## License
 
 This project is open source and available under the MIT License.
